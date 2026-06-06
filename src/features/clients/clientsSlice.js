@@ -14,13 +14,13 @@ const clientsSlice = createState({
                 state.items.unshift(action.payload);
             },
             prepare(clietnt) {
-                return(
+                return{
                     payload: {
                         id: nanoid(),
                         createdAt: new Date().toISOString().slice(0, 10),
                         ...client
                     }
-                )
+                }
             }
         }
     }
