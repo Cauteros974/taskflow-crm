@@ -40,7 +40,7 @@ const clientsSlice = createState({
 
         deleteClient(state, action) {
             state.items = state.items.filter(
-                
+                (client) => client.id !== action.payload
             )
         }
     }
