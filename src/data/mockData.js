@@ -88,5 +88,15 @@ export const mockTask = [
         projectId: "project-2",
         clientId: "client-2",
         dueDate: "2026-06-12"
+    },
+    {
+        id: "task-4",
+        title: "Create a Client Page",
+        description: "Client list, cards, adding and deleting",
+        status: "New",
+        priority: "Medium",
+        projectId: "project-2",
+        clientId: "client-2",
+        dueDate: "2026-06-19"
     }
 ]
