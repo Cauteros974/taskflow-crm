@@ -31,5 +31,6 @@ store.subscribe(() => {
   saveState({
     tasks: store.getState().tasks,
     clients: store.getState().clients,
+    projects: store.getState().projects
   });
 });
