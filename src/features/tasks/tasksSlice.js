@@ -17,6 +17,13 @@ const tasksSlice = createSlice({
         addTask: {
             reducer(state, action){
                 state.items.unshift(action.payload);
+            },
+            prepare(task) {
+                return{
+                    payload: {
+                        
+                    }
+                }
             }
         }
     }
