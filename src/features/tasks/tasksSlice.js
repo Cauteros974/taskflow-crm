@@ -24,8 +24,14 @@ const tasksSlice = createSlice({
                         id: nanoid(),
                         ...task
                     }
-                }
+                };
             }
+        },
+
+        updateTask(state, action) {
+            const index = state.items.findIndex(
+                (task) => task.id
+            )
         }
     }
 })
