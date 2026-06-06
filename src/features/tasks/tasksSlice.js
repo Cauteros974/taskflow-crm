@@ -21,7 +21,8 @@ const tasksSlice = createSlice({
             prepare(task) {
                 return{
                     payload: {
-                        
+                        id: nanoid(),
+                        ...task
                     }
                 }
             }
