@@ -66,5 +66,6 @@ export const mockTask = [
         description: "Refine the required metrics and prepare a list of widgets",
         status: "Completed",
         priority: "Medium",
+        dueDate: "2026-05-25"
     }
 ]
