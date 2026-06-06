@@ -46,6 +46,6 @@ const clientsSlice = createState({
     }
 });
 
-export const {addClients, updateClient} = clientsSlice.action;
+export const {addClients, updateClient, deleteClient} = clientsSlice.action;
 
 export default clientsSlice.reducer;
