@@ -16,7 +16,9 @@ const clientsSlice = createState({
             prepare(clietnt) {
                 return(
                     payload: {
-                        id: nanoid()
+                        id: nanoid(),
+                        createdAt: new Date().toISOString().slice(0, 10),
+                        ...client
                     }
                 )
             }
