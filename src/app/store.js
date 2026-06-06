@@ -21,4 +21,8 @@ const savedState = (state) => {
     } catch {
         console.log("Failed to save data to localStorage")
     }
-}
+};
+
+export const store = configureStore({
+    reducer: rootReducer
+})
