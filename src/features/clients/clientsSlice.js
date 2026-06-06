@@ -1,5 +1,6 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 import { mockClients } from "../../data/mockData.js";
+import { updateTask } from "../tasks/tasksSlice.js";
 
 const clientsSlice = createState({
     name: "clients",
@@ -20,10 +21,16 @@ const clientsSlice = createState({
                         createdAt: new Date().toISOString().slice(0, 10),
                         ...client
                     }
-                }
+                };
             }
+        },
+
+        updateClient(state, action) {
+
         }
     }
 });
+
+export const {addClients, updateClient} = clientsSlice.action;
 
 export default clientsSlice.reducer;
