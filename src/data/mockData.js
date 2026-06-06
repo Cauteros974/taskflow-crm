@@ -10,5 +10,7 @@ export const mockClients = [
         name: "Anna Koval",
         email: "anna.kovel@example.com",
         phone: "+123 12 345 67 89",
+        status: "Active",
+        createdAt: "2026-05-11"
     }
 ]
