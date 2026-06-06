@@ -17,7 +17,7 @@ const loadState = () => {
 
 const savedState = (state) => {
     try{
-        localStorage.setItem("askflow-crm-state")
+        localStorage.setItem("askflow-crm-state", JSON.stringify(state));
     } catch {
         console.log("Failed to save data to localStorage")
     }
