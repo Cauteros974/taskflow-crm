@@ -25,4 +25,10 @@ const savedState = (state) => {
 
 export const store = configureStore({
     reducer: rootReducer
-})
+});
+
+store.subscribe(() => {
+  saveState({
+    tasks: store.getState().tasks,
+  });
+});
