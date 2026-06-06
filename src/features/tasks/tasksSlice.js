@@ -51,6 +51,21 @@ const tasksSlice = createSlice({
             if(task) {
                 task.status = action.payload.status;
             }
+        },
+
+        setTaskFilter(state, action) {
+            state.filters = {
+                ...state.filters,
+                ...action.payload
+            };
+        },
+
+        resetTaskFilters(state) {
+            state.filters = {
+                search: "",
+                status: "All",
+                priority: "All"
+            }
         }
     }
 })
