@@ -6,7 +6,15 @@ const clientsSlice = createState({
 
     initialState: {
         items: mockClients
+    },
+
+    reducers: {
+        addClients: {
+            reducer(state, action) {
+                state.items.unshift(action.payload);
+            }
+        }
     }
 });
 
-export default clientsSlice;
+export default clientsSlice.reducer;
