@@ -59,7 +59,7 @@ export const mockProjects = [
     }
 ];
 
-export const mockTask = [
+export const mockTasks = [
     {
         id: "task-1",
         titile: "Collect dashboard requirements",
