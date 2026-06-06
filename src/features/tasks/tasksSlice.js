@@ -65,7 +65,7 @@ const tasksSlice = createSlice({
                 search: "",
                 status: "All",
                 priority: "All"
-            }
+            };
         }
     }
 })
