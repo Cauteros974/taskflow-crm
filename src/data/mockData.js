@@ -57,4 +57,12 @@ export const mockProjects = [
         status: "Planning",
         progress: 20
     }
+];
+
+export const mockTask = [
+    {
+        id: "task-1",
+        titile: "Collect dashboard requirements",
+        description: "Refine the required metrics and prepare a list of widgets"
+    }
 ]
