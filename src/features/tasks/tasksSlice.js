@@ -10,3 +10,8 @@ const initialState = {
     }
 };
 
+const tasksSlice = createSlice({
+    name: "tasks",
+    initialState,
+    
+})
