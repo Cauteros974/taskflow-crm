@@ -32,8 +32,9 @@ const clientsSlice = createState({
 
             if(index !== -1) {
                 state.items[index] = {
-                    ...state.items[index]
-                }
+                    ...state.items[index],
+                    ...action.payload
+                };
             }
         }
     }
