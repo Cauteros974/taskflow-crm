@@ -47,6 +47,10 @@ const tasksSlice = createSlice({
 
         changeTaskStatus(state, action) {
             const task = state.items.find((item) => item.id)
+
+            if(task) {
+                task.status = action.payload.status;
+            }
         }
     }
 })
