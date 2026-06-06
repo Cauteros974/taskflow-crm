@@ -32,4 +32,18 @@ export const mockClients = [
         status: "Active",
         createdAt: "2026-05-22"
     },
+];
+
+export const mockProjects = [
+    {
+        id: "project-1",
+        title: "Website Redesign",
+        clientId: "client-1",
+        description:
+            "Homepage update, responsive layout, and basic analytics.",
+        startDate: "2026-05-12",
+        deadline: "2026-06-30",
+        status: "In Progress",
+        progress: 45
+    }
 ]
