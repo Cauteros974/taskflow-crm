@@ -3,6 +3,7 @@ import { configureStore } from "@reduxjs/toolkit";
 const rootReducer = combineReducer ({
     task: taskReducer,
     clients: clientsReducer,
+    projects: projectReducer
 });
 
 const loadState = () => {
