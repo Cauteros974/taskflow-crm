@@ -30,5 +30,6 @@ export const store = configureStore({
 store.subscribe(() => {
   saveState({
     tasks: store.getState().tasks,
+    clients: store.getState().clients,
   });
 });
