@@ -46,7 +46,7 @@ const tasksSlice = createSlice({
         },
 
         changeTaskStatus(state, action) {
-            const task = state.items.find((item) => item.id !== action.payload.id);
+            const task = state.items.find((item) => item.id === action.payload.id);
 
             if(task) {
                 task.status = action.payload.status;
