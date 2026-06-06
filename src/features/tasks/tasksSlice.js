@@ -13,5 +13,9 @@ const initialState = {
 const tasksSlice = createSlice({
     name: "tasks",
     initialState,
-    
+    reducers: {
+        addTask: {
+            reducer(state, action)
+        }
+    }
 })
