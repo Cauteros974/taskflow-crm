@@ -30,7 +30,7 @@ const tasksSlice = createSlice({
 
         updateTask(state, action) {
             const index = state.items.findIndex(
-                (task) => task.id
+                (task) => task.id === action.payload.id
             )
         }
     }
