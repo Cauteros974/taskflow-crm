@@ -6,6 +6,9 @@ import { CssBaseline } from "@mui/material";
 import { ConfigProvider } from "antd";
 import App from "./App.jsx";
 
+import "antd/dist/reset.css";
+import "./styles/global.css";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
