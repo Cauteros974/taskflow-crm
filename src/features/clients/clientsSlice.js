@@ -29,6 +29,12 @@ const clientsSlice = createState({
             const index = state.items.findIndex(
                 (client) => client.id === action.payload.id
             );
+
+            if(index !== -1) {
+                state.items[index] = {
+                    ...state.items[index]
+                }
+            }
         }
     }
 });
