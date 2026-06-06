@@ -12,6 +12,13 @@ const clientsSlice = createState({
         addClients: {
             reducer(state, action) {
                 state.items.unshift(action.payload);
+            },
+            prepare(clietnt) {
+                return(
+                    payload: {
+                        id: nanoid()
+                    }
+                )
             }
         }
     }
