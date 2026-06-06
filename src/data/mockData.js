@@ -13,5 +13,23 @@ export const mockClients = [
         company: "Koval Studio",
         status: "Active",
         createdAt: "2026-05-11"
-    }
+    },
+    {
+        id: "client-2",
+        name: "Dmitry Lenss",
+        email: "d.lenss@example.com",
+        phone: "+123 32 222 90 65",
+        company: "Lenss Logistics",
+        status: "Potential",
+        createdAt: "2026-05-18"
+    },
+    {
+        id: "client-3",
+        name: "Edward Nolon",
+        email: "e.nolon@example.com",
+        phone: "+123 77 356 10 99",
+        company: "Nolon Tech",
+        status: "Active",
+        createdAt: "2026-05-22"
+    },
 ]
