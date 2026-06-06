@@ -63,6 +63,8 @@ export const mockTask = [
     {
         id: "task-1",
         titile: "Collect dashboard requirements",
-        description: "Refine the required metrics and prepare a list of widgets"
+        description: "Refine the required metrics and prepare a list of widgets",
+        status: "Completed",
+        priority: "Medium",
     }
 ]
