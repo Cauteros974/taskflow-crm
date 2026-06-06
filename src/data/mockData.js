@@ -45,5 +45,16 @@ export const mockProjects = [
         deadline: "2026-06-30",
         status: "In Progress",
         progress: 45
+    },
+    {
+        id: "project-2",
+        title: "CRM for applications",
+        clientId: "client-2",
+        description:
+            "Mini CRM for processing incoming requests and monitoring statuses.",
+        startDate: "2026-05-20",
+        deadline: "2026-07-18",
+        status: "Planning",
+        progress: 20
     }
 ]
