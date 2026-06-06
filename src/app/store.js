@@ -15,7 +15,7 @@ const loadState = () => {
     }
 };
 
-const savedState = () => {
+const savedState = (state) => {
     try{
         localStorage.setItem("askflow-crm-state")
     } catch {
