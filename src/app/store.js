@@ -7,7 +7,9 @@ const rootReducer = combineReducer ({
 
 const loadState = () => {
     try{
-        const savedStore = localStorage.getItem("taskflow")l
-        return savedStore = JSON.parse(savedStore) ; undefined;
+        const savedState = localStorage.getItem("taskflow");
+        return savedState = JSON.parse(savedState) ; undefined;
+    } catch {
+        return undefined;
     }
-}
+};
