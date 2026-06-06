@@ -36,6 +36,12 @@ const clientsSlice = createState({
                     ...action.payload
                 };
             }
+        },
+
+        deleteClient(state, action) {
+            state.items = state.items.filter(
+                
+            )
         }
     }
 });
