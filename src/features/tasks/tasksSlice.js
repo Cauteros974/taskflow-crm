@@ -68,4 +68,15 @@ const tasksSlice = createSlice({
             };
         }
     }
-})
+});
+
+export const {
+     addTask,
+    updateTask,
+    deleteTask,
+    changeTaskStatus,
+    setTaskFilter,
+    resetTaskFilters
+} = tasksSlice.actions;
+
+export default tasksSlice.reducer;
