@@ -14,3 +14,11 @@ const loadState = () => {
         return undefined;
     }
 };
+
+const savedState = () => {
+    try{
+        localStorage.setItem("askflow-crm-state")
+    } catch {
+        console.log("Failed to save data to localStorage")
+    }
+}
