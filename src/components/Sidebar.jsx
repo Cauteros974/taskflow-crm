@@ -1,0 +1,36 @@
+import { NavLink } from "react-router-dom";
+import { Box, Typography } from "@mui/material";
+
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import TaskIcon from "@mui/icons-material/Task";
+import GroupsIcon from "@mui/icons-material/Groups";
+import FolderIcon from "@mui/icons-material/Folder";
+import ViewKanbanIcon from "@mui/icons-material/ViewKanban";
+
+const navItems = [
+  {
+    to: "/",
+    label: "Dashboard",
+    icon: <DashboardIcon />
+  },
+  {
+    to: "/tasks",
+    label: "Tasks",
+    icon: <TaskIcon />
+  },
+  {
+    to: "/clients",
+    label: "Clients",
+    icon: <GroupsIcon />
+  },
+  {
+    to: "/projects",
+    label: "Projects",
+    icon: <FolderIcon />
+  },
+  {
+    to: "/kanban",
+    label: "Kanban",
+    icon: <ViewKanbanIcon />
+  }
+];
