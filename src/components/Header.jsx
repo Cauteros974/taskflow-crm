@@ -20,6 +20,16 @@ export default function Header() {
             Test
             <KeyboardArrowDownIcon fontSize="small" />
         </Menu.Button>
+
+         <Menu.Items className="profile-menu-items">
+            <Menu.Item>
+                {({focus})=> {
+                    <button className={focus ? "menu-item active" : "menu-item"}>
+                        Profile
+                    </button>
+                }}
+            </Menu.Item>
+         </Menu.Items>
       </Menu>
     </Box>
   );
