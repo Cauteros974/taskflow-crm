@@ -41,9 +41,9 @@ const projectsSlice = createSlice({
         },
 
         deleteProject(state, action) {
-            state.items = state.items.filter{
+            state.items = state.items.filter(
                 (project) => project.id !== action.payload
-            }
+            );
         }
     }
 });
