@@ -27,7 +27,14 @@ const projectsSlice = createSlice({
         updateProject(state, action) {
             const index = state.items.findIndex(
                 (project) => project.id === action.payload.id
-            )
+            );
+
+            if(index !== -1) {
+                state.items[index] = {
+                    ...state.items[index],
+                    ...action.payload,
+                }
+            }
         }
     }
 });
