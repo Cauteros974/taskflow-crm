@@ -52,7 +52,8 @@ export default function Sidebar() {
                             isActive ? "nav-link active" : "nav-link"
                         }
                     >
-
+                        {items.icon}
+                        <span>{items.label}</span>
                     </NavLink>
                 ))}
             </nav>
