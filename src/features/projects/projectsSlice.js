@@ -13,10 +13,11 @@ const projectsSlice = createSlice({
             reducer(state, action) {
                 state.items(action.payload)
             },
-            prepare(projects) {
+            prepare(project) {
                 return{
                     payload: {
-                        id: nanoid()
+                        id: nanoid(),
+                        ...project
                     }
                 }
             }
