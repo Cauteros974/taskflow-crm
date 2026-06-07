@@ -41,6 +41,21 @@ export default function Sidebar() {
             <Typography variant="h6" fontWeight={900} className="logo">
                 TaskFlow
             </Typography>
+
+            <nav className="nav">
+                {navItems.map((item) => (
+                    <NavLink
+                        key={item.to}
+                        to={item.to}
+                        end={item.to === "/"}
+                        className={({ isActive }) =>
+                            isActive ? "nav-link active" : "nav-link"
+                        }
+                    >
+
+                    </NavLink>
+                ))}
+            </nav>
         </Box>
     )
 }
