@@ -36,12 +36,18 @@ const projectsSlice = createSlice({
                     progress: Number(
                         action.payload.progress ?? state.items[index].progress
                     )
-                }
+                };
+            }
+        },
+
+        deleteProject(state, action) {
+            state.items = state.items.filter{
+                (project) => project.id !== action.payload
             }
         }
     }
 });
 
-export const {addProject, updateProject} = projectsSlice.actions;
+export const {addProject, updateProject, deleteProject} = projectsSlice.actions;
 
 export default projectsSlice.reducer;
