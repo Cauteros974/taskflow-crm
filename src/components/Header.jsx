@@ -9,6 +9,10 @@ export default function Header() {
         <Typography variant="h5" fontWeight={800}>
           TaskFlow CRM
         </Typography>
+
+        <Typography variant="body2" color="text.secondary">
+            Managing tasks, clients, and projects
+        </Typography>
       </Box>
     </Box>
   );
