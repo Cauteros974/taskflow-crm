@@ -12,6 +12,13 @@ const projectsSlice = createSlice({
         addProject: {
             reducer(state, action) {
                 state.items(action.payload)
+            },
+            prepare(projects) {
+                return{
+                    payload: {
+                        id: nanoid()
+                    }
+                }
             }
         }
     }
