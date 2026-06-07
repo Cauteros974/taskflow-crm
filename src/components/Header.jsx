@@ -16,7 +16,7 @@ export default function Header() {
       </Box>
       
       <Menu as="div" className="profile-menu">
-        <Menu.Button>
+        <Menu.Button className="profile-button">
             Test
             <KeyboardArrowDownIcon fontSize="small" />
         </Menu.Button>
