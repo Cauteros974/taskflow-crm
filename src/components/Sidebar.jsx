@@ -34,3 +34,13 @@ const navItems = [
     icon: <ViewKanbanIcon />
   }
 ];
+
+export default function Sidebar() {
+    return(
+        <Box clasname = "sidebar">
+            <Typography variant="h6" fontWeight={900} className="logo">
+                TaskFlow
+            </Typography>
+        </Box>
+    )
+}
