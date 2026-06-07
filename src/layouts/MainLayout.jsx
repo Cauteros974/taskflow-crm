@@ -8,6 +8,14 @@ export default function MainLayout() {
     return(
         <Box classname="app-shell">
             <Sidebar />
+
+            <Box className="app-content">
+                <Header />
+
+                <main className="page-container">
+                    <Outlet />
+                </main>
+            </Box>
         </Box>
-    )
+    );
 }
