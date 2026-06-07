@@ -7,4 +7,14 @@ const projectsSlice = createSlice({
     initialState: {
         items: mockProjects
     },
-})
+
+    reducers: {
+        addProject: {
+            reducer(state, action) {
+                state.items(action.payload)
+            }
+        }
+    }
+});
+
+export default projectsSlice.reducer;
