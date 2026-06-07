@@ -14,6 +14,13 @@ export default function Header() {
             Managing tasks, clients, and projects
         </Typography>
       </Box>
+      
+      <Menu as="div" className="profile-menu">
+        <Menu.Button>
+            Test
+            <KeyboardArrowDownIcon fontSize="small" />
+        </Menu.Button>
+      </Menu>
     </Box>
   );
 }
