@@ -1,5 +1,6 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 import { mockProjects } from "../../data/mockData";
+import { updateClient } from "../clients/clientsSlice";
 
 const projectsSlice = createSlice({
     name: "projects",
@@ -19,8 +20,14 @@ const projectsSlice = createSlice({
                         id: nanoid(),
                         ...project
                     }
-                }
+                };
             }
+        },
+
+        updateProject(state, action) {
+            const index = state.items.findIndex(
+                project => project.id === action.payload.id
+            )
         }
     }
 });
