@@ -29,6 +29,14 @@ export default function Header() {
                     </button>
                 }}
             </Menu.Item>
+
+            <Menu.Item>
+                {({focus}) => {
+                    <button className={focus ? "menu-item active": "menu-item"}>
+                        Settings
+                    </button>
+                }}
+            </Menu.Item>
          </Menu.Items>
       </Menu>
     </Box>
