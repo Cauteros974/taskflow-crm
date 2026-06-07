@@ -33,6 +33,9 @@ const projectsSlice = createSlice({
                 state.items[index] = {
                     ...state.items[index],
                     ...action.payload,
+                    progress: Number(
+                        action.payload.progress ?? state.items[index].progress
+                    )
                 }
             }
         }
