@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 export default function PageTitle({title}) {
     return(
@@ -7,6 +7,12 @@ export default function PageTitle({title}) {
                 <Typography variant="h4" fontWeight={900}>
                     {title}
                 </Typography>
+
+                {subtitle && (
+                    <Typography>
+                        
+                    </Typography>
+                )}
             </Box>
         </Box>
     )
