@@ -14,6 +14,8 @@ export default function PageTitle({title, subtitle}) {
                     </Typography>
                 )}
             </Box>
+
+            {action}
         </Box>
-    )
+    );
 }
