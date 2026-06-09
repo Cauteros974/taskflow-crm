@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-export default function PageTitle() {
+export default function PageTitle({title}) {
     return(
         <Box className="page-profile">
             <Box>
