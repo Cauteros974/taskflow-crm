@@ -1,5 +1,6 @@
 const colorMap = {
     New: "badge-blue",
+    In progress: "badge-orange",
     Completed: "badge-green"
 }
 
