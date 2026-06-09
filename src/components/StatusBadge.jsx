@@ -6,6 +6,8 @@ const colorMap = {
 
     Low: "bagde-blue",
     Medium: "badge-orange",
+    High: "badge-purple",
+    Critical: "badge-red",
 
     Active: "badge-green",
     Potential: "badge-blue",
