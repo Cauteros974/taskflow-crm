@@ -11,6 +11,11 @@ const colorMap = {
 
     Active: "badge-green",
     Potential: "badge-blue",
+
+    Planning: "badge-blue",
+    "In Progress": "badge-orange",
+    Pause: "badge-red",
+    Completed: "badge-green"
 }
 
 export default function StatusMap({}) {
