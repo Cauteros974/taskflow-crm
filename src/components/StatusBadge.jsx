@@ -4,8 +4,8 @@ const colorMap = {
     "Under review": "badge-purple",
     Completed: "badge-green",
 
-    "Low": "bagde-blue",
-    "Medium": "badge-orange",
+    Low: "bagde-blue",
+    Medium: "badge-orange",
 
     Active: "badge-green",
     Potential: "badge-blue",
