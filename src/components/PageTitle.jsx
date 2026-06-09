@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-export default function PageTitle({title}) {
+export default function PageTitle({title, subtitle}) {
     return(
         <Box className="page-profile">
             <Box>
@@ -9,8 +9,8 @@ export default function PageTitle({title}) {
                 </Typography>
 
                 {subtitle && (
-                    <Typography>
-                        
+                    <Typography variant="body1" color="text.secondary">
+                        {subtitle}
                     </Typography>
                 )}
             </Box>
