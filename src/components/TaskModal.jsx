@@ -92,8 +92,11 @@ export default function TaskModal({open, close}){
                     <HeadlessSelect
                         label="Client"
                         value={}
-                        onChange={(clientName)}
-                        option={["Not selected", ...clients.map((client) => client)]}
+                        onChange={(clientName) => {
+                            const client = clients.find((item) => item.name === clientName);
+                            updateField("clientId", client?.id || "");
+                        }}
+                        option={["Not selected", ...clients.map((client) => client.name)]}
                     />
                     
                  </div>
