@@ -25,6 +25,8 @@ export default function TaskModal(){
     const clients = useSelector((state) => state.clients.items);
     const projects = useSelector((state) => state.projects.items);
 
+    const [form, setForm] = useState(emptyTask);
+
     return(
         <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
             <DialogTitle>
