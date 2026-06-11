@@ -33,5 +33,5 @@ export default function HeadlessSelect({ value, onChange, options, label}) {
                 </div>
             </Listbox>
         </div>
-    )
+    );
 }
