@@ -104,7 +104,10 @@ export default function TaskModal({open, close}){
 
                     <HeadlessSelect 
                         label="Project"
-
+                        value={
+                            projects.find((project) => project.id === form.projectId)
+                            ?.title || "Not selected"
+                        }
                     />
                     
                  </div>
