@@ -14,6 +14,12 @@ import dayjs from "dayjs";
 import HeadlessSelect from "./HeadlessSelect";
 import { status, priorities} from "../data/mockData";
 
+const emptyTask = {
+    title="",
+    description="",
+    status="New"
+}
+
 export default function TaskModal(){
     return(
         <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
