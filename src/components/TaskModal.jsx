@@ -41,6 +41,17 @@ export default function TaskModal({open, close}){
                 <TextField 
                     label="Name"
                     value={form.title}
+                    onChange={(event) => updateField("title", event.target.value)}
+                    fullWidth
+                />
+
+                <TextField
+                    label="Description"
+                    value={form.description}
+                    onChange={(event) => updateField("description", event.target.value)}
+                    fullWidth
+                    multiline
+                    minRows={3}
                 />
             </DialogContent>
         </Dialog>
