@@ -20,12 +20,16 @@ const emptyTask = {
     status="New"
 }
 
-export default function TaskModal(){
+export default function TaskModal({open, close}){
 
     const clients = useSelector((state) => state.clients.items);
     const projects = useSelector((state) => state.projects.items);
 
     const [form, setForm] = useState(emptyTask);
+
+    useEffect(() => {
+        setForm(task || emptyTask);
+    }, [task, model]);
 
     return(
         <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
