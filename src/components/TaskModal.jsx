@@ -87,6 +87,16 @@ export default function TaskModal({open, close}){
                         options={priorities}
                     />
                  </div>
+
+                 <div>
+                    <HeadlessSelect
+                        label="Client"
+                        value={}
+                        onChange={(clientName)}
+                        option={["Not selected", ...clients.map((client) => client)]}
+                    />
+                    
+                 </div>
             </DialogContent>
         </Dialog>
     )
