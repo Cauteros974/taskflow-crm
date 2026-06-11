@@ -132,5 +132,5 @@ export default function TaskModal({open, close}){
                  </div>
             </DialogContent>
         </Dialog>
-    )
+    );
 }
