@@ -38,6 +38,13 @@ export default function TaskModal({open, close}){
         }));
     };
 
+    const handleSubmit = () => {
+        if (!form.title.trim()) return;
+        
+        onSubmit(form);
+        onClose();
+    };
+
     return(
         <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
             <DialogTitle>
