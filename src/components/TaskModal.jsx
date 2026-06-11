@@ -91,12 +91,20 @@ export default function TaskModal({open, close}){
                  <div>
                     <HeadlessSelect
                         label="Client"
-                        value={}
+                        value={
+                            clients.find((client) => client.id === form.clientId)?.name ||
+                            "Not selected"
+                        }
                         onChange={(clientName) => {
                             const client = clients.find((item) => item.name === clientName);
                             updateField("clientId", client?.id || "");
                         }}
                         option={["Not selected", ...clients.map((client) => client.name)]}
+                    />
+
+                    <HeadlessSelect 
+                        label="Project"
+
                     />
                     
                  </div>
