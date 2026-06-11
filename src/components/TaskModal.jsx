@@ -58,7 +58,8 @@ export default function TaskModal({open, close}){
                     <HeadlessSelect
                         label="Status"
                         value={form.status}
-                        onChange={(event) => updateField("status", event.target.value)}
+                        onChange={(event) => updateField("status", value)}
+                        options={statuses}
                     />
                  </div>
             </DialogContent>
