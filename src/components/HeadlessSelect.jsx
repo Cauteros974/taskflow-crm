@@ -14,7 +14,11 @@ export default function HeadlessSelect({ value, onChange, options, label}) {
                     <Listbox.Option>
                         {options.map((option) => (
                             <Listbox.Option key={option} value={option}>
-                                <div>
+                                <div
+                                    className={`listbox-option ${
+                                        focus ? "focused" : ""
+                                    } ${selected ? "selected" : ""}`}
+                                >
                                     {option}
                                 </div>
                             </Listbox.Option>
