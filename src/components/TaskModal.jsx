@@ -31,6 +31,13 @@ export default function TaskModal({open, close}){
         setForm(task || emptyTask);
     }, [task, open]);
 
+    const updateField = (field, value) => {
+        setForm((prev) => ({
+            ...prev,
+            [field]: value
+        }));
+    };
+
     return(
         <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
             <DialogTitle>
