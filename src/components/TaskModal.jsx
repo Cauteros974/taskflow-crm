@@ -53,6 +53,14 @@ export default function TaskModal({open, close}){
                     multiline
                     minRows={3}
                 />
+
+                 <div className="form-grid">
+                    <HeadlessSelect
+                        label="Status"
+                        value={form.status}
+                        onChange={(event) => updateField("status", event.target.value)}
+                    />
+                 </div>
             </DialogContent>
         </Dialog>
     )
