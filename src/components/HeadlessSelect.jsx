@@ -11,6 +11,15 @@ export default function HeadlessSelect({ value, onChange, options, label}) {
                         {value}
                         <KeyboardArrowDownIcon fontSize="small" />
                     </Listbox.Button>
+                    <Listbox.Option>
+                        {options.map((option) => (
+                            <Listbox.Option key={option} value={option}>
+                                <div>
+                                    {option}
+                                </div>
+                            </Listbox.Option>
+                        ))}
+                    </Listbox.Option>
                 </div>
             </Listbox>
         </div>
