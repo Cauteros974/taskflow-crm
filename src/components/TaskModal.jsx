@@ -108,6 +108,12 @@ export default function TaskModal({open, close}){
                             projects.find((project) => project.id === form.projectId)
                             ?.title || "Not selected"
                         }
+                        onChange={(projectTitle) => {
+                            const project = projects.find(
+                                (item) => item.title === projectTitle
+                            );
+                            updateField("projectId", project?.id || "");
+                        }}
                     />
                     
                  </div>
