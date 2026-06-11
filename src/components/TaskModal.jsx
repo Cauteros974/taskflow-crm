@@ -17,7 +17,11 @@ import { status, priorities} from "../data/mockData";
 const emptyTask = {
     title="",
     description="",
-    status="New"
+    status="New",
+    priority: "Middle",
+    projectId: "",
+    clientId: "",
+    dueDate: dayjs().add(7, "day").format("YYYY-MM-DD")
 }
 
 export default function TaskModal({open, close}){
