@@ -29,7 +29,7 @@ export default function TaskModal({open, close}){
 
     useEffect(() => {
         setForm(task || emptyTask);
-    }, [task, model]);
+    }, [task, open]);
 
     return(
         <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
