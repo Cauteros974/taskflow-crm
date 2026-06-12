@@ -67,6 +67,7 @@ export default function Dashboard() {
                     <StatCard title="Total tasks" value={tasks.length} />
                     <StatCard title="In progress" value={inProgress} />
                     <StatCard title="Under review" value={review} />
+                    <StatCard title="Critical" value={critical} />
                 </Grid>
             </PageTitle>
         </>
