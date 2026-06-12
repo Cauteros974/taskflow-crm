@@ -76,11 +76,13 @@ export default function TaskPage() {
             title: "Client",
             dataIndex: "clientId",
             render: (clientId) => 
-                clients.find((client) => client.id === clientId)
+                clients.find((client) => client.id === clientId)?.name || "_"
         },
         {
             title: "Project",
-            dataIndex: "ProjectId"
+            dataIndex: "projectId",
+            render: (projectId) => 
+                projects.find((project) => project.id === projectId)?.name || "_"
         }
     ]
 }
