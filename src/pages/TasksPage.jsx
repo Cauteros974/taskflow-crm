@@ -177,6 +177,8 @@ export default function TaskPage() {
                     }
                     options={["All", ...priorities]}
                 />
+
+                <Button onClick={() => dispatch(resetTaskFilters())}>Reset</Button>
             </div>
         </>
     )
