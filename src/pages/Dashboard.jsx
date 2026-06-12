@@ -88,6 +88,16 @@ export default function Dashboard() {
                             </CardContent>
                         </Card>
                     </Grid>
+
+                    <Grid item xs={12}>
+                        <Card className="soft-card">
+                            <CardContent>
+                                <Typography>
+                                    Upcoming tasks
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
                 </Grid>
             </PageTitle>
         </>
