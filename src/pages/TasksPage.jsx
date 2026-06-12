@@ -180,6 +180,13 @@ export default function TaskPage() {
 
                 <Button onClick={() => dispatch(resetTaskFilters())}>Reset</Button>
             </div>
+
+            <div className="table-card">
+                <Table
+                    rowKey="id"
+                    columns={columns}
+                />
+            </div>
         </>
     )
 }
