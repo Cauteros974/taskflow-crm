@@ -29,10 +29,8 @@ export default function TaskPage() {
     const [editingTask, setEditingTask] = useState(null);
 
     const filteredTasks = useMemo(() => {
-        return tasks.filter((task) => {
+        return task.filter((task) => {
             const matchesSearch = task.title
-                .toLowerCase()
-                .includes(filters.search.toLowerCase());
-        )
+        })
     })
 }
