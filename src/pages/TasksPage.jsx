@@ -15,8 +15,15 @@ import {
     resetTaskFilters
 } from "../features/tasks/tasksSlice.js";
 
+import { priorities, statuses } from "../data/mockData.js";
+
 export default function TaskPage() {
     const dispatch = useDispatch();
+
+    const tasks = useSelector((state) => state.tasks.items);
+    const filters = useSelector((state) => state.tasks.filters);
+    const clients = useSelector((state) => state.clients.items);
+    const projects = useSelector((state) => state.projects.items);
 
     const [modalOpen, setModalOpen] = useState(false);
     const [editingTask, setEditingTask] = useState(null)
