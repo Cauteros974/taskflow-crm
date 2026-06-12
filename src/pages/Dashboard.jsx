@@ -59,7 +59,10 @@ export default function Dashboard() {
 
     return(
         <>
-            <PageTitle>
+            <PageTitle
+                title="Dashboard"
+                subtitle="General statistics on tasks, clients, and projects"
+            >
                 <Grid>
                     <StatCard title="Total tasks" value={tasks.length} />
                     <StatCard title="In progress" value={inProgress} />
