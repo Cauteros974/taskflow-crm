@@ -26,5 +26,13 @@ export default function TaskPage() {
     const projects = useSelector((state) => state.projects.items);
 
     const [modalOpen, setModalOpen] = useState(false);
-    const [editingTask, setEditingTask] = useState(null)
+    const [editingTask, setEditingTask] = useState(null);
+
+    const filteredTasks = useMemo(() => {
+        return tasks.filter((task) => {
+            const matchesSearch = task.title
+                .toLowerCase()
+                .includes(filters.search.toLowerCase());
+        )
+    })
 }
