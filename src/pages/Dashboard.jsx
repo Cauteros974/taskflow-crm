@@ -55,5 +55,17 @@ export default function Dashboard() {
             title: "Deadline",
             dataIndex: "dueDate"
         }
-    ]
+    ];
+
+    return(
+        <>
+            <PageTitle>
+                <Grid>
+                    <StatCard title="Total tasks" value={tasks.length} />
+                    <StatCard title="In progress" value={inProgress} />
+                    <StatCard title="Under review" value={review} />
+                </Grid>
+            </PageTitle>
+        </>
+    )
 }
