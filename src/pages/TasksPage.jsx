@@ -36,6 +36,9 @@ export default function TaskPage() {
 
                 const matchesStatus = 
                     filters.status === "All";
+                
+                const matchesPriority =
+                    filters.priority === "All"
         })
     })
 }
