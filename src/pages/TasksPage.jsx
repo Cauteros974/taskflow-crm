@@ -47,5 +47,10 @@ export default function TaskPage() {
     const openCreateModel = () => {
         setEditingTask(null);
         setModalOpen(true);
-    }
+    };
+
+    const openEditModal = (task) => {
+        setEditingTask(task);
+        setModalOpen(true);
+    };
 }
