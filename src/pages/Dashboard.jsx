@@ -102,14 +102,24 @@ export default function Dashboard() {
                                     dataSource={[...tasks].slice(0, 5)}
                                     pagination={false}
                                     size="small"
-                                >
-                                    
-                                </Table>
+                                />
                             </CardContent>
                         </Card>
                     </Grid>
                 </Grid>
             </PageTitle>
         </>
+    );
+}
+
+function StatCard({title, value}) {
+    return(
+        <Grid>
+            <Card>
+                <Typography variant="body2">
+                    {title}
+                </Typography>
+            </Card>
+        </Grid>
     )
 }
