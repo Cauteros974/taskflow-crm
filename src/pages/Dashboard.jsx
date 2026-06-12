@@ -83,6 +83,8 @@ export default function Dashboard() {
                                 <Typography color="text.secondary" gutterBottom>
                                     Completed {completed} of {tasks.length}
                                 </Typography>
+
+                                <LinearProgress variant="determinate" value={progressValue}/>
                             </CardContent>
                         </Card>
                     </Grid>
