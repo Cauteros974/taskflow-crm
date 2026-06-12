@@ -89,7 +89,7 @@ export default function Dashboard() {
                         </Card>
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid item xs={12} md={7}>
                         <Card className="soft-card">
                             <CardContent>
                                 <Typography variant="h6" fontWeight={800} gutterBottom>
