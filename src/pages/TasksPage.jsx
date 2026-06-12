@@ -33,6 +33,9 @@ export default function TaskPage() {
             const matchesSearch = task.title
                 .toLowerCase()
                 .includes(filters.search.toLowerCase());
+
+                const matchesStatus = 
+                    filters.status === "All";
         })
     })
 }
