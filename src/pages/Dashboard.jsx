@@ -28,4 +28,8 @@ export default function Dashboard() {
         (task) => task.status === "Review"
     ).length;
 
+    const critical = tasks.filter(
+        (task) => task.priority === "Critical"
+    ).length;
+
 }
