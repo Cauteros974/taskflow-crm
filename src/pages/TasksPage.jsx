@@ -93,6 +93,11 @@ export default function TaskPage() {
             title: "Priority",
             dataIndex: "priority",
             render: (value) => <StatusBadge value={value} />
-        }
+        },
+        {
+            title: "Deadline",
+            dataIndex: "dueDate",
+            sorter: (a, b) => a.dueDate.localeCompare(b.dueDate)
+        },
     ]
 }
