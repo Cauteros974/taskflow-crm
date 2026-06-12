@@ -68,6 +68,8 @@ export default function Dashboard() {
                     <StatCard title="In progress" value={inProgress} />
                     <StatCard title="Under review" value={review} />
                     <StatCard title="Critical" value={critical} />
+                    <StatCard title="Clients" value={clients.length} />
+                    <StatCard title="Projects" value={projects.length} />
                 </Grid>
             </PageTitle>
         </>
