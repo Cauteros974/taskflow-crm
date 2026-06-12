@@ -39,6 +39,8 @@ export default function TaskPage() {
                 
                 const matchesPriority =
                     filters.priority === "All" || task.priority === filters.priority;
-        })
-    })
+
+                return matchesSearch && matchesStatus && matchesPriority;
+        });
+    }, [tasks, filters]);
 }
