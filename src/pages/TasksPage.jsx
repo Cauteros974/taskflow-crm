@@ -102,8 +102,8 @@ export default function TaskPage() {
         {
             title: "Actions",
             render: (_, record) => (
-                <div>
-                    <Button onClick={() => openEditModal(record)}>
+                <div className="table-actions">
+                    <Button size= "small" onClick={() => openEditModal(record)}>
                         Change
                     </Button>
                 </div>
