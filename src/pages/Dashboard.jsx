@@ -116,9 +116,11 @@ function StatCard({title, value}) {
     return(
         <Grid item xs={12} sm={6} md={4} lg={2}>
             <Card className="stat-card">
-                <Typography variant="body2">
-                    {title}
-                </Typography>
+                <CardContent>
+                    <Typography variant="body2">
+                        {title}
+                    </Typography>
+                </CardContent>
             </Card>
         </Grid>
     )
