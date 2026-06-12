@@ -35,10 +35,10 @@ export default function TaskPage() {
                 .includes(filters.search.toLowerCase());
 
                 const matchesStatus = 
-                    filters.status === "All";
+                    filters.status === "All" || task.status === filters.status;
                 
                 const matchesPriority =
-                    filters.priority === "All"
+                    filters.priority === "All" || task.priority === filters.priority;
         })
     })
 }
