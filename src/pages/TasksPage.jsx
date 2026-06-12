@@ -83,6 +83,16 @@ export default function TaskPage() {
             dataIndex: "projectId",
             render: (projectId) => 
                 projects.find((project) => project.id === projectId)?.name || "_"
+        },
+        {
+            title: "Status",
+            dataIndex: "status",
+            render: (value) => <StatusBadge value={value} />
+        },
+        {
+            title: "Priority",
+            dataIndex: "priority",
+            render: (value) => <StatusBadge value={value} />
         }
     ]
 }
