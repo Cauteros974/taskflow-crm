@@ -95,6 +95,14 @@ export default function Dashboard() {
                                 <Typography variant="h6" fontWeight={800} gutterBottom>
                                     Upcoming tasks
                                 </Typography>
+
+                                <Table
+                                    rowKey="id"
+                                    column={columns}
+                                    size="small"
+                                >
+                                    
+                                </Table>
                             </CardContent>
                         </Card>
                     </Grid>
