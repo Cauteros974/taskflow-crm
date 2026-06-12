@@ -42,5 +42,10 @@ export default function TaskPage() {
 
                 return matchesSearch && matchesStatus && matchesPriority;
         });
-    }, [tasks, filters]);
+    }, [tasks, filters]); 
+ 
+    const openCreateModel = () => {
+        setEditingTask(null);
+        setModalOpen(true);
+    }
 }
