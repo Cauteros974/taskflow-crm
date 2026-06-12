@@ -31,6 +31,8 @@ export default function TaskPage() {
     const filteredTasks = useMemo(() => {
         return task.filter((task) => {
             const matchesSearch = task.title
+                .toLowerCase()
+                .includes(filters.search.toLowerCase());
         })
     })
 }
