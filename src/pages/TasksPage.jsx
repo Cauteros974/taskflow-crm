@@ -129,6 +129,8 @@ export default function TaskPage() {
                 subtitle="Creating, editing, searching and filtering tasks"
                 action = {
                     <Button
+                        variant="contained"
+                        startIcon={<AddIcon />}
                         onClick={openCreateModel}
                     >
                         Add task
