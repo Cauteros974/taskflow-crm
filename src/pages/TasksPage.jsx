@@ -65,5 +65,16 @@ export default function TaskPage() {
         } else{
             dispatch(addTask(task));
         }
-    }
+    };
+
+    const columns = [
+        {
+            title: "Name",
+            dataIndex: "title"
+        },
+        {
+            title: "Client",
+            dataIndex: "clientId"
+        }
+    ]
 }
