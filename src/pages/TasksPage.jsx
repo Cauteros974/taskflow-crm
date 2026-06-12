@@ -126,9 +126,11 @@ export default function TaskPage() {
         <>
             <PageTitle
                 title = "Tasks"
-                subtitle="Create, Edit, search and filters tasks"
+                subtitle="Creating, editing, searching and filtering tasks"
                 action = {
-                    <Button>
+                    <Button
+                        onClick={openCreateModel}
+                    >
                         Add task
                     </Button>
                 }
