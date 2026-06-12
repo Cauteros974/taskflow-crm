@@ -99,6 +99,8 @@ export default function Dashboard() {
                                 <Table
                                     rowKey="id"
                                     column={columns}
+                                    dataSource={[...tasks].slice(0, 5)}
+                                    pagination={false}
                                     size="small"
                                 >
                                     
