@@ -107,7 +107,12 @@ export default function TaskPage() {
                         Change
                     </Button>
 
-                    <Popconfirm>
+                    <Popconfirm
+                        title = "Delete task?"
+                        okText = "Yes"
+                        cancelText = "No"
+                        onConfirm={() => dispatch(deleteTask(record.id))}
+                    >
                         <Button>
                             Delete
                         </Button>
