@@ -106,6 +106,12 @@ export default function TaskPage() {
                     <Button size= "small" onClick={() => openEditModal(record)}>
                         Change
                     </Button>
+
+                    <Popconfirm>
+                        <Button>
+                            Delete
+                        </Button>
+                    </Popconfirm>
                 </div>
             )
         }
