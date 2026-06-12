@@ -143,6 +143,13 @@ export default function TaskPage() {
                     label="search"
                     size="small"
                     value={filters.search}
+                    onChange={() =>
+                        dispatch(
+                            setTaskFilter => {
+                                search: event.target.value
+                            }
+                        )
+                    }
                 />
             </div>
         </>
