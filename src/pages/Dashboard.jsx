@@ -71,6 +71,18 @@ export default function Dashboard() {
                     <StatCard title="Clients" value={clients.length} />
                     <StatCard title="Projects" value={projects.length} />
                 </Grid>
+
+                <Grid>
+                    <Grid>
+                        <Card>
+                            <CardContent>
+                                <Typography variant="h6" fontWeight={800} gutterBottom>
+                                    Task progress
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                </Grid>
             </PageTitle>
         </>
     )
