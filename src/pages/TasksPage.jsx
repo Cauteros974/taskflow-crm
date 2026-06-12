@@ -99,5 +99,15 @@ export default function TaskPage() {
             dataIndex: "dueDate",
             sorter: (a, b) => a.dueDate.localeCompare(b.dueDate)
         },
+        {
+            title: "Actions",
+            render: (_, record) => (
+                <div>
+                    <Button onClick={() => openEditModal(record)}>
+                        Change
+                    </Button>
+                </div>
+            )
+        }
     ]
 }
