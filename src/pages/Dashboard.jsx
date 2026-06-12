@@ -79,6 +79,10 @@ export default function Dashboard() {
                                 <Typography variant="h6" fontWeight={800} gutterBottom>
                                     Task progress
                                 </Typography>
+
+                                <Typography>
+                                    Completed{completed}
+                                </Typography>
                             </CardContent>
                         </Card>
                     </Grid>
