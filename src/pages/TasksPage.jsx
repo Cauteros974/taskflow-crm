@@ -138,6 +138,13 @@ export default function TaskPage() {
                 }
             />
             
+            <div className="tilters-panel">
+                <TextField
+                    label="search"
+                    size="small"
+                    value={filters.search}
+                />
+            </div>
         </>
     )
 }
