@@ -80,8 +80,8 @@ export default function Dashboard() {
                                     Task progress
                                 </Typography>
 
-                                <Typography>
-                                    Completed{completed}
+                                <Typography color="text.secondary" gutterBottom>
+                                    Completed {completed} of {tasks.length}
                                 </Typography>
                             </CardContent>
                         </Card>
