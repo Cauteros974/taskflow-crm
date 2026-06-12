@@ -61,6 +61,8 @@ export default function TaskPage() {
                     ...task
                 })
             );
+        } else{
+            dispatch(addTask(task));
         }
     }
 }
