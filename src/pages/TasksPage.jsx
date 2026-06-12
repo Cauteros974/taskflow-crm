@@ -74,7 +74,9 @@ export default function TaskPage() {
         },
         {
             title: "Client",
-            dataIndex: "clientId"
+            dataIndex: "clientId",
+            render: (clientId) => 
+                clients.find((client) => client.id === clientId)
         },
         {
             title: "Project",
