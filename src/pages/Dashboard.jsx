@@ -73,8 +73,8 @@ export default function Dashboard() {
                 </Grid>
 
                 <Grid container spacing={2} className="dashboard-grid">
-                    <Grid>
-                        <Card>
+                    <Grid item xs={12} md={5}>
+                        <Card className="soft-card">
                             <CardContent>
                                 <Typography variant="h6" fontWeight={800} gutterBottom>
                                     Task progress
