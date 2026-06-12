@@ -53,4 +53,14 @@ export default function TaskPage() {
         setEditingTask(task);
         setModalOpen(true);
     };
+
+    const handleSubmit = (task) => {
+        if (editingTask) {
+            dispatch (
+                updateTask({
+                    ...task
+                })
+            );
+        }
+    }
 }
