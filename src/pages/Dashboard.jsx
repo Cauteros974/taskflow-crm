@@ -120,6 +120,10 @@ function StatCard({title, value}) {
                     <Typography variant="body2">
                         {title}
                     </Typography>
+
+                    <Typography variant="h4" fontWeight={900}>
+                        {value}
+                    </Typography>
                 </CardContent>
             </Card>
         </Grid>
