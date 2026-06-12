@@ -151,6 +151,19 @@ export default function TaskPage() {
                         )
                     }
                 />
+
+                <HeadlessSelect 
+                    label="Status"
+                    size="small"
+                    value={filters.status}
+                    onChange={(value) => 
+                        dispatch(
+                            setTaskFilter({
+                                status: value
+                            })
+                        )
+                    }
+                />
             </div>
         </>
     )
