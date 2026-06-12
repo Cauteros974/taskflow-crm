@@ -58,7 +58,8 @@ export default function TaskPage() {
         if (editingTask) {
             dispatch (
                 updateTask({
-                    ...task
+                    ...task,
+                    id: editingTask.id
                 })
             );
         } else{
