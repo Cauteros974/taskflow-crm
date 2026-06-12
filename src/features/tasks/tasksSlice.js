@@ -71,7 +71,7 @@ const tasksSlice = createSlice({
 });
 
 export const {
-     addTask,
+    addTask,
     updateTask,
     deleteTask,
     changeTaskStatus,

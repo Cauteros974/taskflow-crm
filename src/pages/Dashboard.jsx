@@ -127,5 +127,5 @@ function StatCard({title, value}) {
                 </CardContent>
             </Card>
         </Grid>
-    )
+    );
 }
