@@ -50,5 +50,9 @@ export default function Dashboard() {
             dataIndex: "priority",
             render: (value) => <StatusBadge value={value} />
         },
+        {
+            title: "Deadline",
+            dataIndex: "dueDate"
+        }
     ]
 }
