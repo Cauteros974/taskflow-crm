@@ -20,4 +20,12 @@ export default function Dashboard() {
         (task) => task.status === "Completed"
     ).length;
 
+    const inProgress = tasks.filter(
+        (task) => task.status == "In process"
+    ).length;
+
+    const review = tasks.filter(
+        (task) => task.status === "Review"
+    ).length;
+
 }
