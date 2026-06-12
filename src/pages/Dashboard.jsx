@@ -44,6 +44,11 @@ export default function Dashboard() {
         {
             title: "Status",
             dataIndex: "status",
-        }
+        },
+        {
+            title: "Priority",
+            dataIndex: "priority",
+            render: (value) => <StatusBadge value={value} />
+        },
     ]
 }
