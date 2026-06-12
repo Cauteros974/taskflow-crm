@@ -114,8 +114,8 @@ export default function Dashboard() {
 
 function StatCard({title, value}) {
     return(
-        <Grid>
-            <Card>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+            <Card className="stat-card">
                 <Typography variant="body2">
                     {title}
                 </Typography>
