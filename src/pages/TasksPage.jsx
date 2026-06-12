@@ -195,7 +195,9 @@ export default function TaskPage() {
             <TaskModal 
                 open={modalOpen}
                 onClose={() => setModalOpen(false)}
+                onSubmit={handleSubmit}
+                task={editingTask}
             />
         </>
-    )
+    );
 }
