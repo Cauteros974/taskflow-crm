@@ -120,5 +120,20 @@ export default function TaskPage() {
                 </div>
             )
         }
-    ]
+    ];
+
+    return(
+        <>
+            <PageTitle
+                title = "Tasks"
+                subtitle="Create, Edit, search and filters tasks"
+                action = {
+                    <Button>
+                        Add task
+                    </Button>
+                }
+            />
+            
+        </>
+    )
 }
