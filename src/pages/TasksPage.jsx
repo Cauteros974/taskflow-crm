@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button, TextField } from "@mui/material";
 import { Popconfirm, Table } from "antd";
@@ -17,4 +17,7 @@ import {
 
 export default function TaskPage() {
     const dispatch = useDispatch();
+
+    const [modalOpen, setModalOpen] = useState(false);
+    const [editingTask, setEditingTask] = useState(null)
 }
