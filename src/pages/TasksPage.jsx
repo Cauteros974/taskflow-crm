@@ -154,7 +154,6 @@ export default function TaskPage() {
 
                 <HeadlessSelect 
                     label="Status"
-                    size="small"
                     value={filters.status}
                     onChange={(value) => 
                         dispatch(
@@ -163,7 +162,20 @@ export default function TaskPage() {
                             })
                         )
                     }
-                    options={["All"]}
+                    options={["All", ...statuses]}
+                />
+
+                <HeadlessSelect 
+                    label="Priority"
+                    value={filters.priority}
+                    onChange={(value) => 
+                        dispatch(
+                            setTaskFilter({
+                                priority: value
+                            })
+                        )
+                    }
+                    options={["All", ...priorities]}
                 />
             </div>
         </>
