@@ -72,7 +72,7 @@ export default function Dashboard() {
                     <StatCard title="Projects" value={projects.length} />
                 </Grid>
 
-                <Grid>
+                <Grid container spacing={2} className="dashboard-grid">
                     <Grid>
                         <Card>
                             <CardContent>
