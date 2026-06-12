@@ -75,6 +75,10 @@ export default function TaskPage() {
         {
             title: "Client",
             dataIndex: "clientId"
+        },
+        {
+            title: "Project",
+            dataIndex: "ProjectId"
         }
     ]
 }
