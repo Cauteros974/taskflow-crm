@@ -191,6 +191,11 @@ export default function TaskPage() {
                     }}
                 />
             </div>
+
+            <TaskModal 
+                open={modalOpen}
+                onClose={() => setModalOpen(false)}
+            />
         </>
     )
 }
