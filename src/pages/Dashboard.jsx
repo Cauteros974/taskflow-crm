@@ -13,5 +13,6 @@ import StatusBadge from "../components/StatusBadge.jsx";
 
 export default function Dashboard() {
     const tasks = useSelector((state) => state.tasks.items);
-    
+    const clients = useSelector((state) => state.clients.items);
+    const projects = useSelector((state) => state.projects.items);
 }
