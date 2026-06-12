@@ -39,7 +39,11 @@ export default function Dashboard() {
     const columns = [
         {
             title: "Task",
-            dataIndex: "Title"
+            dataIndex: "title"
+        },
+        {
+            title: "Status",
+            dataIndex: "status",
         }
     ]
 }
