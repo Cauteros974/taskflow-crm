@@ -32,4 +32,7 @@ export default function Dashboard() {
         (task) => task.priority === "Critical"
     ).length;
 
+    const progressValue = tasks.length
+        ? Math.round((completed / tasks.length))
+        : 0
 }
