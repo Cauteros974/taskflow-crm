@@ -185,6 +185,10 @@ export default function TaskPage() {
                 <Table
                     rowKey="id"
                     columns={columns}
+                    dataSource={filteredTasks}
+                    pagination={{
+                        pageSize: 6
+                    }}
                 />
             </div>
         </>
