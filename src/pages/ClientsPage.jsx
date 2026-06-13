@@ -120,7 +120,11 @@ export default function ClientPage() {
                                         Change
                                     </Button>
 
-                                    <Popconfirm>
+                                    <Popconfirm
+                                        title="Delete client?"
+                                        okText="Yes"
+                                        cancelText="No"
+                                    >
                                         <Button size="small" color="error">
                                             Delete
                                         </Button>
