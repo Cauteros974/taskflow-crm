@@ -18,7 +18,7 @@ const colorMap = {
     Completed: "badge-green"
 }
 
-export default function StatusMap({}) {
+export default function StatusBadge({}) {
     return(
         <span className={`badge ${colorMap[value] || "badge-blue"}`}>
             {value}

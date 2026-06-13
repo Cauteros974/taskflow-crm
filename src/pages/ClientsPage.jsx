@@ -1,0 +1,20 @@
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Button, Card, CardContent, Grid, TextField, Typography } from "@mui/material";
+import { Form, Input, Modal, Popconfirm, Select } from "antd";
+import AddIcon from "@mui/icons-material/Add";
+
+import PageTitle from "../components/PageTitle";
+import StatusBadge from "../components/StatusBadge";
+
+import {
+  addClient,
+  deleteClient,
+  updateClient
+} from "../features/clients/clientsSlice.js";
+
+export default function ClientPage() {
+    const dispatch = useDispatch();
+
+    const clients = useSelector((state) => state.clients.items);
+}
