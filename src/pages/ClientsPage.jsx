@@ -69,11 +69,20 @@ export default function ClientPage() {
                         subtitle="Customer cards, search and contact management"
                         startIcon={<AddIcon />}
                         onClick={openCreateModal}
-                    />
+                    >
+                        Add a client
+                    </Button>
                 }
-            >
+            />
 
-            </PageTitle>
+            <div className="filters-panel">
+                <TextField 
+                    label="Search for a client"
+                    value={search}
+                    onChange={(event) => setSearch(event.target.value)}
+                />
+            </div>
+            
         </>
     )
 }
