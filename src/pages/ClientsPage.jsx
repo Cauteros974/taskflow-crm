@@ -23,4 +23,12 @@ export default function ClientPage() {
     const [editingClient, setEditingClient] = useState(null);
 
     const [form] = Form.useForm();
+
+    const filterClietns = clients.filter((clients) => {
+        const value = `${client.name} ${client.company} ${client.email}`.toLowerCase();
+
+        return value.includes(search.toLowerCase());
+    });
+
+    
 }
