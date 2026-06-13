@@ -23,4 +23,6 @@ export default function ProjectsPage() {
     const tasks = useSelector((state) => state.tasks.items);
     
     const [search, setSearch] = useState("");
+    const [modalOpen, setModalOpen] = useState(false);
+    const [editingProject, setEditingProject] = useState(null);
 }
