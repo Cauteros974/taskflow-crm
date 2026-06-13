@@ -112,7 +112,7 @@ export default function ClientPage() {
                                 </Typography>
                                 
                                 <div className="card-actions">
-                                    <Button className="card-action-change " size="small">
+                                    <Button size="small" onClick={() => openEditModal(client)}>
                                         Change
                                     </Button>
                                 </div>
