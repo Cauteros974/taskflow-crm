@@ -34,5 +34,11 @@ export default function ClientPage() {
         setEditingClient(nul);
         form.resetFields();
         setModalOpen(true);
+    };
+
+    const openEditModal = () => {
+        setEditingClient(client);
+        form.setFieldsValue(client);
+        setModalOpen(true);
     }
 }
