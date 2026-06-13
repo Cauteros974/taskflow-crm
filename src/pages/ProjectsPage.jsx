@@ -61,5 +61,13 @@ export default function ProjectsPage() {
             deadline: values.deadline ? values.deadline.format("YYYY-MM-DD") : ""
         };
 
+        if(editingProject) {
+            dispatch(
+                updateProject({
+                    ...payload,
+                    id: editingProject.id
+                })
+            )
+        }
     }
 }
