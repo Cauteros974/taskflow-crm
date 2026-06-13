@@ -44,6 +44,7 @@ export default function ProjectsPage() {
         form.setFieldsValue({
             ...project,
             startDate: project.startDate ? dayjs(protect.startDate) : null,
+            deadline: project.deadline ? dayjs(project.deadline) : null
         })
     }
 }
