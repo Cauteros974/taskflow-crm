@@ -101,7 +101,9 @@ export default function ProjectsPage() {
             </div>
 
             <Grid container spacing={2}>
-                
+                {fileredProjects.map((project) => {
+                    const client = clietns.fint((item) => item.id === project.clientId);
+                })}
             </Grid>
         </>
     )
