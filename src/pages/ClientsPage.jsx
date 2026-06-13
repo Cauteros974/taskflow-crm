@@ -42,15 +42,18 @@ export default function ClientPage() {
         setModalOpen(true);
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         const values = await form.validateFields();
 
         if(editingClient) {
             dispatch (
                 updateClient({
-                    ...values
+                    ...values,
+                    id: editingClient.id
                 })
-            )
-        }
+            );
+        } else [
+            dispatch(addClient(value));
+        ]
     }
 }
