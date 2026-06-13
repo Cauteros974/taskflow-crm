@@ -124,6 +124,7 @@ export default function ClientPage() {
                                         title="Delete client?"
                                         okText="Yes"
                                         cancelText="No"
+                                        onConfirm={() => dispatch(deleteClient(client.id))}
                                     >
                                         <Button size="small" color="error">
                                             Delete
@@ -135,6 +136,22 @@ export default function ClientPage() {
                     </Grid>
                 ))}
             </Grid>
+
+            <Modal>
+                <Form form={form} layout="vertical">
+                    <Form.Item
+                        name="name"
+                        label="Name"
+                        rules={[
+                            {
+                                required: true
+                            }
+                        ]}
+                    >
+                        <Input/>
+                    </Form.Item>
+                </Form>
+            </Modal>
             
         </>
     )
