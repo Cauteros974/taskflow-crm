@@ -12,7 +12,7 @@ import { DatePicker } from "antd";
 import dayjs from "dayjs";
 
 import HeadlessSelect from "./HeadlessSelect";
-import { status, priorities} from "../data/mockData";
+import { statuses, priorities} from "../data/mockData";
 
 const emptyTask = {
     title: "",
