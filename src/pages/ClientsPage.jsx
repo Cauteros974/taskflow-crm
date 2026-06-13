@@ -36,9 +36,21 @@ export default function ClientPage() {
         setModalOpen(true);
     };
 
-    const openEditModal = () => {
+    const openEditModal = (client) => {
         setEditingClient(client);
         form.setFieldsValue(client);
         setModalOpen(true);
+    };
+
+    const handleSubmit = () => {
+        const values = await form.validateFields();
+
+        if(editingClient) {
+            dispatch (
+                updateClient({
+                    ...values
+                })
+            )
+        }
     }
 }
