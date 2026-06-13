@@ -1,8 +1,8 @@
 export const statuses = ["New", "In process", "Under review", "Completed"];
 
-export const priorities = ["Low", "Middle", "Hight", "Critical"];
+export const priorities = ["Low", "Medium", "High", "Critical"];
 
-export const projectStatues = ["Planning", "In Progress", "Pause", "Completed"];
+export const projectStatuses = ["Planning", "In Progress", "Pause", "Completed"];
 
 export const mockClients = [
     {
@@ -39,8 +39,7 @@ export const mockProjects = [
         id: "project-1",
         title: "Website Redesign",
         clientId: "client-1",
-        description:
-            "Homepage update, responsive layout, and basic analytics.",
+        description: "Homepage update, responsive layout, and basic analytics.",
         startDate: "2026-05-12",
         deadline: "2026-06-30",
         status: "In Progress",
@@ -50,8 +49,7 @@ export const mockProjects = [
         id: "project-2",
         title: "CRM for applications",
         clientId: "client-2",
-        description:
-            "Mini CRM for processing incoming requests and monitoring statuses.",
+        description: "Mini CRM for processing incoming requests and monitoring statuses.",
         startDate: "2026-05-20",
         deadline: "2026-07-18",
         status: "Planning",
@@ -62,7 +60,7 @@ export const mockProjects = [
 export const mockTasks = [
     {
         id: "task-1",
-        titile: "Collect dashboard requirements",
+        title: "Collect dashboard requirements",  // fixed typo
         description: "Refine the required metrics and prepare a list of widgets",
         status: "Completed",
         priority: "Medium",
@@ -71,7 +69,7 @@ export const mockTasks = [
     },
     {
         id: "task-2",
-        titile: "Design statistics cards",
+        title: "Design statistics cards",  // fixed typo
         description: "Prepare the UI for the cards for the main page",
         status: "In Progress",
         priority: "High",
@@ -99,4 +97,4 @@ export const mockTasks = [
         clientId: "client-2",
         dueDate: "2026-06-19"
     }
-]
+];
