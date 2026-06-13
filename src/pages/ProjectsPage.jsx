@@ -29,6 +29,6 @@ export default function ProjectsPage() {
     const [form] = Form.useForm();
 
     const filteredProjects = projects.filter((project) => 
-        project.title.toLowerCase().includes()
+        project.title.toLowerCase().includes(search.toLowerCase())
     );
 }
