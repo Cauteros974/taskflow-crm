@@ -57,5 +57,21 @@ export default function ClientPage() {
         }
 
         setModalOpen(false);
-    }
+    };
+
+    return(
+        <>
+            <PageTitle
+                title = "Clients"
+                actions = {
+                    <Button 
+                        variant="contained"
+                        startIcon={AddIcon}
+                    />
+                }
+            >
+
+            </PageTitle>
+        </>
+    )
 }
