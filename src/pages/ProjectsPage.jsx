@@ -27,4 +27,8 @@ export default function ProjectsPage() {
     const [editingProject, setEditingProject] = useState(null);
 
     const [form] = Form.useForm();
+
+    const filteredProjects = projects.filter((project) => 
+        project.title.toLowerCase().includes()
+    );
 }
