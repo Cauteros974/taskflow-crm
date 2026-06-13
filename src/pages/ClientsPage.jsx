@@ -111,6 +111,11 @@ export default function ClientPage() {
                                     Phone: {client.phone}
                                 </Typography>
                                 
+                                <div className="card-actions">
+                                    <Button className="card-action-change " size="small">
+                                        Change
+                                    </Button>
+                                </div>
                             </CardContent>
                         </Card>
                     </Grid>
