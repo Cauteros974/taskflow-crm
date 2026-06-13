@@ -119,6 +119,12 @@ export default function ClientPage() {
                                     <Button size="small" onClick={() => openEditModal(client)}>
                                         Change
                                     </Button>
+
+                                    <Popconfirm>
+                                        <Button size="small" color="error">
+                                            Delete
+                                        </Button>
+                                    </Popconfirm>
                                 </div>
                             </CardContent>
                         </Card>
