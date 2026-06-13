@@ -89,9 +89,15 @@ export default function ProjectsPage() {
                         Add Project
                     </Button>
                 }
-            >
+            />
 
-            </PageTitle>
+            <div className="filters-panel">
+                <TextField
+                    label="Search for a project"
+                    size="small"
+                    value={search}
+                />
+            </div>
         </>
     )
 }
