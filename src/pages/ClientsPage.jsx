@@ -55,5 +55,7 @@ export default function ClientPage() {
         } else {
             dispatch(addClient(values));
         }
+
+        setModalOpen(false);
     }
 }
