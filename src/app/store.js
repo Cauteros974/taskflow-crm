@@ -1,30 +1,35 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
 
-const rootReducer = combineReducer ({
-    task: taskReducer,
-    clients: clientsReducer,
-    projects: projectReducer
+import tasksReducer from "../features/tasks/tasksSlice.js";
+import clientsReducer from "../features/clients/clientsSlice.js";
+import projectsReducer from "../features/projects/projectsSlice.js";
+
+const rootReducer = combineReducers({
+  tasks: tasksReducer,
+  clients: clientsReducer,
+  projects: projectsReducer
 });
 
 const loadState = () => {
-    try{
-        const savedState = localStorage.getItem("taskflow");
-        return savedState = JSON.parse(savedState) ; undefined;
-    } catch {
-        return undefined;
-    }
+  try {
+    const savedState = localStorage.getItem("taskflow-crm-state");
+    return savedState ? JSON.parse(savedState) : undefined;
+  } catch {
+    return undefined;
+  }
 };
 
-const savedState = (state) => {
-    try{
-        localStorage.setItem("askflow-crm-state", JSON.stringify(state));
-    } catch {
-        console.log("Failed to save data to localStorage")
-    }
+const saveState = (state) => {
+  try {
+    localStorage.setItem("taskflow-crm-state", JSON.stringify(state));
+  } catch {
+    console.log("Failed to save data to localStorage");
+  }
 };
 
 export const store = configureStore({
-    reducer: rootReducer
+  reducer: rootReducer,
+  preloadedState: loadState()
 });
 
 store.subscribe(() => {
