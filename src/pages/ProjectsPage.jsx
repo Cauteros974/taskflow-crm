@@ -22,4 +22,5 @@ export default function ProjectsPage() {
     const clients = useSelector(() => state.clients.items);
     const tasks = useSelector((state) => state.tasks.items);
     
+    const [search, setSearch] = useState("");
 }
