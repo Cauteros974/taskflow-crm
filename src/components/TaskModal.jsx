@@ -15,9 +15,9 @@ import HeadlessSelect from "./HeadlessSelect";
 import { status, priorities} from "../data/mockData";
 
 const emptyTask = {
-    title="",
-    description="",
-    status="New",
+    title: "",
+    description: "",
+    status: "New",
     priority: "Middle",
     projectId: "",
     clientId: "",

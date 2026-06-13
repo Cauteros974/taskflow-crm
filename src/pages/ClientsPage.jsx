@@ -207,7 +207,6 @@ export default function ClientPage() {
                     </Form.Item>
                 </Form>
             </Modal>
-            
         </>
-    )
+    );
 }
