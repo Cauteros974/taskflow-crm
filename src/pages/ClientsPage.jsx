@@ -102,6 +102,10 @@ export default function ClientPage() {
 
                                     <StatusBadge value={client.status} />
                                 </div>
+
+                                <Typography className="card-line">
+                                    Email: {client.email}
+                                </Typography>
                             </CardContent>
                         </Card>
                     </Grid>
