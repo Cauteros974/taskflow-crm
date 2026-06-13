@@ -110,6 +110,10 @@ export default function ClientPage() {
                                 <Typography className="card-line">
                                     Phone: {client.phone}
                                 </Typography>
+
+                                <Typography className="card-line">
+                                    Added: {client.createdAt}
+                                </Typography>
                                 
                                 <div className="card-actions">
                                     <Button size="small" onClick={() => openEditModal(client)}>
