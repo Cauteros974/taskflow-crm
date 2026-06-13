@@ -37,4 +37,13 @@ export default function ProjectsPage() {
         form.resetFields();
         setModalOpen(true);
     };
+
+    const openEditModal = (project) => {
+        setEditingProject(project);
+
+        form.setFieldsValue({
+            ...project,
+            startDate: project.startDate ? dayjs(protect.startDate) : null,
+        })
+    }
 }
