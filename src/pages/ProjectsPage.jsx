@@ -96,6 +96,7 @@ export default function ProjectsPage() {
                     label="Search for a project"
                     size="small"
                     value={search}
+                    onChange={(event) => setSearch(event.target.value)}
                 />
             </div>
         </>
