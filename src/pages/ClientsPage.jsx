@@ -17,4 +17,10 @@ export default function ClientPage() {
     const dispatch = useDispatch();
 
     const clients = useSelector((state) => state.clients.items);
+
+    const [search, setSearch] = useState("");
+    const [modalOpen, setModalOpen] = useState(false);
+    const [editingClient, setEditingClient] = useState(null);
+
+    const [form] = Form.useForm();
 }
