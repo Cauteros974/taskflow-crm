@@ -164,6 +164,32 @@ export default function ClientPage() {
                     >
                         <Input />
                     </Form.Item>
+
+                    <Form.Item
+                        name="email"
+                        label="Email"
+                        rules={[
+                        {
+                            required: true,
+                            message: "Enter email"
+                        }
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
+
+                    <Form.Item
+                        name="phone"
+                        label="Phone"
+                        rules={[
+                        {
+                            required: true,
+                            message: "Enter phone"
+                        }
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
                 </Form>
             </Modal>
             
