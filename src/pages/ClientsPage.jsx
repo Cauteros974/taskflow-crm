@@ -78,10 +78,29 @@ export default function ClientPage() {
             <div className="filters-panel">
                 <TextField 
                     label="Search for a client"
+                    size="small"
                     value={search}
                     onChange={(event) => setSearch(event.target.value)}
                 />
             </div>
+
+            <Grid container spacing={2}>
+                {filteredClients.map((client) => (
+                    <Grid item key={client.id}>
+                        <Card className="soft-card client-card">
+                            <CardContent>
+                                <div className="client-header">
+                                    <div>
+                                        <Typography variant="h6" fontWeight={800}>
+                                            {client.name}
+                                        </Typography>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                ))}
+            </Grid>
             
         </>
     )
