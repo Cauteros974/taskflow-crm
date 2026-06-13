@@ -31,4 +31,9 @@ export default function ProjectsPage() {
     const filteredProjects = projects.filter((project) => 
         project.title.toLowerCase().includes(search.toLowerCase())
     );
+
+    const openCreateModal = () => {
+        setEditingProject(null);
+        form.resetFields();
+    };
 }
