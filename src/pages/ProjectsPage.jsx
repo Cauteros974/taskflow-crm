@@ -52,5 +52,14 @@ export default function ProjectsPage() {
 
     const handleSubmit = async () => {
         const values = await form.validateFields();
+
+        const payload = {
+            ...values,
+            startDate: values.startDate
+                ? values.startDate.format("YYYY-MM-DD")
+                : "",
+            deadline: values.deadline ? values.deadline.format("YYYY-MM-DD") : ""
+        };
+
     }
 }
