@@ -94,6 +94,10 @@ export default function ClientPage() {
                                         <Typography variant="h6" fontWeight={800}>
                                             {client.name}
                                         </Typography>
+
+                                        <Typography color="text.secondary">
+                                            {client.company}
+                                        </Typography>
                                     </div>
                                 </div>
                             </CardContent>
