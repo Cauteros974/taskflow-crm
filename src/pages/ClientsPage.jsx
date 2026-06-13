@@ -52,8 +52,8 @@ export default function ClientPage() {
                     id: editingClient.id
                 })
             );
-        } else [
+        } else {
             dispatch(addClient(value));
-        ]
+        }
     }
 }
