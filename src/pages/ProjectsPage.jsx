@@ -99,6 +99,10 @@ export default function ProjectsPage() {
                     onChange={(event) => setSearch(event.target.value)}
                 />
             </div>
+
+            <Grid container spacing={2}>
+                
+            </Grid>
         </>
     )
 }
