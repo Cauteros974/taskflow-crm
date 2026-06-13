@@ -25,4 +25,6 @@ export default function ProjectsPage() {
     const [search, setSearch] = useState("");
     const [modalOpen, setModalOpen] = useState(false);
     const [editingProject, setEditingProject] = useState(null);
+
+    const [form] = Form.useForm();
 }
