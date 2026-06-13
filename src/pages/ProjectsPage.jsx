@@ -45,6 +45,12 @@ export default function ProjectsPage() {
             ...project,
             startDate: project.startDate ? dayjs(protect.startDate) : null,
             deadline: project.deadline ? dayjs(project.deadline) : null
-        })
+        });
+
+        setModalOpen(true);
+    };
+
+    const handleSubmit = async () => {
+        const values = await form.validateFields();
     }
 }
