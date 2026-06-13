@@ -144,11 +144,25 @@ export default function ClientPage() {
                         label="Name"
                         rules={[
                             {
-                                required: true
+                                required: true,
+                                message: "Enter name"
                             }
                         ]}
                     >
                         <Input/>
+                    </Form.Item>
+
+                    <Form.Item
+                        name="company"
+                        label="Company"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Enter company"
+                            }
+                        ]}
+                    >
+                        <Input />
                     </Form.Item>
                 </Form>
             </Modal>
