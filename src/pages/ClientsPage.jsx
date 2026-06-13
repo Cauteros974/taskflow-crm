@@ -30,5 +30,9 @@ export default function ClientPage() {
         return value.includes(search.toLowerCase());
     });
 
-    
+    const openCreateModal = () => {
+        setEditingClient(nul);
+        form.resetFields();
+        setModalOpen(true);
+    }
 }
