@@ -1,8 +1,7 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 import { mockClients } from "../../data/mockData.js";
-import { updateTask } from "../tasks/tasksSlice.js";
 
-const clientsSlice = createState({
+const clientsSlice = createSlice({
     name: "clients",
 
     initialState: {
@@ -10,12 +9,12 @@ const clientsSlice = createState({
     },
 
     reducers: {
-        addClients: {
+        addClient: {
             reducer(state, action) {
                 state.items.unshift(action.payload);
             },
-            prepare(clietnt) {
-                return{
+            prepare(client) {
+                return {
                     payload: {
                         id: nanoid(),
                         createdAt: new Date().toISOString().slice(0, 10),
@@ -30,7 +29,7 @@ const clientsSlice = createState({
                 (client) => client.id === action.payload.id
             );
 
-            if(index !== -1) {
+            if (index !== -1) {
                 state.items[index] = {
                     ...state.items[index],
                     ...action.payload
@@ -46,6 +45,6 @@ const clientsSlice = createState({
     }
 });
 
-export const {addClients, updateClient, deleteClient} = clientsSlice.action;
+export const { addClient, updateClient, deleteClient } = clientsSlice.actions;
 
 export default clientsSlice.reducer;
