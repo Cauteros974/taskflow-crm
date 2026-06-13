@@ -106,6 +106,11 @@ export default function ClientPage() {
                                 <Typography className="card-line">
                                     Email: {client.email}
                                 </Typography>
+
+                                <Typography className="card-line">
+                                    Phone: {client.phone}
+                                </Typography>
+                                
                             </CardContent>
                         </Card>
                     </Grid>
