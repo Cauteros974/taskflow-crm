@@ -67,7 +67,11 @@ export default function ProjectsPage() {
                     ...payload,
                     id: editingProject.id
                 })
-            )
+            );
+        } else {
+            dispatch(addProject(payload));
         }
+
+        setModalOpen(open);
     }
 }
