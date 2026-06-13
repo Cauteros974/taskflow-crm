@@ -99,6 +99,8 @@ export default function ClientPage() {
                                             {client.company}
                                         </Typography>
                                     </div>
+
+                                    <StatusBadge value={client.status} />
                                 </div>
                             </CardContent>
                         </Card>
