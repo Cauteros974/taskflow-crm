@@ -66,7 +66,9 @@ export default function ClientPage() {
                 actions = {
                     <Button 
                         variant="contained"
-                        startIcon={AddIcon}
+                        subtitle="Customer cards, search and contact management"
+                        startIcon={<AddIcon />}
+                        onClick={openCreateModal}
                     />
                 }
             >
