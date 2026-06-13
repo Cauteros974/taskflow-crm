@@ -190,6 +190,21 @@ export default function ClientPage() {
                     >
                         <Input />
                     </Form.Item>
+
+                    <Form.Item>
+                        <Select
+                            options={[
+                                {
+                                    value: "Active",
+                                    label: "Active"
+                                },
+                                {
+                                    value: "Potential",
+                                    label: "Potential"
+                                }
+                            ]}
+                        />
+                    </Form.Item>
                 </Form>
             </Modal>
             
