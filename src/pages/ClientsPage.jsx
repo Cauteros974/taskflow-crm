@@ -24,14 +24,13 @@ export default function ClientPage() {
 
     const [form] = Form.useForm();
 
-    const filterClietns = clients.filter((clients) => {
+    const filteredClients = clients.filter((client) => {
         const value = `${client.name} ${client.company} ${client.email}`.toLowerCase();
-
         return value.includes(search.toLowerCase());
     });
 
     const openCreateModal = () => {
-        setEditingClient(nul);
+        setEditingClient(null);
         form.resetFields();
         setModalOpen(true);
     };
@@ -45,8 +44,8 @@ export default function ClientPage() {
     const handleSubmit = async () => {
         const values = await form.validateFields();
 
-        if(editingClient) {
-            dispatch (
+        if (editingClient) {
+            dispatch(
                 updateClient({
                     ...values,
                     id: editingClient.id
@@ -59,14 +58,14 @@ export default function ClientPage() {
         setModalOpen(false);
     };
 
-    return(
+    return (
         <>
             <PageTitle
-                title = "Clients"
-                actions = {
-                    <Button 
+                title="Clients"
+                subtitle="Customer cards, search and contact management"
+                actions={
+                    <Button
                         variant="contained"
-                        subtitle="Customer cards, search and contact management"
                         startIcon={<AddIcon />}
                         onClick={openCreateModal}
                     >
@@ -76,7 +75,7 @@ export default function ClientPage() {
             />
 
             <div className="filters-panel">
-                <TextField 
+                <TextField
                     label="Search for a client"
                     size="small"
                     value={search}
@@ -114,7 +113,7 @@ export default function ClientPage() {
                                 <Typography className="card-line">
                                     Added: {client.createdAt}
                                 </Typography>
-                                
+
                                 <div className="card-actions">
                                     <Button size="small" onClick={() => openEditModal(client)}>
                                         Change
@@ -136,31 +135,28 @@ export default function ClientPage() {
                     </Grid>
                 ))}
             </Grid>
-
-            <Modal>
+            
+            <Modal
+                open={modalOpen}
+                title={editingClient ? "Edit client" : "Add client"}
+                okText={editingClient ? "Save" : "Add"}
+                cancelText="Cancel"
+                onOk={handleSubmit}
+                onCancel={() => setModalOpen(false)}
+            >
                 <Form form={form} layout="vertical">
                     <Form.Item
                         name="name"
                         label="Name"
-                        rules={[
-                            {
-                                required: true,
-                                message: "Enter name"
-                            }
-                        ]}
+                        rules={[{ required: true, message: "Enter name" }]}
                     >
-                        <Input/>
+                        <Input />
                     </Form.Item>
 
                     <Form.Item
                         name="company"
                         label="Company"
-                        rules={[
-                            {
-                                required: true,
-                                message: "Enter company"
-                            }
-                        ]}
+                        rules={[{ required: true, message: "Enter company" }]}
                     >
                         <Input />
                     </Form.Item>
@@ -168,12 +164,7 @@ export default function ClientPage() {
                     <Form.Item
                         name="email"
                         label="Email"
-                        rules={[
-                        {
-                            required: true,
-                            message: "Enter email"
-                        }
-                        ]}
+                        rules={[{ required: true, message: "Enter email" }]}
                     >
                         <Input />
                     </Form.Item>
@@ -181,27 +172,20 @@ export default function ClientPage() {
                     <Form.Item
                         name="phone"
                         label="Phone"
-                        rules={[
-                        {
-                            required: true,
-                            message: "Enter phone"
-                        }
-                        ]}
+                        rules={[{ required: true, message: "Enter phone" }]}
                     >
                         <Input />
                     </Form.Item>
 
-                    <Form.Item>
+                    <Form.Item
+                        name="status"
+                        label="Status"
+                        rules={[{ required: true, message: "Select status" }]}
+                    >
                         <Select
                             options={[
-                                {
-                                    value: "Active",
-                                    label: "Active"
-                                },
-                                {
-                                    value: "Potential",
-                                    label: "Potential"
-                                }
+                                { value: "Active", label: "Active" },
+                                { value: "Potential", label: "Potential" }
                             ]}
                         />
                     </Form.Item>
