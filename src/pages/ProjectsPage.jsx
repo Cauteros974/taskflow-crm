@@ -73,5 +73,25 @@ export default function ProjectsPage() {
         }
 
         setModalOpen(open);
-    }
+    };
+
+    return(
+        <>
+            <PageTitle
+                title="Projects"
+                subtitle="Creating Projects, Linking to Competitors, and Monitoring Progress"
+                actions={
+                    <Button
+                        variant="contained"
+                        startIcon={<AddIcon />}
+                        onClick={openCreateModal}
+                    >
+                        Add Project
+                    </Button>
+                }
+            >
+
+            </PageTitle>
+        </>
+    )
 }
