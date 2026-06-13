@@ -20,4 +20,6 @@ export default function ProjectsPage() {
 
     const projects = useSelector(() => state.project.items);
     const clients = useSelector(() => state.clients.items);
+    const tasks = useSelector((state) => state.tasks.items);
+    
 }
