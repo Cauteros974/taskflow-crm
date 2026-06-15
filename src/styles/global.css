@@ -52,4 +52,8 @@ button {
   align-items: center;
   gap: 12px;
   color: #cbd5e1;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 14px;
+  transition: 0.2s ease;
 }
