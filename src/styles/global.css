@@ -406,3 +406,12 @@ button {
 .kanban-description {
   margin-top: 8px !important;
 }
+
+.kanban-task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  color: #64748b;
+  font-size: 13px;
+}
