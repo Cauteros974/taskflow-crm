@@ -46,5 +46,16 @@ export default function KanbanPage () {
         }
 
         setActiveTask(null);
-    }
+    };
+
+    return(
+        <>
+            <PageTitle
+                title="Kanban"
+                subtitle="Drag and drop tasks between statuses"
+            >
+
+            </PageTitle>
+        </>
+    )
 }
