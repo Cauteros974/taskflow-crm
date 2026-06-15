@@ -96,22 +96,22 @@ export default function ProjectsPage() {
   return (
     <>
       <PageTitle
-        title="Проекты"
-        subtitle="Создание проектов, привязка к клиентам и контроль прогресса"
+        title="Projects"
+        subtitle="Creating projects, linking to clients, and monitoring progress"
         action={
           <Button
             variant="contained"
             startIcon={<AddIcon />}
             onClick={openCreateModal}
           >
-            Добавить проект
+            Add a project
           </Button>
         }
       />
 
       <div className="filters-panel">
         <TextField
-          label="Поиск проекта"
+          label="Project Search"
           size="small"
           value={search}
           onChange={(event) => setSearch(event.target.value)}
@@ -137,7 +137,7 @@ export default function ProjectsPage() {
                       </Typography>
 
                       <Typography color="text.secondary">
-                        Клиент: {client?.name || "—"}
+                        Client: {client?.name || "—"}
                       </Typography>
                     </div>
 
@@ -151,7 +151,7 @@ export default function ProjectsPage() {
                           selected ? "tab active" : "tab"
                         }
                       >
-                        Описание
+                        Description
                       </Tab>
 
                       <Tab
@@ -159,7 +159,7 @@ export default function ProjectsPage() {
                           selected ? "tab active" : "tab"
                         }
                       >
-                        Задачи
+                        Tasks
                       </Tab>
                     </Tab.List>
 
@@ -170,11 +170,11 @@ export default function ProjectsPage() {
                         </Typography>
 
                         <Typography className="card-line">
-                          Срок: {project.startDate} — {project.deadline}
+                          Term: {project.startDate} — {project.deadline}
                         </Typography>
 
                         <Typography className="card-line">
-                          Прогресс: {project.progress}%
+                          Progress: {project.progress}%
                         </Typography>
 
                         <LinearProgress
@@ -195,7 +195,7 @@ export default function ProjectsPage() {
                           </ul>
                         ) : (
                           <Typography color="text.secondary">
-                            Задач пока нет
+                            There are no tasks yet
                           </Typography>
                         )}
                       </Tab.Panel>
@@ -204,17 +204,17 @@ export default function ProjectsPage() {
 
                   <div className="card-actions">
                     <Button size="small" onClick={() => openEditModal(project)}>
-                      Изменить
+                      Change
                     </Button>
 
                     <Popconfirm
-                      title="Удалить проект?"
-                      okText="Да"
-                      cancelText="Нет"
+                      title="Delete project?"
+                      okText="Yes"
+                      cancelText="No"
                       onConfirm={() => dispatch(deleteProject(project.id))}
                     >
                       <Button size="small" color="error">
-                        Удалить
+                        Delete
                       </Button>
                     </Popconfirm>
                   </div>
@@ -230,17 +230,17 @@ export default function ProjectsPage() {
         open={modalOpen}
         onOk={handleSubmit}
         onCancel={() => setModalOpen(false)}
-        okText="Сохранить"
-        cancelText="Отмена"
+        okText="Save"
+        cancelText="Cancel"
       >
         <Form form={form} layout="vertical">
           <Form.Item
             name="title"
-            label="Название"
+            label="Name"
             rules={[
               {
                 required: true,
-                message: "Введите название"
+                message: "Enter the name"
               }
             ]}
           >
@@ -249,11 +249,11 @@ export default function ProjectsPage() {
 
           <Form.Item
             name="clientId"
-            label="Клиент"
+            label="Client"
             rules={[
               {
                 required: true,
-                message: "Выберите клиента"
+                message: "Select a client"
               }
             ]}
           >
@@ -265,14 +265,14 @@ export default function ProjectsPage() {
             />
           </Form.Item>
 
-          <Form.Item name="description" label="Описание">
+          <Form.Item name="description" label="Description">
             <Input.TextArea rows={3} />
           </Form.Item>
 
           <Form.Item
             name="status"
-            label="Статус"
-            initialValue="Планирование"
+            label="Status"
+            initialValue="Planning"
           >
             <Select
               options={projectStatuses.map((status) => ({
@@ -282,15 +282,15 @@ export default function ProjectsPage() {
             />
           </Form.Item>
 
-          <Form.Item name="progress" label="Прогресс" initialValue={0}>
+          <Form.Item name="progress" label="Progress" initialValue={0}>
             <InputNumber min={0} max={100} style={{ width: "100%" }} />
           </Form.Item>
 
-          <Form.Item name="startDate" label="Дата начала">
+          <Form.Item name="startDate" label="Start date">
             <DatePicker style={{ width: "100%" }} />
           </Form.Item>
 
-          <Form.Item name="deadline" label="Дедлайн">
+          <Form.Item name="deadline" label="Deadline">
             <DatePicker style={{ width: "100%" }} />
           </Form.Item>
         </Form>
