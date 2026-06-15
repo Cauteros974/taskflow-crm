@@ -136,7 +136,7 @@ function TaskCard({task, isDragging, isOverlay}) {
                 {task.description}
             </Typography>
 
-            <div className="kanban-task">
+            <div className="kanban-task-footer">
                 <StatusBadge value={task.priority} />
             </div>
         </Card>
