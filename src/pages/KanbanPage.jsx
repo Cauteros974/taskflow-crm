@@ -125,7 +125,7 @@ function TaskCard({task, isDragging, isOverlay}) {
             }`}
         >
             <CardContent>
-                <Typography>{task.title}</Typography>
+                <Typography fontWeigh={500}>{task.title}</Typography>
             </CardContent>
 
             <Typography
