@@ -94,3 +94,11 @@ button {
   gap: 16px;
   margin-bottom: 24px;
 }
+
+.stat-card,
+.soft-card,
+.table-card {
+  border-radius: 20px !important;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06) !important;
+}
