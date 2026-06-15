@@ -168,3 +168,8 @@ button {
   color: #047857;
   background: #d1fae5;
 }
+
+.badge-red {
+  color: #b91c1c;
+  background: #fee2e2;
+}
