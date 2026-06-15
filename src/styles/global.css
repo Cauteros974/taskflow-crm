@@ -115,3 +115,12 @@ button {
   background: white;
   padding: 18px;
 }
+
+.filters-panel {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 18px;
+  display: flex;
+}
