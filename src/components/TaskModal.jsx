@@ -24,7 +24,7 @@ const emptyTask = {
     dueDate: dayjs().add(7, "day").format("YYYY-MM-DD")
 }
 
-export default function TaskModal({open, close}){
+export default function TaskModal({ open, onClose, onSubmit, task }) {
 
     const clients = useSelector((state) => state.clients.items);
     const projects = useSelector((state) => state.projects.items);
