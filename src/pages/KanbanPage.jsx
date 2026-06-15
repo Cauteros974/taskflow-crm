@@ -82,7 +82,7 @@ function KanbanPage(){
     return(
         <div>
             <div className="kanab-column-header">
-                <Typography>{status}</Typography>
+                <Typography></Typography>
             </div>
         </div>
     )
