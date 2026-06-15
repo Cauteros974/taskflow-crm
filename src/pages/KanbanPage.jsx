@@ -33,9 +33,8 @@ export default function KanbanPage () {
         setActiveTask(task || null);
     };
 
-    const handleDragEnd = (event) => (
+    const handleDragEnd = (event) => {
         const {active, over} = event;
-
         
-    )
+    }
 }
