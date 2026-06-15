@@ -32,4 +32,10 @@ export default function KanbanPage () {
         const task = tasks.find((item) => item.id === event.active.id);
         setActiveTask(task || null);
     };
+
+    const handleDragEnd = (event) => (
+        const {active, over} = event;
+
+        
+    )
 }
