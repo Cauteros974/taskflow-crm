@@ -106,3 +106,7 @@ button {
 .stat-card {
   background: linear-gradient(135deg, #ffffff, #eef4ff) !important;
 }
+
+.dashboard-grid {
+  margin-top: 6px;
+}
