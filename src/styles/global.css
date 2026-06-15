@@ -31,4 +31,6 @@ button {
   color: white;
   padding: 24px 18px;
   position: sticky;
+  top: 0;
+  box-sizing: border-box;
 }
