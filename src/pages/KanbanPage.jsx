@@ -123,6 +123,13 @@ function TaskCard({task, isDragging, isOverlay}) {
             <CardContent>
                 <Typography>{task.title}</Typography>
             </CardContent>
+
+            <Typography
+                variant="body2"
+                className="kanban-description"
+            >
+                {task.description}
+            </Typography>
         </Card>
     )
 }
