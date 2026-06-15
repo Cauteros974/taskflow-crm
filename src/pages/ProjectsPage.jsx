@@ -226,7 +226,7 @@ export default function ProjectsPage() {
       </Grid>
 
       <Modal
-        title={editingProject ? "Редактировать проект" : "Новый проект"}
+        title={editingProject ? "Edit a project" : "New project"}
         open={modalOpen}
         onOk={handleSubmit}
         onCancel={() => setModalOpen(false)}
