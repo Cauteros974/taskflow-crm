@@ -92,5 +92,13 @@ function KanbanColumn({status}){
                 ))}
             </div>
         </div>
+    );
+}
+
+function DraggableTask({task}) {
+    return(
+        <div ref={setNodeRef} style={style}>
+            <TaskCard task={task} isDragging={isDragging} />
+        </div>
     )
 }
