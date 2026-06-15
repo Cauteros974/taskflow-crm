@@ -25,4 +25,6 @@ export default function KanbanPage () {
     const tasks = useSelector((state) => state.tasks.items);
 
     const sensors = useSensors(useSensor(PointerSensor));
+
+    const [activeTask, setActiveTask] = useState(null);
 }
