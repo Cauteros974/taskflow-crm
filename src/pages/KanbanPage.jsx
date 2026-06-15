@@ -65,9 +65,14 @@ export default function KanbanPage () {
                          <KanbanColumn 
                             key={status}
                             tasks={tasks.filter((task) => task.status === status)}
+                            status={status}
                          />
                     ))}
                 </div>
+
+                <DragOverlay>
+                    {activeTask ? <TaskCard task={activeTask} isOverlay /> : null}
+                </DragOverlay>
             </DndContext>
         </>
     )
