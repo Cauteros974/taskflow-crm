@@ -119,7 +119,11 @@ function DraggableTask({task}) {
 
 function TaskCard({task, isDragging, isOverlay}) {
     return(
-        <Card>
+        <Card
+            className={`kanban-task ${isDragging ? "dragging" : ""} ${
+                isOverlay ? "overlay" : ""
+            }`}
+        >
             <CardContent>
                 <Typography>{task.title}</Typography>
             </CardContent>
