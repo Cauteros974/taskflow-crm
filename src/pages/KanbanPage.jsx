@@ -40,8 +40,9 @@ export default function KanbanPage () {
             dispatch(
                 changeTaskStatus({
                     id: active.id,
+                    status: over.id
                 })
-            )
+            );
         }
     }
 }
