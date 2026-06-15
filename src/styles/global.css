@@ -212,3 +212,11 @@ button {
   text-align: left;
   cursor: pointer;
 }
+
+.menu-item.active {
+  background: #eff6ff;
+}
+
+.select-wrapper {
+  min-width: 180px;
+}
