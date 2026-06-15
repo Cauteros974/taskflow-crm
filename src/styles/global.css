@@ -173,3 +173,7 @@ button {
   color: #b91c1c;
   background: #fee2e2;
 }
+
+.profile-menu {
+  position: relative;
+}
