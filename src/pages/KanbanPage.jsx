@@ -116,3 +116,13 @@ function DraggableTask({task}) {
         </div>
     );
 }
+
+function TaskCard({task, isDragging, isOverlay}) {
+    return(
+        <Card>
+            <CardContent>
+                <Typography>{task.title}</Typography>
+            </CardContent>
+        </Card>
+    )
+}
