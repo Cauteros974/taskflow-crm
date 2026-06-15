@@ -6,7 +6,7 @@ import Header from "../components/Header";
 
 export default function MainLayout() {
     return(
-        <Box classname="app-shell">
+        <Box className="app-shell">
             <Sidebar />
 
             <Box className="app-content">

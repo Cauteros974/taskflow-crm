@@ -1,10 +1,10 @@
 const colorMap = {
     New: "badge-blue",
-    "In progress": "badge-orange",
+    "In Progress": "badge-orange",
     "Under review": "badge-purple",
     Completed: "badge-green",
 
-    Low: "bagde-blue",
+    Low: "badge-blue",
     Medium: "badge-orange",
     High: "badge-purple",
     Critical: "badge-red",
@@ -13,15 +13,13 @@ const colorMap = {
     Potential: "badge-blue",
 
     Planning: "badge-blue",
-    "In Progress": "badge-orange",
     Pause: "badge-red",
-    Completed: "badge-green"
-}
+};
 
-export default function StatusBadge({}) {
-    return(
+export default function StatusBadge({ value }) {
+    return (
         <span className={`badge ${colorMap[value] || "badge-blue"}`}>
             {value}
         </span>
-    )
+    );
 }
