@@ -158,3 +158,13 @@ button {
   color: #c2410c;
   background: #ffedd5;
 }
+
+.badge-purple {
+  color: #7e22ce;
+  background: #f3e8ff;
+}
+
+.badge-green {
+  color: #047857;
+  background: #d1fae5;
+}
