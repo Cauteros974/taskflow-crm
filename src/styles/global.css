@@ -82,3 +82,7 @@ button {
   top: 0;
   z-index: 10;
 }
+
+.page-container {
+  padding: 20px;
+}
