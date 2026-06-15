@@ -82,7 +82,7 @@ function KanbanColumn({status}){
     return(
         <div ref={setNodeRef} className={`kanban-column ${isOver ? "over" : ""}`}>
             <div className="kanab-column-header">
-                <Typography>{status}</Typography>
+                <Typography fontWeight={900}>{status}</Typography>
                 <span>{tasks.length}</span>
             </div>
         </div>
