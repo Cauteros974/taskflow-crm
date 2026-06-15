@@ -44,5 +44,7 @@ export default function KanbanPage () {
                 })
             );
         }
+
+        setActive(null);
     }
 }
