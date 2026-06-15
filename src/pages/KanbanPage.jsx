@@ -64,6 +64,7 @@ export default function KanbanPage () {
                     {statuses.map((status) => (
                          <KanbanColumn 
                             key={status}
+                            tasks={tasks.filter((task) => task.status === status)}
                          />
                     ))}
                 </div>
