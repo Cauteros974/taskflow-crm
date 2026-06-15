@@ -45,6 +45,6 @@ export default function KanbanPage () {
             );
         }
 
-        setActive(null);
+        setActiveTask(null);
     }
 }
