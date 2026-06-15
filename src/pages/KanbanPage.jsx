@@ -83,7 +83,6 @@ function KanbanColumn({status}){
         id: status
     })
 
-
     return(
         <div ref={setNodeRef} className={`kanban-column ${isOver ? "over" : ""}`}>
             <div className="kanab-column-header">
@@ -101,6 +100,14 @@ function KanbanColumn({status}){
 }
 
 function DraggableTask({task}) {
+    const { attributes, listeners, setNodeRef, transform, isDragging } =
+        useDraggable({
+            id: task.id
+        })
+
+}
+
+
     return(
         <div ref={setNodeRef} style={style} {...listeners} {...attributes}>
             <TaskCard task={task} isDragging={isDragging} />
