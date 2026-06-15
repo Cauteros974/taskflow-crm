@@ -189,3 +189,12 @@ button {
   cursor: pointer;
   font-weight: 700;
 }
+
+.profile-menu-items {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 160px;
+  background: white;
+  border-radius: 14px;
+}
