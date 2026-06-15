@@ -60,7 +60,13 @@ export default function KanbanPage () {
                 onDragStart={handleDragStart}
                 onDragEnd={handleDragEnd}
             >
-                
+                <div className="board">
+                    {statuses.map((status) => (
+                         <KanbanColumn 
+                            key={status}
+                         />
+                    ))}
+                </div>
             </DndContext>
         </>
     )
