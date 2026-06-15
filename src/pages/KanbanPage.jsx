@@ -1,0 +1,26 @@
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import {
+  DndContext,
+  DragOverlay,
+  PointerSensor,
+  useDraggable,
+  useDroppable,
+  useSensor,
+  useSensors
+} from "@dnd-kit/core";
+
+import { Card, CardContent, Typography } from "@mui/material";
+
+import PageTitle from "../components/PageTitle";
+import StatusBadge from "../components/StatusBadge";
+
+import { changeTaskStatus } from "../features/tasks/tasksSlice";
+import { statuses } from "../data/mockData";
+
+export default function KanbanPage () {
+    const dispatch = useDispatch();
+
+    const tasks = useSelector((state) => state.tasks.items);
+}
