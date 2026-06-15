@@ -46,3 +46,10 @@ button {
   flex-direction: column;
   gap: 8px;
 }
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #cbd5e1;
+}
