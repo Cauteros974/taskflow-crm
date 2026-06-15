@@ -135,6 +135,10 @@ function TaskCard({task, isDragging, isOverlay}) {
             >
                 {task.description}
             </Typography>
+
+            <div className="kanban-task">
+                <StatusBadge value={task.priority} />
+            </div>
         </Card>
     )
 }
