@@ -35,3 +35,14 @@ button {
   height: 100vh;
   box-sizing: border-box;
 }
+
+.logo {
+  margin-bottom: 30px !important;
+  letter-spacing: -0.03em;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
