@@ -402,3 +402,7 @@ button {
   width: 260px;
   transform: rotate(3deg);
 }
+
+.kanban-description {
+  margin-top: 8px !important;
+}
