@@ -86,3 +86,11 @@ button {
 .page-container {
   padding: 28px;
 }
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
