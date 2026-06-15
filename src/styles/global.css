@@ -393,3 +393,12 @@ button {
   border-radius: 18px !important;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08) !important;
 }
+
+.kanban-task.dragging {
+  opacity: 0.45;
+}
+
+.kanban-task.overlay {
+  width: 260px;
+  transform: rotate(3deg);
+}
