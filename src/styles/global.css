@@ -224,4 +224,7 @@ button {
 .select-label {
   display: block;
   font-size: 13px;
+  color: #64748b;
+  margin-bottom: 6px;
+  font-weight: 700;
 }
