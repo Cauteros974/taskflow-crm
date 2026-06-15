@@ -63,3 +63,8 @@ button {
   background: #1d4ed8;
   color: white;
 }
+
+.app-content {
+  flex: 1;
+  min-width: 0;
+}
