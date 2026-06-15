@@ -13,3 +13,12 @@ body {
 button {
   font-family: inherit;
 }
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  background: radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.12),
+    ),
+}
