@@ -23,4 +23,6 @@ export default function KanbanPage () {
     const dispatch = useDispatch();
 
     const tasks = useSelector((state) => state.tasks.items);
+
+    const sensors = useSensors(useSensor(PointerSensor));
 }
