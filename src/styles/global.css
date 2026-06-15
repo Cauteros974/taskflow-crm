@@ -318,3 +318,19 @@ button {
   margin: 14px 0;
   gap: 6px;
 }
+
+.tab {
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 800;
+  color: #64748b;
+}
+
+.tab.active {
+  background: white;
+  color: #1d4ed8;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
