@@ -290,3 +290,11 @@ button {
 .project-card {
   height: 100%;
 }
+
+.client-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+  margin-bottom: 16px;
+}
