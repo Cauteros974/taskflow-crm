@@ -1,203 +1,205 @@
 import { useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button, TextField } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 import { Popconfirm, Table } from "antd";
 
 import PageTitle from "../components/PageTitle.jsx";
 import TaskModal from "../components/TaskModal.jsx";
 import StatusBadge from "../components/StatusBadge.jsx";
 import HeadlessSelect from "../components/HeadlessSelect.jsx";
-import { 
-    addTask, 
-    updateTask,
-    deleteTask,
-    setTaskFilter,
-    resetTaskFilters
+
+import {
+  addTask,
+  updateTask,
+  deleteTask,
+  setTaskFilter,
+  resetTaskFilters,
 } from "../features/tasks/tasksSlice.js";
 
 import { priorities, statuses } from "../data/mockData.js";
 
-export default function TaskPage() {
-    const dispatch = useDispatch();
+export default function TasksPage() {
+  const dispatch = useDispatch();
 
-    const tasks = useSelector((state) => state.tasks.items);
-    const filters = useSelector((state) => state.tasks.filters);
-    const clients = useSelector((state) => state.clients.items);
-    const projects = useSelector((state) => state.projects.items);
+  const tasks = useSelector((state) => state.tasks.items);
+  const filters = useSelector((state) => state.tasks.filters);
+  const clients = useSelector((state) => state.clients.items);
+  const projects = useSelector((state) => state.projects.items);
 
-    const [modalOpen, setModalOpen] = useState(false);
-    const [editingTask, setEditingTask] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [editingTask, setEditingTask] = useState(null);
 
-    const filteredTasks = useMemo(() => {
-        return task.filter((task) => {
-            const matchesSearch = task.title
-                .toLowerCase()
-                .includes(filters.search.toLowerCase());
+  const filteredTasks = useMemo(() => {
+    return tasks.filter((task) => {
+      const matchesSearch = task.title
+        .toLowerCase()
+        .includes(filters.search.toLowerCase());
 
-                const matchesStatus = 
-                    filters.status === "All" || task.status === filters.status;
-                
-                const matchesPriority =
-                    filters.priority === "All" || task.priority === filters.priority;
+      const matchesStatus =
+        filters.status === "All" || task.status === filters.status;
 
-                return matchesSearch && matchesStatus && matchesPriority;
-        });
-    }, [tasks, filters]); 
- 
-    const openCreateModel = () => {
-        setEditingTask(null);
-        setModalOpen(true);
-    };
+      const matchesPriority =
+        filters.priority === "All" || task.priority === filters.priority;
 
-    const openEditModal = (task) => {
-        setEditingTask(task);
-        setModalOpen(true);
-    };
+      return matchesSearch && matchesStatus && matchesPriority;
+    });
+  }, [tasks, filters.search, filters.status, filters.priority]);
 
-    const handleSubmit = (task) => {
-        if (editingTask) {
-            dispatch (
-                updateTask({
-                    ...task,
-                    id: editingTask.id
-                })
-            );
-        } else{
-            dispatch(addTask(task));
+  const openCreateModal = () => {
+    setEditingTask(null);
+    setModalOpen(true);
+  };
+
+  const openEditModal = (task) => {
+    setEditingTask(task);
+    setModalOpen(true);
+  };
+
+  const handleSubmit = (task) => {
+    if (editingTask) {
+      dispatch(
+        updateTask({
+          ...task,
+          id: editingTask.id,
+        })
+      );
+    } else {
+      dispatch(addTask(task));
+    }
+
+    setModalOpen(false);
+  };
+
+  const columns = [
+    {
+      title: "Name",
+      dataIndex: "title",
+    },
+    {
+      title: "Client",
+      dataIndex: "clientId",
+      render: (clientId) =>
+        clients.find((client) => client.id === clientId)?.name || "_",
+    },
+    {
+      title: "Project",
+      dataIndex: "projectId",
+      render: (projectId) =>
+        projects.find((project) => project.id === projectId)?.name || "_",
+    },
+    {
+      title: "Status",
+      dataIndex: "status",
+      render: (value) => <StatusBadge value={value} />,
+    },
+    {
+      title: "Priority",
+      dataIndex: "priority",
+      render: (value) => <StatusBadge value={value} />,
+    },
+    {
+      title: "Deadline",
+      dataIndex: "dueDate",
+      sorter: (a, b) => a.dueDate.localeCompare(b.dueDate),
+    },
+    {
+      title: "Actions",
+      render: (_, record) => (
+        <div className="table-actions">
+          <Button size="small" onClick={() => openEditModal(record)}>
+            Change
+          </Button>
+
+          <Popconfirm
+            title="Delete task?"
+            okText="Yes"
+            cancelText="No"
+            onConfirm={() => dispatch(deleteTask(record.id))}
+          >
+            <Button>Delete</Button>
+          </Popconfirm>
+        </div>
+      ),
+    },
+  ];
+
+  return (
+    <>
+      <PageTitle
+        title="Tasks"
+        subtitle="Creating, editing, searching and filtering tasks"
+        action={
+          <Button
+            variant="contained"
+            startIcon={<AddIcon />}
+            onClick={openCreateModal}
+          >
+            Add task
+          </Button>
         }
-    };
+      />
 
-    const columns = [
-        {
-            title: "Name",
-            dataIndex: "title"
-        },
-        {
-            title: "Client",
-            dataIndex: "clientId",
-            render: (clientId) => 
-                clients.find((client) => client.id === clientId)?.name || "_"
-        },
-        {
-            title: "Project",
-            dataIndex: "projectId",
-            render: (projectId) => 
-                projects.find((project) => project.id === projectId)?.name || "_"
-        },
-        {
-            title: "Status",
-            dataIndex: "status",
-            render: (value) => <StatusBadge value={value} />
-        },
-        {
-            title: "Priority",
-            dataIndex: "priority",
-            render: (value) => <StatusBadge value={value} />
-        },
-        {
-            title: "Deadline",
-            dataIndex: "dueDate",
-            sorter: (a, b) => a.dueDate.localeCompare(b.dueDate)
-        },
-        {
-            title: "Actions",
-            render: (_, record) => (
-                <div className="table-actions">
-                    <Button size= "small" onClick={() => openEditModal(record)}>
-                        Change
-                    </Button>
-
-                    <Popconfirm
-                        title = "Delete task?"
-                        okText = "Yes"
-                        cancelText = "No"
-                        onConfirm={() => dispatch(deleteTask(record.id))}
-                    >
-                        <Button>
-                            Delete
-                        </Button>
-                    </Popconfirm>
-                </div>
+      <div className="filters-panel">
+        <TextField
+          label="Search"
+          size="small"
+          value={filters.search}
+          onChange={(event) =>
+            dispatch(
+              setTaskFilter({
+                search: event.target.value,
+              })
             )
-        }
-    ];
+          }
+        />
 
-    return(
-        <>
-            <PageTitle
-                title = "Tasks"
-                subtitle="Creating, editing, searching and filtering tasks"
-                action = {
-                    <Button
-                        variant="contained"
-                        startIcon={<AddIcon />}
-                        onClick={openCreateModel}
-                    >
-                        Add task
-                    </Button>
-                }
-            />
-            
-            <div className="tilters-panel">
-                <TextField
-                    label="search"
-                    size="small"
-                    value={filters.search}
-                    onChange={(event) =>
-                        dispatch(
-                            setTaskFilter ({
-                                search: event.target.value
-                            })
-                        )
-                    }
-                />
+        <HeadlessSelect
+          label="Status"
+          value={filters.status}
+          onChange={(value) =>
+            dispatch(
+              setTaskFilter({
+                status: value,
+              })
+            )
+          }
+          options={["All", ...statuses]}
+        />
 
-                <HeadlessSelect 
-                    label="Status"
-                    value={filters.status}
-                    onChange={(value) => 
-                        dispatch(
-                            setTaskFilter({
-                                status: value
-                            })
-                        )
-                    }
-                    options={["All", ...statuses]}
-                />
+        <HeadlessSelect
+          label="Priority"
+          value={filters.priority}
+          onChange={(value) =>
+            dispatch(
+              setTaskFilter({
+                priority: value,
+              })
+            )
+          }
+          options={["All", ...priorities]}
+        />
 
-                <HeadlessSelect 
-                    label="Priority"
-                    value={filters.priority}
-                    onChange={(value) => 
-                        dispatch(
-                            setTaskFilter({
-                                priority: value
-                            })
-                        )
-                    }
-                    options={["All", ...priorities]}
-                />
+        <Button onClick={() => dispatch(resetTaskFilters())}>Reset</Button>
+      </div>
 
-                <Button onClick={() => dispatch(resetTaskFilters())}>Reset</Button>
-            </div>
+      <div className="table-card">
+        <Table
+          rowKey="id"
+          columns={columns}
+          dataSource={filteredTasks}
+          pagination={{
+            pageSize: 6,
+          }}
+        />
+      </div>
 
-            <div className="table-card">
-                <Table
-                    rowKey="id"
-                    columns={columns}
-                    dataSource={filteredTasks}
-                    pagination={{
-                        pageSize: 6
-                    }}
-                />
-            </div>
-
-            <TaskModal 
-                open={modalOpen}
-                onClose={() => setModalOpen(false)}
-                onSubmit={handleSubmit}
-                task={editingTask}
-            />
-        </>
-    );
+      <TaskModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        onSubmit={handleSubmit}
+        task={editingTask}
+      />
+    </>
+  );
 }
