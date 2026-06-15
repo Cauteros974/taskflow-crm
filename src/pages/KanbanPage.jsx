@@ -138,6 +138,7 @@ function TaskCard({task, isDragging, isOverlay}) {
 
             <div className="kanban-task-footer">
                 <StatusBadge value={task.priority} />
+                <span>{task.dueDate}</span>
             </div>
         </Card>
     )
