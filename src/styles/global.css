@@ -381,3 +381,7 @@ button {
   font-weight: 900;
   font-size: 12px;
 }
+
+.kanban-tasks {
+  display: flex;
+}
