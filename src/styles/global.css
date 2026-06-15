@@ -365,3 +365,11 @@ button {
 .kanban-column.over {
   background: #eff6ff;
   border-color: #93c5fd;
+}
+
+.kanban-column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
