@@ -35,8 +35,8 @@ export default function KanbanPage () {
 
     const handleDragEnd = (event) => {
         const {active, over} = event;
-
-        if(active.id == over.id) {
+        
+        if (over && active.id !== over.id) {
             dispatch(
                 changeTaskStatus({
                     id: active.id,
