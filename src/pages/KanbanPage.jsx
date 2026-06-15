@@ -126,6 +126,7 @@ function TaskCard({task, isDragging, isOverlay}) {
 
             <Typography
                 variant="body2"
+                color="text.secondary"
                 className="kanban-description"
             >
                 {task.description}
