@@ -75,5 +75,15 @@ export default function KanbanPage () {
                 </DragOverlay>
             </DndContext>
         </>
+    );
+}
+
+function KanbanPage(){
+    return(
+        <div>
+            <div className="kanab-column-header">
+                <Typography>{status}</Typography>
+            </div>
+        </div>
     )
 }
