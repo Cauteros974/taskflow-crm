@@ -27,4 +27,8 @@ export default function KanbanPage () {
     const sensors = useSensors(useSensor(PointerSensor));
 
     const [activeTask, setActiveTask] = useState(null);
+
+    const handleDragStart = (event) => {
+        const task = tasks.find((item) => item.id === event.active.id);
+    };
 }
