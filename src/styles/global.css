@@ -285,3 +285,8 @@ button {
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
+
+.client-card,
+.project-card {
+  height: 100%;
+}
