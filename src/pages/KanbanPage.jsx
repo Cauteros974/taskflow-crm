@@ -53,9 +53,7 @@ export default function KanbanPage () {
             <PageTitle
                 title="Kanban"
                 subtitle="Drag and drop tasks between statuses"
-            >
-
-            </PageTitle>
+            />
         </>
     )
 }
