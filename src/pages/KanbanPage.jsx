@@ -54,6 +54,14 @@ export default function KanbanPage () {
                 title="Kanban"
                 subtitle="Drag and drop tasks between statuses"
             />
+
+            <DndContext 
+                sensors={sensors}
+                onDragStart={handleDragStart}
+                onDragEnd={handleDragEnd}
+            >
+                
+            </DndContext>
         </>
     )
 }
