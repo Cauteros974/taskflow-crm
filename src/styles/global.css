@@ -259,3 +259,9 @@ button {
   max-height: 220px;
   overflow: auto;
 }
+
+.listbox-option {
+  padding: 9px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
