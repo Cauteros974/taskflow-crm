@@ -110,3 +110,8 @@ button {
 .dashboard-grid {
   margin-top: 6px;
 }
+
+.table-card {
+  background: white;
+  padding: 18px;
+}
