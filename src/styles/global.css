@@ -72,6 +72,7 @@ button {
 .header {
   height: 76px;
   background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid #e5e7eb;
   display: flex;
   align-items: center;
