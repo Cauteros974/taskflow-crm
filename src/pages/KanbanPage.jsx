@@ -78,9 +78,9 @@ export default function KanbanPage () {
     );
 }
 
-function KanbanPage({status}){
+function KanbanColumn({status}){
     return(
-        <div>
+        <div ref={setNodeRef} className={`kanban-column ${isOver ? "over" : ""}`}>
             <div className="kanab-column-header">
                 <Typography>{status}</Typography>
             </div>
