@@ -79,6 +79,11 @@ export default function KanbanPage () {
 }
 
 function KanbanColumn({status}){
+    const { setNodeRef, isOver } = useDroppable({
+        id: status
+    })
+
+
     return(
         <div ref={setNodeRef} className={`kanban-column ${isOver ? "over" : ""}`}>
             <div className="kanab-column-header">
