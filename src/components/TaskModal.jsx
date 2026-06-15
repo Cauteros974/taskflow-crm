@@ -99,7 +99,7 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
                             const client = clients.find((item) => item.name === clientName);
                             updateField("clientId", client?.id || "");
                         }}
-                        option={["Not selected", ...clients.map((client) => client.name)]}
+                        options={["Not selected", ...clients.map((client) => client.name)]}
                     />
 
                     <HeadlessSelect 
