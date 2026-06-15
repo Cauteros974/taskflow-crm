@@ -298,3 +298,8 @@ button {
   align-items: start;
   margin-bottom: 16px;
 }
+
+.card-line {
+  margin-top: 8px !important;
+  color: #475569;
+}
