@@ -78,11 +78,11 @@ export default function KanbanPage () {
     );
 }
 
-function KanbanPage(){
+function KanbanPage({status}){
     return(
         <div>
             <div className="kanab-column-header">
-                <Typography></Typography>
+                <Typography>{status}</Typography>
             </div>
         </div>
     )
