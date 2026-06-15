@@ -148,3 +148,13 @@ button {
   font-weight: 800;
   white-space: nowrap;
 }
+
+.badge-blue {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.badge-orange {
+  color: #c2410c;
+  background: #ffedd5;
+}
