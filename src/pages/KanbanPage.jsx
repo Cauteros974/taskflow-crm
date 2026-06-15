@@ -85,6 +85,12 @@ function KanbanColumn({status}){
                 <Typography fontWeight={900}>{status}</Typography>
                 <span>{tasks.length}</span>
             </div>
+
+            <div className="">
+                {tasks.map((task) => (
+                    <DraggableTask key={task.id} task={task} />
+                ))}
+            </div>
         </div>
     )
 }
