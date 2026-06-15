@@ -350,4 +350,18 @@ button {
   display: grid;
   grid-template-columns: repeat(4, minmax(230px, 1fr));
   gap: 16px;
+  align-items: start;
 }
+
+.kanban-column {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  padding: 14px;
+  min-height: 560px;
+  transition: 0.2s ease;
+}
+
+.kanban-column.over {
+  background: #eff6ff;
+  border-color: #93c5fd;
