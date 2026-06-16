@@ -97,7 +97,7 @@ const tasksSlice = createSlice({
                 (item) => item.id === action.payload.taskId
             );
 
-            if(task) {
+            if(task && task.comments) {
                 task.comments = task.comments.filter(
                     (comment) => comment.id !== action.payload.commentId
                 )
