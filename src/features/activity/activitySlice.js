@@ -1,45 +1,47 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
-    items: [
-        {
-            id: "activity-1",
-            type: "system",
-            title: "The project has been launched",
-            entityType: "system",
-            description: "TaskFlow CRM is ready to go.",
-            entityId: null,
-            createdAt: "2026-06-05 10:00"
-        },
-    ]
+  items: [
+    {
+      id: "activity-1",
+      type: "system",
+      title: "Проект запущен",
+      description: "TaskFlow CRM готов к работе.",
+      entityType: "system",
+      entityId: null,
+      createdAt: "2026-06-05 10:00"
+    }
+  ]
 };
 
 const activitySlice = createSlice({
-    name="activity",
+  name: "activity",
 
-    initialState,
+  initialState,
 
-    reducers: {
-        addActivity: {
-            reducer(state, action) {
-                state.items.unshift(action.payload);
-            },
+  reducers: {
+    addActivity: {
+      reducer(state, action) {
+        state.items.unshift(action.payload);
+      },
 
-            prepare(activity) {
-                const now = new Date();
-                
-                return {
-                    payload: {
-                        id: nanoid(),
-                        createdAt: now.toLocaleString("ru-RU", {
-                            year: "numeric",
-                            month: "2-digit",
-                            day: "2-digit",
-                            hour: "2-digit",
-                            minute: "2-digit"
+      prepare(activity) {
+        const now = new Date();
+
+        return {
+          payload: {
+            id: nanoid(),
+            createdAt: now.toLocaleString("ru-RU", {
+              year: "numeric",
+              month: "2-digit",
+              day: "2-digit",
+              hour: "2-digit",
+              minute: "2-digit"
             }),
             ...activity
           }
         };
-    }
+      }
+    },
+  }
 });
