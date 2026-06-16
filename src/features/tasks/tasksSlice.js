@@ -58,9 +58,17 @@ const tasksSlice = createSlice({
             reducer() {
                 const task = state.items.find(
                     (items) => items.id === action.payload.taskId
-                )
+                );
+
+                if(task) {
+                    if (!task.comments) {
+                        task.comments = [];
+                    }
+
+                    task.comments.unshift(action.payload.comments);
+                }
             }
-        }
+        },
 
         setTaskFilter(state, action) {
             state.filters = {
