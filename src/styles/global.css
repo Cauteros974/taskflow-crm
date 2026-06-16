@@ -39,6 +39,8 @@ button {
 .logo {
   margin-bottom: 30px !important;
   letter-spacing: -0.03em;
+  padding-left: 17px;
+  font-size: 25px !important;
 }
 
 .nav {
