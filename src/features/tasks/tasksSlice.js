@@ -96,6 +96,12 @@ const tasksSlice = createSlice({
             const task = state.items.find(
                 (item) => item.id === action.payload.taskId
             );
+
+            if(task) {
+                task.comments = task.comments.filter(
+                    (comment) => comment.id !== action.payload.commentId
+                )
+            }
         },
 
         setTaskFilter(state, action) {
