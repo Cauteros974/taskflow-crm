@@ -42,4 +42,4 @@ const activitySlice = createSlice({
           }
         };
     }
-})
+});
