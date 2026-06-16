@@ -21,9 +21,9 @@ const activitySlice = createSlice({
 
     reducers: {
         addActivity: {
-            reducer: {
-                items,unshift(action,payload);
-            }
+            reducer(state, action) {
+                state.items.unshift(action.payload);
+            },
         }
     }
 })
