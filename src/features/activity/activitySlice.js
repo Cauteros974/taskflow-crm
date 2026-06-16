@@ -49,3 +49,5 @@ const activitySlice = createSlice({
     }
   }
 });
+
+export const { addActivity, clearActivity } = activitySlice.actions;
