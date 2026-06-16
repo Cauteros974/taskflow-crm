@@ -74,7 +74,19 @@ const tasksSlice = createSlice({
 
                 return{
                     payload: {
-                         taskId,
+                        taskId,
+                        comment: {
+                            id: nanoid(),
+                            text,
+                            author: "Mike",
+                            createdAt: now.toLocaleString("ru-RU", {
+                                year: "numeric",
+                                month: "2-digit",
+                                day: "2-digit",
+                                hour: "2-digit",
+                                minute: "2-digit"
+                            })
+                        }
                     }
                 }
             }
