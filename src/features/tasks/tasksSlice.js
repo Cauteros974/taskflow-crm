@@ -72,11 +72,11 @@ const tasksSlice = createSlice({
             prepare({taskId, text}) {
                 const now = new Date();
 
-                return(
+                return{
                     payload: {
                          taskId,
                     }
-                )
+                }
             }
         },
 
