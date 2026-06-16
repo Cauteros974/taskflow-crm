@@ -67,6 +67,16 @@ const tasksSlice = createSlice({
 
                     task.comments.unshift(action.payload.comments);
                 }
+            },
+
+            prepare({taskId, text}) {
+                const now = new Date();
+
+                return(
+                    payload: {
+                         taskId,
+                    }
+                )
             }
         },
 
