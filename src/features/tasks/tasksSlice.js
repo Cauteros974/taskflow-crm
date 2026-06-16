@@ -94,8 +94,8 @@ const tasksSlice = createSlice({
 
         deleteTaskComment(state, action) {
             const task = state.items.find(
-                (item) => item.id
-            )
+                (item) => item.id === action.payload.taskId
+            );
         },
 
         setTaskFilter(state, action) {
