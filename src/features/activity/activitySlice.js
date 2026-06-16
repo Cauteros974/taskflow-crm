@@ -24,6 +24,21 @@ const activitySlice = createSlice({
             reducer(state, action) {
                 state.items.unshift(action.payload);
             },
+
+            prepare{
+                const now = new Date();
+
+                return {
+                    payload: {
+                        id: nanoid(),
+                        createdAt: now.toLocaleString("ru-RU", {
+                        year: "numeric",
+                        month: "2-digit",
+                        day: "2-digit",
+                    }),
+            ...activity
+          }
+            }
         }
     }
 })
