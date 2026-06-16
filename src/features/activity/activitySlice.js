@@ -43,5 +43,9 @@ const activitySlice = createSlice({
         };
       }
     },
+
+    clearActivity(state) {
+      state.items = [];
+    }
   }
 });
