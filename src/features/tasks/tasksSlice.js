@@ -88,8 +88,14 @@ const tasksSlice = createSlice({
                             })
                         }
                     }
-                }
+                };
             }
+        },
+
+        deleteTaskComment(state, action) {
+            const task = state.items.find(
+                (item) => item.id
+            )
         },
 
         setTaskFilter(state, action) {
