@@ -22,6 +22,7 @@ const tasksSlice = createSlice({
                 return{
                     payload: {
                         id: nanoid(),
+                        comments: [],
                         ...task
                     }
                 };
@@ -52,6 +53,14 @@ const tasksSlice = createSlice({
                 task.status = action.payload.status;
             }
         },
+
+        addTaskComment: {
+            reducer() {
+                const task = state.items.find(
+                    (items) => items.id === action.payload.taskId
+                )
+            }
+        }
 
         setTaskFilter(state, action) {
             state.filters = {
