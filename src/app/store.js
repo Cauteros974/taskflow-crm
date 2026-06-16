@@ -3,11 +3,13 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import tasksReducer from "../features/tasks/tasksSlice.js";
 import clientsReducer from "../features/clients/clientsSlice.js";
 import projectsReducer from "../features/projects/projectsSlice.js";
+import activityReducer from "../features/activity/activitySlice.js";
 
 const rootReducer = combineReducers({
   tasks: tasksReducer,
   clients: clientsReducer,
-  projects: projectsReducer
+  projects: projectsReducer,
+  activity: activityReducer
 });
 
 const loadState = () => {
