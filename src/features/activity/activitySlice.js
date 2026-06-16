@@ -17,5 +17,13 @@ const initialState = {
 const activitySlice = createSlice({
     name="activity",
 
-    initialState
+    initialState,
+
+    reducers: {
+        addActivity: {
+            reducer: {
+                items,unshift(action,payload);
+            }
+        }
+    }
 })
