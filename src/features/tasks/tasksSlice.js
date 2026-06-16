@@ -100,7 +100,7 @@ const tasksSlice = createSlice({
             if(task && task.comments) {
                 task.comments = task.comments.filter(
                     (comment) => comment.id !== action.payload.commentId
-                )
+                );
             }
         },
 
@@ -126,6 +126,8 @@ export const {
     updateTask,
     deleteTask,
     changeTaskStatus,
+    addTaskComment,
+    deleteTaskComment,
     setTaskFilter,
     resetTaskFilters
 } = tasksSlice.actions;
