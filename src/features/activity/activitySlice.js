@@ -5,8 +5,8 @@ const initialState = {
     {
       id: "activity-1",
       type: "system",
-      title: "Проект запущен",
-      description: "TaskFlow CRM готов к работе.",
+      title: "The project has been launched",
+      description: "TaskFlow CRM is ready to go.",
       entityType: "system",
       entityId: null,
       createdAt: "2026-06-05 10:00"
