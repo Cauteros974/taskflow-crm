@@ -66,7 +66,7 @@ export const mockTasks = [
         priority: "Medium",
         clientId: "client-1",
         dueDate: "2026-05-25",
-        comment: [
+        comments: [
             {
                 id: "commnet-1",
                 author: "Test-1",
@@ -83,7 +83,8 @@ export const mockTasks = [
         priority: "High",
         projectId: "project-1",
         clientId: "client-1",
-        dueDate: "2026-06-08"
+        dueDate: "2026-06-08",
+        comments: []
     },
     {
         id: "task-3",
