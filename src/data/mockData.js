@@ -69,7 +69,9 @@ export const mockTasks = [
         comment: [
             {
                 id: "commnet-1",
-                text: "The requirements are collected, we can move on to design."
+                author: "Test-1",
+                text: "The requirements are collected, we can move on to design.",
+                createdAt: "19.06.2026, 10:15"
             }
         ]
     },
