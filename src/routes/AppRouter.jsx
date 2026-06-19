@@ -7,15 +7,19 @@ import ClientsPage from "../pages/ClientsPage.jsx";
 import ProjectsPage from "../pages/ProjectsPage.jsx";
 import KanbanPage from "../pages/KanbanPage.jsx";
 
+
 export default function AppRouter() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Dashboard />} />
+
         <Route path="tasks" element={<TasksPage />} />
+
         <Route path="clients" element={<ClientsPage />} />
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="kanban" element={<KanbanPage />} />
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

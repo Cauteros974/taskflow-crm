@@ -104,6 +104,7 @@ export const mockTasks = [
         priority: "Medium",
         projectId: "project-2",
         clientId: "client-2",
-        dueDate: "2026-06-19"
+        dueDate: "2026-06-19",
+        coments:[]
     }
 ];
