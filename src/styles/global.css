@@ -447,4 +447,8 @@ button {
     align-items: start;
     flex-direction: column;
   }
+
+  .kanban-board {
+    grid-template-columns: 1fr;
+  }
 }
