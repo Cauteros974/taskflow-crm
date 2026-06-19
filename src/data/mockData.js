@@ -65,7 +65,13 @@ export const mockTasks = [
         status: "Completed",
         priority: "Medium",
         clientId: "client-1",
-        dueDate: "2026-05-25"
+        dueDate: "2026-05-25",
+        comment: [
+            {
+                id: "commnet-1",
+                text: "The requirements are collected, we can move on to design."
+            }
+        ]
     },
     {
         id: "task-2",
