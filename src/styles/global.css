@@ -437,4 +437,9 @@ button {
     height: auto;
     position: static;
   }
+
+  .nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
 }
