@@ -451,4 +451,8 @@ button {
   .kanban-board {
     grid-template-columns: 1fr;
   }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
 }
