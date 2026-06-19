@@ -442,4 +442,9 @@ button {
     flex-direction: row;
     overflow-x: auto;
   }
+
+  .page-title {
+    align-items: start;
+    flex-direction: column;
+  }
 }
