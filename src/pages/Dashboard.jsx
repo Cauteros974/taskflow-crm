@@ -34,7 +34,7 @@ export default function Dashboard() {
 
     const progressValue = tasks.length
         ? Math.round((completed / tasks.length) * 100)
-        : 0
+        : 0;
     
     const columns = [
         {
