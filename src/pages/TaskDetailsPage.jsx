@@ -162,7 +162,7 @@ export default function TaskDetailsPage() {
                 <div className="task-details-grid">
                     <Card className="soft">
                         <CardContent>
-                            <div className="">
+                            <div className="details-header">
                                 <div>
                                     <Typography>
                                         Task information
