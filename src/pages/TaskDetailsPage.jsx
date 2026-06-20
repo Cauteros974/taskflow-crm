@@ -104,5 +104,11 @@ export default function TaskDetailsPage() {
 
         message.success("Task deleted")
         navigate("/tasks");
+
+        const handleAddComment = () => {
+            const text = commentText.trim();
+
+            if (!text) return;
+        }
     }
 }
