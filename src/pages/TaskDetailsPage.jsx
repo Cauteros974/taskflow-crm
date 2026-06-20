@@ -35,4 +35,7 @@ export default function TaskDetailsPage() {
     );
     const clients = useSelector((state) => state.clients.items);
     const projects = useSelector((state) => state.projects.items);
+    
+    const [commentText, setCommentText] = useState("");
+    const [modalOpen, setModalOpen] = useState(false);
 }
