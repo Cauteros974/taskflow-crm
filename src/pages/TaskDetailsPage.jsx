@@ -243,7 +243,8 @@ export default function TaskDetailsPage() {
                                 <TextField
                                     label="Write a comment"
                                     value={commentText}
-                                    onChange={(event)}
+                                    onChange={(event) => setCommentText(event.target.value)}
+                                    multiline
                                     minRows={3}
                                     fullWidth
                                 >
