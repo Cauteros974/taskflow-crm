@@ -166,8 +166,7 @@ export default function TaskDetailsPage() {
                             Back
                         </Button>
                     }
-                >
-                </PageTitle>
+                />
 
                 <div className="task-details-grid">
                     <Card className="soft-card">
@@ -176,6 +175,10 @@ export default function TaskDetailsPage() {
                                 <div>
                                     <Typography variant="h6" fontWeight={900}>
                                         Task information
+                                    </Typography>
+
+                                    <Typography>
+                                        Basic data, client, project and deadline
                                     </Typography>
                                 </div>
                             </div>
