@@ -84,6 +84,8 @@ export default function TaskDetailsPage() {
                 entityType: "task",
                 entityId: task.id
             })
-        )
-    }
+        );
+
+        message.success("The task has been updated");
+    };
 }
