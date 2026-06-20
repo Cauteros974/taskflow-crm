@@ -34,4 +34,5 @@ export default function TaskDetailsPage() {
         state.tasks.items.find((item) => item.id === taskId)
     );
     const clients = useSelector((state) => state.clients.items);
+    const projects = useSelector((state) => state.projects.items);
 }
