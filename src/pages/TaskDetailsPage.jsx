@@ -125,6 +125,18 @@ export default function TaskDetailsPage() {
                     entityType: "task",
                     entityId: task.id
                 })
+            );
+
+            setCommentText("");
+            message.success("Comment added");
+        };
+
+        const handleDeleteComment = (commentId) => {
+            dispatch(
+                deleteTaskComment({
+                    tasId: task.id,
+                    commentId
+                })
             )
         }
     }
