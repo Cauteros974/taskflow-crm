@@ -193,7 +193,7 @@ export default function TaskDetailsPage() {
                                         cancelText="No"
                                         onConfirm={handleDeleteTask}
                                     >
-
+                                        <Button>Delete</Button>
                                     </Popconfirm>
                                 </div>
                             </div>
