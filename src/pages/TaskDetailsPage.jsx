@@ -100,6 +100,9 @@ export default function TaskDetailsPage() {
                 entityType: "task", 
                 entityId: task.id
             })
-        )
+        );
+
+        message.success("Task deleted")
+        navigate("/tasks");
     }
 }
