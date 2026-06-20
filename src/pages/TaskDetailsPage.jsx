@@ -265,6 +265,17 @@ export default function TaskDetailsPage() {
                                                     <strong>{comment.author}</strong>
                                                     <span>{comment.createdAt}</span>
                                                 </div>
+
+                                                <Popconfirm
+                                                    title="Delete comment?"
+                                                    okText="Yes"
+                                                    cancelText="No"
+                                                    onConfirm={() => handleDeleteComment(comment.id)}
+                                                >
+                                                    <button className="comment-delete-button">
+                                                        Delete
+                                                    </button>
+                                                </Popconfirm>
                                             </div>
                                         </div>
                                     ))
