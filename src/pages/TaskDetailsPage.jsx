@@ -186,6 +186,13 @@ export default function TaskDetailsPage() {
                                     <Button variant="contained" onClick={() => setModalOpen(true)}>
                                         Change
                                     </Button>
+
+                                    <Popconfirm 
+                                        title="Delete task?"
+                                        onText="Yes"
+                                    >
+
+                                    </Popconfirm>
                                 </div>
                             </div>
                         </CardContent>
