@@ -244,6 +244,8 @@ export default function TaskDetailsPage() {
                                     label="Write a comment"
                                     value={commentText}
                                     onChange={(event)}
+                                    minRows={3}
+                                    fullWidth
                                 >
 
                                 </TextField>
