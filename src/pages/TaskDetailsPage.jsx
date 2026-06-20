@@ -217,17 +217,17 @@ export default function TaskDetailsPage() {
 
                                 <div>
                                     <span>Clinet</span>
-                                    <StatusBadge value={task.client} />
+                                    <strong>{client?.name || "Not selected"}</strong>
                                 </div>
 
                                 <div>
                                     <span>Project</span>
-                                    <StatusBadge value={task.project} />
+                                    <strong>{client?.name || "Not selected"}</strong>
                                 </div>
 
                                 <div>
                                     <span>Deadline</span>
-                                    <StatusBadge value={task.client} />
+                                    <strong>{client?.name || "Not selected"}</strong>
                                 </div>
                             </div>
                         </CardContent>
