@@ -159,6 +159,9 @@ export default function TaskDetailsPage() {
                     action={
                         <Button
                             component={Link}
+                            to="/tasks"
+                            variant="outlined"
+                            startIcon={<ArrowBackIcon />}
                         >
                             Back
                         </Button>
