@@ -53,6 +53,8 @@ export default function TaskDetailsPage() {
                         <Button
                             component={Link}
                             to="/tasks"
+                            variant="contained"
+                            startIcon={<ArrowBackIcon />}
                         >
                             Return to tasks
                         </Button>
