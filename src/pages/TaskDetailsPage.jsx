@@ -292,6 +292,8 @@ export default function TaskDetailsPage() {
                 <TaskModal 
                     open={modalOpen}
                     onClose={() => setModalOpen(false)}
+                    onSubmit={handleUpdateTask}
+                    task={task}
                 />
             </>
         )
