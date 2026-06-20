@@ -50,7 +50,10 @@ export default function TaskDetailsPage() {
                             The task may have been deleted.
                         </Typography>
 
-                        <Button>
+                        <Button
+                            component={Link}
+                            to="/tasks"
+                        >
                             Return to tasks
                         </Button>
                     </CardContent>
