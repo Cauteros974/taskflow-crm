@@ -232,6 +232,14 @@ export default function TaskDetailsPage() {
                             </div>
                         </CardContent>
                     </Card>
+
+                    <Card className="soft-card">
+                        <CardContent>
+                            <Typography variant="h6" fontWeight={900} gutterBottom>
+                                Comments
+                            </Typography>
+                        </CardContent>
+                    </Card>
                 </div>
             </>
         )
