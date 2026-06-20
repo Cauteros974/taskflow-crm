@@ -143,6 +143,8 @@ export default function TaskDetailsPage() {
                     type:"comment_deleted",
                     title: "Comment removed",
                     description: `Comment removed in task: ${task.title}`,
+                     entityType: "task",
+                     entityId: task.id
                 })
             )
         }
