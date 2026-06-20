@@ -46,7 +46,7 @@ export default function TaskDetailsPage() {
 
                 </PageTitle>
 
-                <Card>
+                <Card className="soft-card">
                     <CardContent>
                         <Typography color="text.secondary" gutterBottom>
                             The task may have been deleted.
