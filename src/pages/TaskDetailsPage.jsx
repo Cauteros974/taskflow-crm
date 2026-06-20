@@ -74,6 +74,13 @@ export default function TaskDetailsPage() {
             updateTask({
                 ...updateTask
             })
+        );
+
+        dispatch(
+            addActivity({
+                tape:"task_updated",
+                title:"The task has been updated"
+            })
         )
     }
 }
