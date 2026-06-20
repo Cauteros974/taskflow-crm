@@ -238,6 +238,16 @@ export default function TaskDetailsPage() {
                             <Typography variant="h6" fontWeight={900} gutterBottom>
                                 Comments
                             </Typography>
+
+                            <div className="commnet">
+                                <TextField
+                                    label="Write a comment"
+                                    value={commentText}
+                                    onChange={(event)}
+                                >
+
+                                </TextField>
+                            </div>
                         </CardContent>
                     </Card>
                 </div>
