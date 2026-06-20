@@ -88,4 +88,18 @@ export default function TaskDetailsPage() {
 
         message.success("The task has been updated");
     };
+
+    const handleDeleteTask = () => {
+        dispatch(deleteTask(task.id));
+
+        dispatch(
+            addActivity({
+                type:"task_deleted",
+                title: "Task deleted", 
+                description: `Task deleted: ${task.title}`, 
+                entityType: "task", 
+                entityId: task.id
+            })
+        )
+    }
 }
