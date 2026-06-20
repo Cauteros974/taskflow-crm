@@ -137,6 +137,13 @@ export default function TaskDetailsPage() {
                     tasId: task.id,
                     commentId
                 })
+            );
+            dispatch(
+                addActivity({
+                    type:"comment_deleted",
+                    title: "Comment removed",
+                    description: `Comment removed in task: ${task.title}`,
+                })
             )
         }
     }
