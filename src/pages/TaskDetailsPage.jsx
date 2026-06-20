@@ -247,9 +247,7 @@ export default function TaskDetailsPage() {
                                     multiline
                                     minRows={3}
                                     fullWidth
-                                >
-
-                                </TextField>
+                                />
                             </div>
                         </CardContent>
                     </Card>
