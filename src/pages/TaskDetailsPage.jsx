@@ -183,7 +183,7 @@ export default function TaskDetailsPage() {
                                 </div>
 
                                 <div className="table-actions">
-                                    <Button onClick={() => setModalOpen(true)}>
+                                    <Button variant="contained" onClick={() => setModalOpen(true)}>
                                         Change
                                     </Button>
                                 </div>
