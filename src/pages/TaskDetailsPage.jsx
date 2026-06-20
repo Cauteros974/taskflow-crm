@@ -248,7 +248,13 @@ export default function TaskDetailsPage() {
                                     minRows={3}
                                     fullWidth
                                 />
+
+                                <Button variant="contained" onClick={handleAddComment}>
+                                    Add a comment
+                                </Button>
                             </div>
+
+                            <Divider className="details-divider" />
                         </CardContent>
                     </Card>
                 </div>
