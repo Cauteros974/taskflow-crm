@@ -79,7 +79,9 @@ export default function TaskDetailsPage() {
         dispatch(
             addActivity({
                 tape:"task_updated",
-                title:"The task has been updated"
+                title:"The task has been updated",
+                entityType: "task",
+                entityId: task.id
             })
         )
     }
