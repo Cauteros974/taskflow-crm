@@ -198,9 +198,9 @@ export default function TaskDetailsPage() {
                                 </div>
                             </div>
 
-                            <Divider />
+                            <Divider className="details-divider"/>
 
-                            <Typography>
+                            <Typography className="details-description">
                                 {task.description || "Desctiprion missing"}
                             </Typography>
                         </CardContent>
