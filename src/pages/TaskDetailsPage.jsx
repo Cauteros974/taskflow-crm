@@ -109,6 +109,13 @@ export default function TaskDetailsPage() {
             const text = commentText.trim();
 
             if (!text) return;
+
+            dispatch(
+                addTaskComment({
+                    taskId: task.id,
+                    text
+                })
+            );
         }
     }
 }
