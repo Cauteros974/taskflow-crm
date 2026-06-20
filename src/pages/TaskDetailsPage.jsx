@@ -80,6 +80,7 @@ export default function TaskDetailsPage() {
             addActivity({
                 tape:"task_updated",
                 title:"The task has been updated",
+                description: `Changed task: ${updatedTask.title}`,
                 entityType: "task",
                 entityId: task.id
             })
