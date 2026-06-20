@@ -197,6 +197,12 @@ export default function TaskDetailsPage() {
                                     </Popconfirm>
                                 </div>
                             </div>
+
+                            <Divider />
+
+                            <Typography>
+                                {task.description || "Desctiprion missing"}
+                            </Typography>
                         </CardContent>
                     </Card>
                 </div>
