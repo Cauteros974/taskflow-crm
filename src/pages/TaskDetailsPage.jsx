@@ -190,6 +190,8 @@ export default function TaskDetailsPage() {
                                     <Popconfirm 
                                         title="Delete task?"
                                         onText="Yes"
+                                        cancelText="No"
+                                        onConfirm={handleDeleteTask}
                                     >
 
                                     </Popconfirm>
