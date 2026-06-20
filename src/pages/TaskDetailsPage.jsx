@@ -181,6 +181,12 @@ export default function TaskDetailsPage() {
                                         Basic data, client, project and deadline
                                     </Typography>
                                 </div>
+
+                                <div className="table-actions">
+                                    <Button onClick={() => setModalOpen(true)}>
+                                        Change
+                                    </Button>
+                                </div>
                             </div>
                         </CardContent>
                     </Card>
