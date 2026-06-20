@@ -255,6 +255,25 @@ export default function TaskDetailsPage() {
                             </div>
 
                             <Divider className="details-divider" />
+
+                            <div className="comments-list">
+                                {comments.length ? (
+                                    comments.map((comment) => (
+                                        <div className="comment-card" key={comment.id}>
+                                            <div className="comment-header">
+                                                <div>
+                                                    <strong>{comment.author}</strong>
+                                                    <span>{comment.createdAt}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))
+                                ) : (
+                                    <Typography color="text.secondary">
+                                        There are no comments yet.
+                                    </Typography>
+                                )}
+                            </div>
                         </CardContent>
                     </Card>
                 </div>
