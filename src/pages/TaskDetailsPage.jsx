@@ -153,14 +153,21 @@ export default function TaskDetailsPage() {
 
         return(
             <>
-                <PageTitle>
-                    <Button>
-                        Back
-                    </Button>
+                <PageTitle
+                    title={task.title}
+                    subtitle="Task Details Page"
+                    action={
+                        <Button
+                            component={Link}
+                        >
+                            Back
+                        </Button>
+                    }
+                >
                 </PageTitle>
 
                 <div className="task-details-grid">
-                    <Card className="soft">
+                    <Card className="soft-card">
                         <CardContent>
                             <div className="details-header">
                                 <div>
