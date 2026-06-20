@@ -68,4 +68,12 @@ export default function TaskDetailsPage() {
     const project = projects.find((item) => item.id);
 
     const comments = task.comments || [];
+
+    const handleUpdateTask = (updateTask) => {
+        dispatch(
+            updateTask({
+                ...updateTask
+            })
+        )
+    }
 }
