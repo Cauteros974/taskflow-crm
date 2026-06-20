@@ -38,4 +38,22 @@ export default function TaskDetailsPage() {
     
     const [commentText, setCommentText] = useState("");
     const [modalOpen, setModalOpen] = useState(false);
+
+    if(task) {
+        return(
+            <>
+                <PageTitle>
+
+                </PageTitle>
+
+                <Card>
+                    <CardContent>
+                        <Typography>
+                            The task may have been deleted.
+                        </Typography>
+                    </CardContent>
+                </Card>
+            </>
+        )
+    }
 }
