@@ -164,7 +164,7 @@ export default function TaskDetailsPage() {
                         <CardContent>
                             <div className="details-header">
                                 <div>
-                                    <Typography>
+                                    <Typography variant="h6" fontWeight={900}>
                                         Task information
                                     </Typography>
                                 </div>
