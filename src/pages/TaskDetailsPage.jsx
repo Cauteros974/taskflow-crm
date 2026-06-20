@@ -146,7 +146,33 @@ export default function TaskDetailsPage() {
                      entityType: "task",
                      entityId: task.id
                 })
-            )
-        }
+            );
+
+            message.success("Comment deleted")
+        };
+
+        return(
+            <>
+                <PageTitle>
+                    <Button>
+                        Back
+                    </Button>
+                </PageTitle>
+
+                <div className="task-details-grid">
+                    <Card className="soft">
+                        <CardContent>
+                            <div className="">
+                                <div>
+                                    <Typography>
+                                        Task information
+                                    </Typography>
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
+                </div>
+            </>
+        )
     }
 }
