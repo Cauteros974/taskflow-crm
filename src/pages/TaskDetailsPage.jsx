@@ -29,4 +29,9 @@ export default function TaskDetailsPage() {
     const {taskId } = useParms();
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
+    const task = useSelector((state) =>
+        state.tasks.items.find((item) => item.id === taskId)
+    );
+    const clients = useSelector((state) => state.clients.items);
 }
