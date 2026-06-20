@@ -54,13 +54,18 @@ export default function TaskDetailsPage() {
                             component={Link}
                             to="/tasks"
                             variant="contained"
-                            startIcon={<ArrowBackIcon />}
+                            startIcon={<ArrowBackIcon/>}
                         >
                             Return to tasks
                         </Button>
                     </CardContent>
                 </Card>
             </>
-        )
+        );
     }
+
+    const client = clients.find((item) => item.id);
+    const project = projects.find((item) => item.id);
+
+    const comments = task.comments || [];
 }
