@@ -288,6 +288,11 @@ export default function TaskDetailsPage() {
                         </CardContent>
                     </Card>
                 </div>
+
+                <TaskModal 
+                    open={modalOpen}
+                    onClose={() => setModalOpen(false)}
+                />
             </>
         )
     }
