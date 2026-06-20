@@ -203,6 +203,13 @@ export default function TaskDetailsPage() {
                             <Typography className="details-description">
                                 {task.description || "Desctiprion missing"}
                             </Typography>
+
+                            <div className="details-list">
+                                <div>
+                                    <span>Status</span>
+                                    <StatusBadge value={task.status} />
+                                </div>
+                            </div>
                         </CardContent>
                     </Card>
                 </div>
