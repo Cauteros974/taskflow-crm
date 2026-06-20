@@ -224,6 +224,11 @@ export default function TaskDetailsPage() {
                                     <span>Project</span>
                                     <StatusBadge value={task.project} />
                                 </div>
+
+                                <div>
+                                    <span>Deadline</span>
+                                    <StatusBadge value={task.client} />
+                                </div>
                             </div>
                         </CardContent>
                     </Card>
