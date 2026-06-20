@@ -209,6 +209,11 @@ export default function TaskDetailsPage() {
                                     <span>Status</span>
                                     <StatusBadge value={task.status} />
                                 </div>
+
+                                <div>
+                                    <span>Priority</span>
+                                    <StatusBadge value={task.priority} />
+                                </div>
                             </div>
                         </CardContent>
                     </Card>
