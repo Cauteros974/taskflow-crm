@@ -42,10 +42,8 @@ export default function TaskDetailsPage() {
     if(task) {
         return(
             <>
-                <PageTitle>
-
-                </PageTitle>
-
+                <PageTitle title="Task not found"/>
+                
                 <Card className="soft-card">
                     <CardContent>
                         <Typography color="text.secondary" gutterBottom>
