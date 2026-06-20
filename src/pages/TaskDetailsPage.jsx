@@ -116,6 +116,16 @@ export default function TaskDetailsPage() {
                     text
                 })
             );
+
+            dispatch(
+                addActivity({
+                    type: "comment_added",
+                    title: "Comment added",
+                    description: `Comment added to task: ${task.title}`,
+                    entityType: "task",
+                    entityId: task.id
+                })
+            )
         }
     }
 }
