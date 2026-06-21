@@ -13,4 +13,5 @@ const typeLabels = {
     comment_added: "Comment",
     comment_deleted: "Comment",
     status_changed: "Status",
+    system: "System"
 }
