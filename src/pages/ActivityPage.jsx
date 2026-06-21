@@ -14,4 +14,10 @@ const typeLabels = {
     comment_deleted: "Comment",
     status_changed: "Status",
     system: "System"
+};
+
+export default function activityPage () {
+    const dispatch = useDispatch();
+
+    const activity = useSelector(false);
 }
