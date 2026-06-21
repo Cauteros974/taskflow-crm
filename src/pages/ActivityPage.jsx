@@ -49,7 +49,9 @@ export default function activityPage () {
                                     <div className="activity-marker" />
 
                                     <div className="activity-content">
-
+                                        <div className="activity-top">
+                                            <Typography fontWeight={900}>{item.title}</Typography>
+                                        </div>
                                     </div>
                                 </div>
                             ))
