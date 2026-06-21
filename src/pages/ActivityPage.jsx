@@ -43,7 +43,13 @@ export default function activityPage () {
             <Card className="soft-card">
                 <CardContent>
                     <div className="activity-list">
-                        
+                        {activity.length ? (
+                            activity.map((item) => (
+                                <div className="activity-item" key={item.id}>
+                                    
+                                </div>
+                            ))
+                        )}
                     </div>
                 </CardContent>
             </Card>
