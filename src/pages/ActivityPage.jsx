@@ -32,7 +32,11 @@ export default function activityPage () {
                         onText="Yes"
                         cancelText="No"
                         onConfirm={() => dispatch(clearActivity())}
-                    />
+                    >
+                        <Button color="error">
+                            Clear history
+                        </Button>
+                    </Popconfirm>
                 }
             />
         </>
