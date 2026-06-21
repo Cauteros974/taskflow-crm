@@ -20,4 +20,13 @@ export default function activityPage () {
     const dispatch = useDispatch();
 
     const activity = useSelector((state) => state.activity.items);
+
+    return(
+        <>
+            <PageTitle 
+                title="Action History"
+                subtitle="All important events in the app"
+            />
+        </>
+    )
 }
