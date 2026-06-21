@@ -427,6 +427,10 @@ button {
   font-size: 13px;
 }
 
+.stats-grid {
+  margin-bottom: 18px;
+}
+
 @media (max-width: 900px) {
   .app-shell {
     flex-direction: column;
