@@ -12,11 +12,13 @@ import {
 } from "@dnd-kit/core";
 
 import { Card, CardContent, Typography } from "@mui/material";
+import { message } from "antd";
 
 import PageTitle from "../components/PageTitle.jsx";
 import StatusBadge from "../components/StatusBadge.jsx";
 
 import { changeTaskStatus } from "../features/tasks/tasksSlice.js";
+import { addActivity } from "../features/activity/activitySlice.js";
 import { statuses } from "../data/mockData.js";
 
 export default function KanbanPage() {
