@@ -47,6 +47,10 @@ export default function activityPage () {
                             activity.map((item) => (
                                 <div className="activity-item" key={item.id}>
                                     <div className="activity-marker" />
+
+                                    <div className="activity-content">
+
+                                    </div>
                                 </div>
                             ))
                         )}
@@ -54,5 +58,5 @@ export default function activityPage () {
                 </CardContent>
             </Card>
         </>
-    )
+    );
 }
