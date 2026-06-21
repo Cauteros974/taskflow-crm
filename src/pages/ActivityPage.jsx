@@ -56,6 +56,15 @@ export default function ActivityPage() {
                     <Typography color="text.secondary">
                       {item.description}
                     </Typography>
+
+                    <div className="activity-bottom">
+
+                      {item.entityType === "task" && item.entityId && (
+                        <Link to={`/tasks/${item.entityId}`}>
+                          Open task
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))
