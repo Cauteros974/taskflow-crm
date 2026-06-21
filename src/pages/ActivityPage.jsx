@@ -46,7 +46,7 @@ export default function activityPage () {
                         {activity.length ? (
                             activity.map((item) => (
                                 <div className="activity-item" key={item.id}>
-                                    
+                                    <div className="activity-marker" />
                                 </div>
                             ))
                         )}
