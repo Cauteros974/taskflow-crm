@@ -40,12 +40,10 @@ export default function activityPage () {
                 }
             />
 
-            <Card variant="elevation">
+            <Card className="soft-card">
                 <CardContent>
                     <div className="activity-list">
-                        {activity.length ? (
-                            <div className="activity-item" key={item.id}>
-                        )}
+                        
                     </div>
                 </CardContent>
             </Card>
