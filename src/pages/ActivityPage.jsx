@@ -52,6 +52,10 @@ export default function ActivityPage() {
                     <div className="activity-top">
                       <Typography fontWeight={900}>{item.title}</Typography>
                     </div>
+
+                    <Typography color="text.secondary">
+                      {item.description}
+                    </Typography>
                   </div>
                 </div>
               ))
