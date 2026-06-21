@@ -11,4 +11,6 @@ const typeLabels = {
     task_updated: "Update",
     task_deleted: "Delete",
     comment_added: "Comment",
+    comment_deleted: "Comment",
+    status_changed: "Status",
 }
