@@ -19,15 +19,15 @@ export default function Dashboard() {
   const completed = tasks.filter(
     (task) => task.status === "Completed"
   ).length;
-
+  
   const inProgress = tasks.filter(
-    (task) => task.status === "In process"
+    (task) => task.status === "In Progress"
   ).length;
-
+  
   const review = tasks.filter(
-    (task) => task.status === "Review"
+    (task) => task.status === "Under review"
   ).length;
-
+  
   const critical = tasks.filter(
     (task) => task.priority === "Critical"
   ).length;
