@@ -39,6 +39,16 @@ export default function activityPage () {
                     </Popconfirm>
                 }
             />
+
+            <Card variant="elevation">
+                <CardContent>
+                    <div className="activity-list">
+                        {activity.length ? (
+                            <div className="activity-item" key={item.id}>
+                        )}
+                    </div>
+                </CardContent>
+            </Card>
         </>
     )
 }
