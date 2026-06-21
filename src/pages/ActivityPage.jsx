@@ -31,6 +31,7 @@ export default function activityPage () {
                         title="Clear history?"
                         onText="Yes"
                         cancelText="No"
+                        onConfirm={() => dispatch(clearActivity())}
                     />
                 }
             />
