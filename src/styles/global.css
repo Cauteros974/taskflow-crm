@@ -431,6 +431,10 @@ button {
   margin-bottom: 18px;
 }
 
+.dashboard-grid {
+  align-items: stretch;
+}
+
 @media (max-width: 900px) {
   .app-shell {
     flex-direction: column;
