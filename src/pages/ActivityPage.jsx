@@ -58,6 +58,7 @@ export default function ActivityPage() {
                     </Typography>
 
                     <div className="activity-bottom">
+                      <span>{item.createdAt}</span>
 
                       {item.entityType === "task" && item.entityId && (
                         <Link to={`/tasks/${item.entityId}`}>
