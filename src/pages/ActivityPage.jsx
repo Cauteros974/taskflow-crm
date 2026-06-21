@@ -26,6 +26,13 @@ export default function activityPage () {
             <PageTitle 
                 title="Action History"
                 subtitle="All important events in the app"
+                action={
+                    <Popconfirm 
+                        title="Clear history?"
+                        onText="Yes"
+                        cancelText="No"
+                    />
+                }
             />
         </>
     )
