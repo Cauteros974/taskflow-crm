@@ -27,7 +27,6 @@ export default function Dashboard() {
   const review = tasks.filter(
     (task) => task.status === "Under review"
   ).length;
-  
   const critical = tasks.filter(
     (task) => task.priority === "Critical"
   ).length;
