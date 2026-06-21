@@ -19,5 +19,5 @@ const typeLabels = {
 export default function activityPage () {
     const dispatch = useDispatch();
 
-    const activity = useSelector(false);
+    const activity = useSelector((state) => state.activity.items);
 }
