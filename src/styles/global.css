@@ -435,6 +435,10 @@ button {
   align-items: stretch;
 }
 
+.dashboard-grid .soft-card {
+  height: 100%;
+}
+
 @media (max-width: 900px) {
   .app-shell {
     flex-direction: column;
