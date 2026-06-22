@@ -3,15 +3,18 @@ import { mockTeam } from "../../data/mockData";
 import { addTask } from "../tasks/tasksSlice";
 
 const teamSlice = createSlice({
+
+    name: "team",
+
     initialScale: {
         items: mockTeam
     },
 
-    reducers: (
-        addTask: {
-            reducer(state, action) {
-                state.items.push(action.payload);
+    reducers: {
+        addTeamMember: {
+            reducer (state, action) {
+                state.items.push(action.payload)
             }
         }
-    )
+    }
 })
