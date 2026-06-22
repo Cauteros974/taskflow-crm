@@ -112,9 +112,9 @@ export const mockTasks = [
 export const mockTeam = [
     {
         id: "member-1",
-        name: "Bogdan",
+        name: "David",
         role: "Project Manager",
-        email: "bogdan@taskflow.dev",
+        email: "david@taskflow.dev",
         capacity: 5
     },
 ]
