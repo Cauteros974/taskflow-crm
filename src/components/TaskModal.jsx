@@ -136,6 +136,10 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
 
                             updateField("assigneeId", member?.id || "");
                         }}
+                        options={[
+                             "Not selected",
+                             ...team.map((member) => member.name)
+                        ]}
                     />
                  </div>
 
