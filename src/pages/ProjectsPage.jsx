@@ -292,10 +292,6 @@ export default function ProjectsPage() {
             />
           </Form.Item>
 
-          <Form.Item name="progress" label="Progress" initialValue={0}>
-            <InputNumber min={0} max={100} style={{ width: "100%" }} />
-          </Form.Item>
-
           <Form.Item name="startDate" label="Start date">
             <DatePicker style={{ width: "100%" }} />
           </Form.Item>
