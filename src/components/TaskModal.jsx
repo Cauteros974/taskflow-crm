@@ -133,6 +133,8 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
                             const member = team.find(
                                 (item) => item.name === memberName
                             );
+
+                            updateField("assigneeId", member?.id || "");
                         }}
                     />
                  </div>
