@@ -32,6 +32,8 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
 
     const [form, setForm] = useState(emptyTask);
 
+    const team = useSelector((state) => state.team.item);
+
     useEffect(() => {
         setForm(task || emptyTask);
     }, [task, open]);
