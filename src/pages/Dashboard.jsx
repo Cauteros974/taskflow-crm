@@ -58,6 +58,7 @@ export default function Dashboard() {
       }
 
       localStorage.setItem(
+        "taskflow-crm-state",
         JSON.stringify(data)
       )
     }
