@@ -30,7 +30,8 @@ export default function TeamPage() {
             ).length;
 
             const workload = Math.min(
-                Math.round((activeTasks / member) * 100)
+                Math.round((activeTasks / member.capacity) * 100),
+                100
             )
         })}
       </Grid>
