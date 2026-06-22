@@ -108,3 +108,13 @@ export const mockTasks = [
         coments:[]
     }
 ];
+
+export const mockTeam = [
+    {
+        id: "member-1",
+        name: "Bogdan",
+        role: "Project Manager",
+        email: "bogdan@taskflow.dev",
+        capacity: 5
+    },
+]
