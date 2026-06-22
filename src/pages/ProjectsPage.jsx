@@ -130,6 +130,12 @@ export default function ProjectsPage() {
             (task) => task.status === "Completed"
           ).length;
 
+          const projectProgress = projectTasks.length
+            ? Math.round(
+              (completedProjectTasks / projectTasks.length) * 100
+            )
+          : 0;
+
           return (
             <Grid item xs={12} md={6} key={project.id}>
               <Card className="soft-card project-card">
