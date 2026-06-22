@@ -40,6 +40,10 @@ export default function Dashboard() {
     const file = event.target.files?.[0];
     
     if (!file) return;
+
+    try{
+      const data = JSON.parse(await file.text())
+    }
   };
 
 
