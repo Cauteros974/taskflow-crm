@@ -117,4 +117,11 @@ export const mockTeam = [
         email: "david@taskflow.dev",
         capacity: 5
     },
+    {
+        id: "member-2",
+        name: "Anna",
+        role: "UI/UX Designer",
+        email: "anna@taskflow.dev",
+        capacity: 4
+    },
 ]
