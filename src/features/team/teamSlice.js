@@ -32,9 +32,9 @@ const teamSlice = createSlice({
                 (member) => member.id === action.payload.id
             );
 
-            if(index == 1) {
-                state.items.action {
-                    ...state.items,
+            if(index !== 1) {
+                state.items[index] = {
+                    ...state.items[index],
                     ...action.payload,
                 }
             }
