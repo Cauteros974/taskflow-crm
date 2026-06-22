@@ -30,17 +30,15 @@ export default function Dashboard() {
 
     const url = URL.createObjectURL(blob);
     const link = document.create("a");
-  }
 
-  
-  
-  link.href = url;
-  link.download = `taskflow-${new Date()
-    .toISOString()
-    .slice(0, 10)}.json`;
-
-  link.click();
-  URL.revokeObjectURL(url);
+     link.href = url;
+     link.download = `taskflow-${new Date()
+      .toISOString()
+      .slice(0, 10)}.json`;
+      
+    link.click();
+    URL.revokeObjectURL(url);
+  };
 
   const importData = async (event) => {
     const file = event.target.files?.[0];
