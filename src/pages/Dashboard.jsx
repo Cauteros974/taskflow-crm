@@ -19,9 +19,10 @@ export default function Dashboard() {
   const clients = useSelector((state) => state.clients.items);
   const projects = useSelector((state) => state.projects.items);
 
-  const appState = useSelector((state) => state);
-
   const exportData = () => {
+
+    const appState = store.getState();
+
     const blob = new Blob(
       [JSON.stringify(appState, null, 2)],
       { type: "application/json" }
