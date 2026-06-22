@@ -38,7 +38,12 @@ const navItems = [
     to: "/activity",
     label: "History",
     icon: <HistoryIcon />
-  }
+  },
+  {
+  to: "/team",
+  label: "Team",
+  icon: <GroupsIcon />
+}
 ];
 
 export default function Sidebar() {
