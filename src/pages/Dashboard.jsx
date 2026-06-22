@@ -27,6 +27,11 @@ export default function Dashboard() {
 
   const url = URL.createObjectURL(blob);
   const link = document.create("a");
+  
+  link.href = url;
+  link.download = `taskflow-${new Date()
+    .toISOString()
+    .slice(0, 10)}.json`;
 
   const completed = tasks.filter(
     (task) => task.status === "Completed"
