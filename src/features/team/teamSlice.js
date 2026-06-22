@@ -6,7 +6,7 @@ const teamSlice = createSlice({
 
     name: "team",
 
-    initialScale: {
+    initialState: {
         items: mockTeam
     },
 
