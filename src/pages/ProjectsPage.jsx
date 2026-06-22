@@ -126,6 +126,8 @@ export default function ProjectsPage() {
             (task) => task.projectId === project.id
           );
 
+          const completedProjectTasks  = projectTasks.length
+
           return (
             <Grid item xs={12} md={6} key={project.id}>
               <Card className="soft-card project-card">
