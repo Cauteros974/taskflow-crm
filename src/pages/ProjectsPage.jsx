@@ -184,7 +184,7 @@ export default function ProjectsPage() {
                         </Typography>
 
                         <Typography className="card-line">
-                          Progress: {project.progress}%
+                          Progress: {projectProgress}%
                         </Typography>
 
                         <LinearProgress
