@@ -52,6 +52,10 @@ export default function Dashboard() {
         Array.isArray(data.clients?.items) &&
         Array.isArray(data.projects?.items) &&
         Array.isArray(data.team?.items);
+
+      if(!valid) {
+        throw new Error();
+      }
     }
   };
 
