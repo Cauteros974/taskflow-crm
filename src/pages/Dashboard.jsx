@@ -46,6 +46,9 @@ export default function Dashboard() {
 
     } catch{
       alert("Invalid TaskFlow backup");
+
+      const valid = 
+        Array.isArray(data.tasks?.items) &&
     }
   };
 
