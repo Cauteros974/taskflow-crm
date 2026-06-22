@@ -16,6 +16,8 @@ export default function Dashboard() {
   const clients = useSelector((state) => state.clients.items);
   const projects = useSelector((state) => state.projects.items);
 
+  const appState = useSelector((state) => state);
+
   const completed = tasks.filter(
     (task) => task.status === "Completed"
   ).length;
