@@ -56,6 +56,10 @@ export default function Dashboard() {
       if(!valid) {
         throw new Error();
       }
+
+      localStorage.setItem(
+        JSON.stringify(data)
+      )
     }
   };
 
