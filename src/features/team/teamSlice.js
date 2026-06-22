@@ -19,7 +19,9 @@ const teamSlice = createSlice({
             prepare(team) {
                 return{
                     payload: {
-                        id: nanoid()
+                        id: nanoid(),
+                        ...member,
+                        capacity: Number(member.capacity)
                     }
                 }
             }
