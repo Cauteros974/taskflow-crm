@@ -468,6 +468,12 @@ button {
   margin-top: 20px;
 }
 
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 
 @media (max-width: 900px) {
   .app-shell {
