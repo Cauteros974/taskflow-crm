@@ -14,6 +14,14 @@ const teamSlice = createSlice({
         addTeamMember: {
             reducer (state, action) {
                 state.items.push(action.payload)
+            },
+
+            prepare(team) {
+                return{
+                    payload: {
+                        id: nanoid()
+                    }
+                }
             }
         }
     }
