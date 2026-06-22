@@ -21,6 +21,7 @@ export default function Dashboard() {
   const exportData = () => {
     const blob = new Blob(
       [JSON.stringify(appState, null, 2)],
+      { type: "application/json" }
     );
   }
 
