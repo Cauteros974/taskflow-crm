@@ -33,6 +33,10 @@ export default function Dashboard() {
     .toISOString()
     .slice(0, 10)}.json`;
 
+  link.click();
+  URL.revokeObjectURL(url);
+
+  
   const completed = tasks.filter(
     (task) => task.status === "Completed"
   ).length;
