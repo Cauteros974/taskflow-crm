@@ -129,6 +129,11 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
                             team.find((member) => member.id === form.assigneeId)?.name ||
                             "Not selected"
                         }
+                        onChange={(memberName) => {
+                            const member = team.find(
+                                (item) => item.name === memberName
+                            );
+                        }}
                     />
                  </div>
 
