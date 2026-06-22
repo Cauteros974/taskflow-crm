@@ -52,6 +52,7 @@ const teamSlice = createSlice({
 export const {
     addTeamMember,
     updateTeamMember,
+    deleteTeamMember
 } = teamSlice.actions;
 
 export default teamSlice.reducer;
