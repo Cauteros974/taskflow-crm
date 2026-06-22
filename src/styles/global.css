@@ -448,7 +448,7 @@ button {
 .team-member-header {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 12px;
 }
 
 
