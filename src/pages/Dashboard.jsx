@@ -50,6 +50,7 @@ export default function Dashboard() {
       const valid = 
         Array.isArray(data.tasks?.items) &&
         Array.isArray(data.clients?.items) &&
+        Array.isArray(data.projects?.items) &&
     }
   };
 
