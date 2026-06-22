@@ -12,6 +12,7 @@ import PageTitle from "../components/PageTitle.jsx";
 
 export default function TeamPage() {
   const team = useSelector((state) => state.team.items);
+  const tasks = useSelector((state) => state.tasks.items);
 
   return (
     <>
