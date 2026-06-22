@@ -43,6 +43,9 @@ export default function Dashboard() {
 
     try{
       const data = JSON.parse(await file.text())
+
+    } catch{
+      alert("Invalid TaskFlow backup");
     }
   };
 
