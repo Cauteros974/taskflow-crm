@@ -31,6 +31,13 @@ const teamSlice = createSlice({
             const index = state.items.findIndex(
                 (member) => member.id === action.payload.id
             );
+
+            if(index == 1) {
+                state.items.action {
+                    ...state.items,
+                    ...action.payload,
+                }
+            }
         }
     }
 })
