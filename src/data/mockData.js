@@ -1,4 +1,9 @@
-export const statuses = ["New", "In process", "Under review", "Completed"];
+export const statuses = [
+    "New", 
+    "In process", 
+    "Under review", 
+    "Completed"
+];
 
 export const priorities = ["Low", "Medium", "High", "Critical"];
 
