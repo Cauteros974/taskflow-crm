@@ -21,6 +21,7 @@ const emptyTask = {
     priority: "Middle",
     projectId: "",
     clientId: "",
+    assigneeId: "",
     dueDate: dayjs().add(7, "day").format("YYYY-MM-DD")
 }
 
