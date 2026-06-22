@@ -189,7 +189,7 @@ export default function ProjectsPage() {
 
                         <LinearProgress
                           variant="determinate"
-                          value={project.progress}
+                          value={projectProgress}
                         />
                       </Tab.Panel>
 
