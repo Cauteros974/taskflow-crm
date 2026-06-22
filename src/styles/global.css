@@ -475,6 +475,12 @@ button {
   margin-bottom: 8px;
 }
 
+.team-workload-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 
 @media (max-width: 900px) {
   .app-shell {
