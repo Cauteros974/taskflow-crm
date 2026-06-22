@@ -20,6 +20,16 @@ export default function TeamPage() {
         title="Team"
         subtitle="Team members and current workload"
       />
+
+      <Grid container spacing={2}>
+        {team.map((member) => {
+            const activeTasks = tasks.filter(
+                (task) =>
+                    task.assigneeId === member.id &&
+                    task.status !== "Completed"
+            ).length;
+        })}
+      </Grid>
     </>
   );
 }
