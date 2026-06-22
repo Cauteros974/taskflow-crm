@@ -36,7 +36,13 @@ export default function Dashboard() {
   link.click();
   URL.revokeObjectURL(url);
 
-  
+  const importData = async (event) => {
+    const file = event.target.files?.[0];
+    
+    if (!file) return;
+  };
+
+
   const completed = tasks.filter(
     (task) => task.status === "Completed"
   ).length;
