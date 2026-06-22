@@ -44,9 +44,6 @@ export default function Dashboard() {
     try{
       const data = JSON.parse(await file.text())
 
-    } catch{
-      alert("Invalid TaskFlow backup");
-
       const valid = 
         Array.isArray(data.tasks?.items) &&
         Array.isArray(data.clients?.items) &&
@@ -60,7 +57,12 @@ export default function Dashboard() {
       localStorage.setItem(
         "taskflow-crm-state",
         JSON.stringify(data)
-      )
+      );
+
+      window.location.reload();
+
+    } catch{
+      alert("Invalid TaskFlow backup");
     }
   };
 
