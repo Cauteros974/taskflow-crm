@@ -37,8 +37,14 @@ const teamSlice = createSlice({
                     ...state.items[index],
                     ...action.payload,
                     capacity: Number(action.payload.capacity)
-                }
+                };
             }
+        },
+
+        deleteTeamMember(state, action) {
+            state.items = state.items.filter(
+                (member) => member.id !== action.payload
+            );
         }
     }
 })
