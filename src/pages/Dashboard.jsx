@@ -27,10 +27,12 @@ export default function Dashboard() {
       [JSON.stringify(appState, null, 2)],
       { type: "application/json" }
     );
+
+    const url = URL.createObjectURL(blob);
+    const link = document.create("a");
   }
 
-  const url = URL.createObjectURL(blob);
-  const link = document.create("a");
+  
   
   link.href = url;
   link.download = `taskflow-${new Date()
