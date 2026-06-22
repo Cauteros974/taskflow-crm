@@ -28,6 +28,10 @@ export default function TeamPage() {
                     task.assigneeId === member.id &&
                     task.status !== "Completed"
             ).length;
+
+            const workload = Math.min(
+                Math.round((activeTasks / member) * 100)
+            )
         })}
       </Grid>
     </>
