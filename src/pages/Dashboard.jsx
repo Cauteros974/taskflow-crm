@@ -25,7 +25,7 @@ export default function Dashboard() {
     );
   }
 
-  const url = URL.createObjectURL();
+  const url = URL.createObjectURL(blob);
   const link = document.create("a");
 
   const completed = tasks.filter(
