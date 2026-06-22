@@ -30,6 +30,7 @@ const saveState = (state) => {
     console.log("Failed to save data to localStorage");
   }
   
+  team: store.getState().team
 };
 
 export const store = configureStore({
