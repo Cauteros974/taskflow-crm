@@ -4,11 +4,13 @@ import tasksReducer from "../features/tasks/tasksSlice.js";
 import clientsReducer from "../features/clients/clientsSlice.js";
 import projectsReducer from "../features/projects/projectsSlice.js";
 import activityReducer from "../features/activity/activitySlice.js";
+import teamReducer from "../features/team/teamSlice.js";
 
 const rootReducer = combineReducers({
   tasks: tasksReducer,
   clients: clientsReducer,
   projects: projectsReducer,
+  team: teamReducer,
   activity: activityReducer
 });
 
@@ -27,6 +29,7 @@ const saveState = (state) => {
   } catch {
     console.log("Failed to save data to localStorage");
   }
+  
 };
 
 export const store = configureStore({
