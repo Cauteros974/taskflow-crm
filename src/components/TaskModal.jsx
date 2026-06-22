@@ -18,7 +18,7 @@ const emptyTask = {
     title: "",
     description: "",
     status: "New",
-    priority: "Middle",
+    priority: "Medium",
     projectId: "",
     clientId: "",
     assigneeId: "",
