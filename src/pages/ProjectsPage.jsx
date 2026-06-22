@@ -126,7 +126,9 @@ export default function ProjectsPage() {
             (task) => task.projectId === project.id
           );
 
-          const completedProjectTasks  = projectTasks.length
+          const completedProjectTasks = projectTasks.filter(
+            (task) => task.status === "Completed"
+          )
 
           return (
             <Grid item xs={12} md={6} key={project.id}>
