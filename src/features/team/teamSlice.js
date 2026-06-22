@@ -36,6 +36,7 @@ const teamSlice = createSlice({
                 state.items[index] = {
                     ...state.items[index],
                     ...action.payload,
+                    capacity: Number(action.payload.capacity)
                 }
             }
         }
