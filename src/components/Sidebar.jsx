@@ -40,10 +40,10 @@ const navItems = [
     icon: <HistoryIcon />
   },
   {
-  to: "/team",
-  label: "Team",
-  icon: <GroupsIcon />
-}
+    to: "/team",
+    label: "Team",
+    icon: <GroupsIcon />
+  }
 ];
 
 export default function Sidebar() {
