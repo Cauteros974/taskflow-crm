@@ -66,6 +66,7 @@ export const mockTasks = [
         priority: "Medium",
         clientId: "client-1",
         dueDate: "2026-05-25",
+        projectId: "project-1",
         comments: [
             {
                 id: "commnet-1",
@@ -81,7 +82,7 @@ export const mockTasks = [
         description: "Prepare the UI for the cards for the main page",
         status: "In Progress",
         priority: "High",
-        projectId: "project-1",
+        projectId: "project-2",
         clientId: "client-1",
         dueDate: "2026-06-08",
         comments: []
@@ -92,7 +93,7 @@ export const mockTasks = [
         description: "Add search, filters, and sorting by deadline.",
         status: "Under review",
         priority: "High",
-        projectId: "project-2",
+        projectId: "project-3",
         clientId: "client-2",
         dueDate: "2026-06-12"
     },
@@ -102,7 +103,7 @@ export const mockTasks = [
         description: "Client list, cards, adding and deleting",
         status: "New",
         priority: "Medium",
-        projectId: "project-2",
+        projectId: "project-4",
         clientId: "client-2",
         dueDate: "2026-06-19",
         coments:[]
