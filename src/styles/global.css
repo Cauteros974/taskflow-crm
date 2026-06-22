@@ -445,6 +445,13 @@ button {
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.07) !important;
 }
 
+.team-member-header {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+
 @media (max-width: 900px) {
   .app-shell {
     flex-direction: column;
