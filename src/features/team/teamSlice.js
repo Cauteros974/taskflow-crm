@@ -23,8 +23,14 @@ const teamSlice = createSlice({
                         ...member,
                         capacity: Number(member.capacity)
                     }
-                }
+                };
             }
+        },
+
+        updateTeamMemeber(state, action) {
+            const index = state.items.findIndex(
+                (member) => member.id === action.payload.id
+            );
         }
     }
 })
