@@ -122,6 +122,14 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
                             ...projects.map((project) => project.title)
                         ]}
                     />
+
+                    <HeadlessSelect 
+                        label="Assignee"
+                        value={
+                            team.find((member) => member.id === form.assigneeId)?.name ||
+                            "Not selected"
+                        }
+                    />
                  </div>
 
                  <div>
