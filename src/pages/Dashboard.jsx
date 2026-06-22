@@ -18,6 +18,12 @@ export default function Dashboard() {
 
   const appState = useSelector((state) => state);
 
+  const exportData = () => {
+    const blob = new Blob(
+      [JSON.stringify(appState, null, 2)],
+    );
+  }
+
   const completed = tasks.filter(
     (task) => task.status === "Completed"
   ).length;
