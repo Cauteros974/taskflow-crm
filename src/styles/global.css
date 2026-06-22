@@ -451,6 +451,11 @@ button {
   gap: 12px;
 }
 
+.data-actions{
+  display: flex;
+  gap: 10px;
+}
+
 
 @media (max-width: 900px) {
   .app-shell {
