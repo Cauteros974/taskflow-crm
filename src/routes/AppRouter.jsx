@@ -7,6 +7,8 @@ import TaskDetailsPage from "../pages/TaskDetailsPage.jsx";
 import ClientsPage from "../pages/ClientsPage.jsx";
 import ProjectsPage from "../pages/ProjectsPage.jsx";
 import KanbanPage from "../pages/KanbanPage.jsx";
+import TeamPage from "../pages/TeamPage.jsx";
+import ActivityPage from "../pages/ActivityPage.jsx";
 
 export default function AppRouter() {
   return (
@@ -20,6 +22,9 @@ export default function AppRouter() {
         <Route path="clients" element={<ClientsPage />} />
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="kanban" element={<KanbanPage />} />
+
+        <Route path="team" element={<TeamPage />} />
+        <Route path="activity" element={<ActivityPage />} />
 
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
