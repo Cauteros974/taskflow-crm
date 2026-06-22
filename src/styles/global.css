@@ -481,6 +481,11 @@ button {
   gap: 12px;
 }
 
+.team-workload-content {
+  flex: 1;
+  min-width: 0;
+}
+
 
 @media (max-width: 900px) {
   .app-shell {
