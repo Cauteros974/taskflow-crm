@@ -210,7 +210,7 @@ export default function Dashboard() {
         <Grid item xs={12} md={7}>
           <Card className="soft-card">
             <CardContent>
-              <Typography variant="h7">
+              <Typography variant="h6" fontWeight={800}>
                 Project progress
               </Typography>
             </CardContent>
