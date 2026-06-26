@@ -512,6 +512,11 @@ button {
   min-width: 0;
 }
 
+.team-avatar{
+  background: #dbeafe !important;
+  color: #1d4ed8 !important;
+}
+
 
 @media (max-width: 900px) {
   .app-shell {
