@@ -287,7 +287,16 @@ export default function Dashboard() {
                             {member.role}
                           </Typography>
                         </div>
+
+                        <Typography variant="body2" fontWeight={800}>
+                          {member.taskCount}/{member.capacity} tasks
+                        </Typography>
                       </div>
+
+                      <LinearProgress 
+                        variant="determinate"
+                        value={member.workload}
+                      />
                     </div>
                   </div>
                 })}
