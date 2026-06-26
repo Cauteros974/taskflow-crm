@@ -227,6 +227,10 @@ export default function Dashboard() {
                           <Typography fontWeight={800}>
                             {project.title}
                           </Typography>
+
+                          <Typography>
+                            Deadline: {project.deadline || "Not specified"}
+                          </Typography>
                         </div>
                       </div>
                     </div>
