@@ -16,6 +16,8 @@ import PageTitle from "../components/PageTitle.jsx";
 import StatusBadge from "../components/StatusBadge.jsx";
 
 export default function Dashboard() {
+  // Get data from the Redux store.
+  // The dashboard builds statistics based on tasks, clients, projects, and teams.
   const tasks = useSelector((state) => state.tasks.items);
   const clients = useSelector((state) => state.clients.items);
   const projects = useSelector((state) => state.projects.items);
@@ -53,6 +55,8 @@ export default function Dashboard() {
     }
   };
 
+  // Count the number of tasks by status.
+  // These values ​​are displayed in the top statistics cards.
   const completed = tasks.filter((t) => t.status === "Completed").length;
   const inProgress = tasks.filter((t) => t.status === "In Progress").length;
   const review = tasks.filter((t) => t.status === "Under review").length;
