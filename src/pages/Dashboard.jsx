@@ -225,6 +225,9 @@ export default function Dashboard() {
 
                     </div>
                   ))
+                ) : (
+                  <Typography color="text.secondary">
+                  </Typography>
                 )}
               </div>
             </CardContent>
