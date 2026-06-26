@@ -487,6 +487,13 @@ button {
   border-bottom: 0;
 }
 
+.project-progress-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
 .progress-header {
   display: flex;
   justify-content: space-between;
