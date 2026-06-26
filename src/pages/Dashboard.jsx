@@ -218,20 +218,13 @@ export default function Dashboard() {
                 Current completion status of active projects
               </Typography>
 
-              <div className="project-progress-list">
-                {project.length ? (
+              <div className="project-list">
+                {projects.length ? (
                   projects.map((project) => (
                     <div className="project-progress-item" key={project.id}>
-                      <div className="">
-                        <div>
-                          <Typography fontWeight={800}>
-                            {project.title}
-                          </Typography>
-                        </div>
-                      </div>
+
                     </div>
                   ))
-                  
                 )}
               </div>
             </CardContent>
