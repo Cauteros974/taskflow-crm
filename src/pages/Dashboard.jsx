@@ -282,6 +282,10 @@ export default function Dashboard() {
                           <Typography fontWeight={800}>
                             {member.name}
                           </Typography>
+
+                          <Typography variant="body2" color="text.secondary">
+                            {member.role}
+                          </Typography>
                         </div>
                       </div>
                     </div>
