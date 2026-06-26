@@ -34,6 +34,8 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
 
     const team = useSelector((state) => state.team.items);
 
+    // If an existing task is submitted, fill the form with its data.
+    // If there is no task, open a blank form to create a task.
     useEffect(() => {
         setForm(task || emptyTask);
     }, [task, open]);
