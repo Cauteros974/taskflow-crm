@@ -1,6 +1,8 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 import { mockTasks } from "../../data/mockData";
 
+// Slice is responsible for the task list, filters, status changes
+// and comments within tasks.
 const initialState = {
     items: mockTasks,
     filters: {
