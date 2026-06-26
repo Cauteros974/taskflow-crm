@@ -207,7 +207,7 @@ export default function Dashboard() {
       </Grid>
 
       <Grid container spacing={2} className="dashboard-secondary-grid">
-        <Grid item xs={10} md={7}>
+        <Grid item xs={12} md={7}>
           <Card className="soft-card">
             <CardContent>
               <Typography>
