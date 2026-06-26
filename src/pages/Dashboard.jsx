@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import {
+  Avatar,
   Card,
   CardContent,
   Grid,
@@ -10,6 +11,8 @@ import {
 import { Table } from "antd";
 
 import { store } from "../app/store.js";
+
+import { mockTeam } from "../data/mockData.js";
 
 import PageTitle from "../components/PageTitle.jsx";
 import StatusBadge from "../components/StatusBadge.jsx";
