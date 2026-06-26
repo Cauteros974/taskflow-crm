@@ -257,6 +257,16 @@ export default function Dashboard() {
             </CardContent>
           </Card>
         </Grid>
+
+        <Grid>
+          <Card>
+            <CardContent>
+              <Typography>
+                Team workload
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
       </Grid>
     </>
   );
