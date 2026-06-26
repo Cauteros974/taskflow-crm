@@ -16,6 +16,8 @@ const rootReducer = combineReducers({
   activity: activityReducer
 });
 
+// Load the saved application state from localStorage.
+// If there is no data or an error occurs, Redux uses the initialState from the slices.
 const loadState = () => {
   try {
     const savedState = localStorage.getItem("taskflow-crm-state");
@@ -25,6 +27,8 @@ const loadState = () => {
   }
 };
 
+// Save the current application state in localStorage,
+// so that the data doesn't disappear after a page reload.
 const saveState = (state) => {
   try {
     localStorage.setItem("taskflow-crm-state", JSON.stringify(state));
