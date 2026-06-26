@@ -217,6 +217,22 @@ export default function Dashboard() {
               <Typography color="text.secondary" className="section-subtitle">
                 Current completion status of active projects
               </Typography>
+
+              <div className="project-list">
+                {project.length ? (
+                  projects.map((project) => (
+                    <div className="">
+                      <div className="">
+                        <div>
+                          <Typography fontWeight={800}>
+                            {project.title}
+                          </Typography>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
             </CardContent>
           </Card>
         </Grid>
