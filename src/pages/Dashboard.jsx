@@ -224,7 +224,7 @@ export default function Dashboard() {
                     <div className="project-progress-item" key={project.id}>
                       <div className="project-progress-header">
                         <div>
-                          <Typography>
+                          <Typography fontWeight={800}>
                             {project.title}
                           </Typography>
                         </div>
