@@ -276,10 +276,10 @@ export default function Dashboard() {
                       {member.name.charAt(0)}
                     </Avatar>
 
-                    <div className="">
-                      <div>
+                    <div className="team-workload-content">
+                      <div className="team-workload-headr">
                         <div>
-                          <Typography>
+                          <Typography fontWeight={800}>
                             {member.name}
                           </Typography>
                         </div>
