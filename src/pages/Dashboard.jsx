@@ -233,7 +233,9 @@ export default function Dashboard() {
                           </Typography>
                         </div>
 
-                        
+                        <Typography>
+                          {project.progress || 0}%
+                        </Typography>
                       </div>
                     </div>
                   ))
