@@ -151,9 +151,11 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
                         onChange={(date) => 
                             updateField(
                                 "dueDate",
-                                date ? date.format("YYY-MM-DD") : ""
+                                date ? date.format("YYYY-MM-DD") : ""
                             )
                         }
+                        format="YYYY-MM-DD"
+                        style={{width: "100%"}}
                     />              
                  </div>
             </DialogContent>
