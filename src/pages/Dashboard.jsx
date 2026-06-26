@@ -239,7 +239,7 @@ export default function Dashboard() {
                       </div>
 
                       <LinearProgress 
-                        variant="buffer"
+                        variant="determinate"
                         value={project.progress || 0}
                       />
                     </div>
