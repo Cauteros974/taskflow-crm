@@ -118,7 +118,7 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
                             updateField("projectId", project?.id || "");
                         }}
                         options={[
-                            "Not Selected",
+                            "Not selected",
                             ...projects.map((project) => project.title)
                         ]}
                     />
