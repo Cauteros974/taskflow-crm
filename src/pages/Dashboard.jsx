@@ -275,6 +275,16 @@ export default function Dashboard() {
                     <Avatar className="team-avatar">
                       {member.name.charAt(0)}
                     </Avatar>
+
+                    <div className="">
+                      <div>
+                        <div>
+                          <Typography>
+                            {member.name}
+                          </Typography>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 })}
               </div>
