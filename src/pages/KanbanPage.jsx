@@ -30,6 +30,8 @@ export default function KanbanPage() {
 
   const [activeTask, setActiveTask] = useState(null);
 
+  // Fires when the user starts dragging a task.
+  // Save the active task to show it in the DragOverlay.
   const handleDragStart = (event) => {
     const task = tasks.find((item) => item.id === event.active.id);
     setActiveTask(task || null);
