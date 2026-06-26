@@ -130,6 +130,10 @@ export default function Dashboard() {
       (task) =>
         task.assigneeId === member.id &&
         task.status !== "Completed"
+    );
+
+    const workload = Math.min(
+      Math.round((memberTasks.length / member.capacity) * 100)
     )
   })
 
