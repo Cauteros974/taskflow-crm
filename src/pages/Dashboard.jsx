@@ -62,6 +62,7 @@ export default function Dashboard() {
   const review = tasks.filter((t) => t.status === "Under review").length;
   const critical = tasks.filter((t) => t.priority === "Critical").length;
 
+  // We calculate the total percentage of completed tasks.
   const progressValue = tasks.length
     ? Math.round((completed / tasks.length) * 100)
     : 0;
