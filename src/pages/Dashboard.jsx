@@ -241,6 +241,9 @@ export default function Dashboard() {
                       <LinearProgress 
                         variant="determinate"
                         value={project.progress || 0}
+                        sx={{
+                          height: 6
+                        }}
                       />
                     </div>
                   ))
