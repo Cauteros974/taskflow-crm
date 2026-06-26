@@ -242,7 +242,8 @@ export default function Dashboard() {
                         variant="determinate"
                         value={project.progress || 0}
                         sx={{
-                          height: 6
+                          height: 8,
+                          borderRadius: 4
                         }}
                       />
                     </div>
