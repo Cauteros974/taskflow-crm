@@ -464,6 +464,10 @@ button {
   height: 100%;
 }
 
+.section-subtitle {
+  margin-top: 4px !important;
+  margin-bottom: 22px !important;
+}
 
 .project-progress-list,
 .team-workload-list {
