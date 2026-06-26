@@ -477,6 +477,11 @@ button {
   margin-top: 20px;
 }
 
+.project-progress-item {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
 .progress-header {
   display: flex;
   justify-content: space-between;
