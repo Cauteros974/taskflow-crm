@@ -55,6 +55,42 @@ export const mockClients = [
         status: "Active",
         createdAt: "2026-12-12"
     },
+    {
+        id: "client-6",
+        name: "Bob Mario",
+        email: "b.mario@example.com",
+        phone: "+123 77 356 10 99",
+        company: "Mario Corp",
+        status: "Potential",
+        createdAt: "2019-2-12"
+    },
+    {
+        id: "client-7",
+        name: "Marry Kielman",
+        email: "m.kieal@example.com",
+        phone: "+123 77 356 10 99",
+        company: "MK Tech",
+        status: "Active",
+        createdAt: "2010-04-23"
+    },
+    {
+        id: "client-8",
+        name: "David Colmun",
+        email: "d.colm@example.com",
+        phone: "+123 77 356 10 99",
+        company: "Colmun Food",
+        status: "Active",
+        createdAt: "2008-08-30"
+    },
+    {
+        id: "client-9",
+        name: "Anna Voolly",
+        email: "a.voolly@example.com",
+        phone: "+123 77 356 10 99",
+        company: "A.V. Corp",
+        status: "Potential",
+        createdAt: "1999-10-12"
+    },
 ];
 
 export const mockProjects = [
