@@ -67,6 +67,7 @@ export default function Dashboard() {
     ? Math.round((completed / tasks.length) * 100)
     : 0;
 
+  // We take the nearest tasks with a deadline and sort them by date.
   const upcomingTasks = [...tasks]
     .filter((task) => task.dueDate)
     .sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate))
