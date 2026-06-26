@@ -161,6 +161,7 @@ export default function Dashboard() {
       </Grid>
 
       <Grid container spacing={2} className="dashboard-grid">
+        
         <Grid item xs={12} md={5}>
           <Card className="soft-card">
             <CardContent>
