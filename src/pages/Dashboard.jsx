@@ -296,6 +296,13 @@ export default function Dashboard() {
                       <LinearProgress 
                         variant="determinate"
                         value={member.workload}
+                        color={
+                          member.workload >= 80
+                            ? "error"
+                            : member.workload >= 60
+                              ? "warning"
+                              : "primary"
+                  }
                       />
                     </div>
                   </div>
