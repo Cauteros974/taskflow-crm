@@ -228,7 +228,7 @@ export default function Dashboard() {
                             {project.title}
                           </Typography>
 
-                          <Typography>
+                          <Typography variant="caption">
                             Deadline: {project.deadline || "Not specified"}
                           </Typography>
                         </div>
