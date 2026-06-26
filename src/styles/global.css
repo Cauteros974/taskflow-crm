@@ -554,3 +554,11 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .project-progress-header,
+  .team-workload-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
