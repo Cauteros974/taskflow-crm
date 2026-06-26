@@ -1,5 +1,5 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
-import { mockClients } from "../../data/mockData.js";
+import { mockClients } from "../../data/mockData";
 
 const clientsSlice = createSlice({
     name: "clients",
