@@ -205,6 +205,18 @@ export default function Dashboard() {
           </Card>
         </Grid>
       </Grid>
+
+      <Grid container spacing={2} className="dashboard-secondary-grid">
+        <Grid item xs={10} md={7}>
+          <Card className="soft-card">
+            <CardContent>
+              <Typography>
+                Project progress
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
     </>
   );
 }
