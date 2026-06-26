@@ -47,6 +47,8 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
         }));
     };
 
+    // Check the required title field, submit the form to the top
+    // and close the modal window after successful saving.
     const handleSubmit = () => {
         if (!form.title.trim()) return;
         
