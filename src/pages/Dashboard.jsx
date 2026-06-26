@@ -213,6 +213,10 @@ export default function Dashboard() {
               <Typography variant="h6" fontWeight={800}>
                 Project progress
               </Typography>
+              
+              <Typography color="text.secondary" className="section-subtitle">
+                Current completion status of active projects
+              </Typography>
             </CardContent>
           </Card>
         </Grid>
