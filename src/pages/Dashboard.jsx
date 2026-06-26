@@ -133,8 +133,15 @@ export default function Dashboard() {
     );
 
     const workload = Math.min(
-      Math.round((memberTasks.length / member.capacity) * 100)
-    )
+      Math.round((memberTasks.length / member.capacity) * 100),
+      100
+    );
+
+    return{
+      ...member,
+      taskCount: memberTasks.length,
+      workload
+    }
   })
 
   return (
