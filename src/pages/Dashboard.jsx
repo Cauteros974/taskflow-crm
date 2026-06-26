@@ -125,6 +125,14 @@ export default function Dashboard() {
     }
   ];
 
+  const teamWorker = mockTeam.map((remember) => {
+    const memberTask = task.filter(
+      (task) =>
+        task.assigneeId === member.id &&
+        task.status !== "Completed"
+    )
+  })
+
   return (
     <>
       <PageTitle
