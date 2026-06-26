@@ -482,6 +482,11 @@ button {
   border-bottom: 1px solid #e5e7eb;
 }
 
+.project-progress-item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
 .progress-header {
   display: flex;
   justify-content: space-between;
