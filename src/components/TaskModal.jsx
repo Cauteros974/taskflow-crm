@@ -148,6 +148,10 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
 
                     <DatePicker 
                         value={form.dueDate ? dayjs(form.dueDate) : null}
+                        onChange={(date) => 
+                            updateField
+                                "dueDate"
+                        }
                     />              
                  </div>
             </DialogContent>
