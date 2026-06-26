@@ -258,11 +258,15 @@ export default function Dashboard() {
           </Card>
         </Grid>
 
-        <Grid>
-          <Card>
+        <Grid item xs={12} md={5}>
+          <Card className="soft-card">
             <CardContent>
               <Typography>
                 Team workload
+              </Typography>
+
+              <Typography>
+                Active tasks assigned to each team member
               </Typography>
             </CardContent>
           </Card>
