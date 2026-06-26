@@ -302,7 +302,11 @@ export default function Dashboard() {
                             : member.workload >= 60
                               ? "warning"
                               : "primary"
-                  }
+                        }
+                        sx={{
+                          height: 7,
+                          borderRadius: 4
+                        }}
                       />
                     </div>
                   </div>
