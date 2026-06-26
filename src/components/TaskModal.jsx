@@ -164,6 +164,10 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
                 <Button onClick={onClose}>
                     Cancel
                 </Button>
+
+                <Button variant="contained" onClick={handleSubmit}>
+                    {task ? "Save" : "Create"}
+                </Button>
             </DialogActions>
         </Dialog>
     );
