@@ -1,19 +1,17 @@
 import { useSelector } from "react-redux";
 import {
   Avatar,
+  Button,
   Card,
   CardContent,
   Grid,
   LinearProgress,
-  Typography,
-  Button
+  Typography
 } from "@mui/material";
 import { Table } from "antd";
 
 import { store } from "../app/store.js";
-
 import { mockTeam } from "../data/mockData.js";
-
 import PageTitle from "../components/PageTitle.jsx";
 import StatusBadge from "../components/StatusBadge.jsx";
 
@@ -23,74 +21,42 @@ export default function Dashboard() {
   const projects = useSelector((state) => state.projects.items);
 
   const exportData = () => {
-
     const appState = store.getState();
-
     const blob = new Blob(
       [JSON.stringify(appState, null, 2)],
       { type: "application/json" }
     );
-
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
-
     link.href = url;
-    link.download = `taskflow-${new Date()
-      .toISOString()
-      .slice(0, 10)}.json`;
-
+    link.download = `taskflow-${new Date().toISOString().slice(0, 10)}.json`;
     document.body.appendChild(link);
     link.click();
     link.remove();
-
     URL.revokeObjectURL(url);
   };
 
   const importData = async (event) => {
     const file = event.target.files?.[0];
-    
     if (!file) return;
-
-    try{
-      const data = JSON.parse(await file.text())
-
-      const valid = 
+    try {
+      const data = JSON.parse(await file.text());
+      const valid =
         Array.isArray(data.tasks?.items) &&
         Array.isArray(data.clients?.items) &&
-        Array.isArray(data.projects?.items) &&
-        Array.isArray(data.team?.items);
-
-      if(!valid) {
-        throw new Error();
-      }
-
-      localStorage.setItem(
-        "taskflow-crm-state",
-        JSON.stringify(data)
-      );
-
+        Array.isArray(data.projects?.items);
+      if (!valid) throw new Error();
+      localStorage.setItem("taskflow-crm-state", JSON.stringify(data));
       window.location.reload();
-
-    } catch{
+    } catch {
       alert("Invalid TaskFlow backup");
     }
   };
 
-
-  const completed = tasks.filter(
-    (task) => task.status === "Completed"
-  ).length;
-  
-  const inProgress = tasks.filter(
-    (task) => task.status === "In Progress"
-  ).length;
-  
-  const review = tasks.filter(
-    (task) => task.status === "Under review"
-  ).length;
-  const critical = tasks.filter(
-    (task) => task.priority === "Critical"
-  ).length;
+  const completed = tasks.filter((t) => t.status === "Completed").length;
+  const inProgress = tasks.filter((t) => t.status === "In Progress").length;
+  const review = tasks.filter((t) => t.status === "Under review").length;
+  const critical = tasks.filter((t) => t.priority === "Critical").length;
 
   const progressValue = tasks.length
     ? Math.round((completed / tasks.length) * 100)
@@ -98,17 +64,11 @@ export default function Dashboard() {
 
   const upcomingTasks = [...tasks]
     .filter((task) => task.dueDate)
-    .sort(
-      (firstTask, secondTask) =>
-        new Date(firstTask.dueDate) - new Date(secondTask.dueDate)
-    )
+    .sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate))
     .slice(0, 5);
 
   const columns = [
-    {
-      title: "Task",
-      dataIndex: "title"
-    },
+    { title: "Task", dataIndex: "title" },
     {
       title: "Status",
       dataIndex: "status",
@@ -119,36 +79,41 @@ export default function Dashboard() {
       dataIndex: "priority",
       render: (value) => <StatusBadge value={value} />
     },
-    {
-      title: "Deadline",
-      dataIndex: "dueDate"
-    }
+    { title: "Deadline", dataIndex: "dueDate" }
   ];
 
   const teamWorkload = mockTeam.map((member) => {
     const memberTasks = tasks.filter(
-      (task) =>
-        task.assigneeId === member.id &&
-        task.status !== "Completed"
+      (task) => task.assigneeId === member.id && task.status !== "Completed"
     );
-
     const workload = Math.min(
       Math.round((memberTasks.length / member.capacity) * 100),
       100
     );
-
-    return{
-      ...member,
-      taskCount: memberTasks.length,
-      workload
-    }
-  })
+    return { ...member, taskCount: memberTasks.length, workload };
+  });
 
   return (
     <>
       <PageTitle
         title="Dashboard"
         subtitle="General statistics on tasks, clients, and projects"
+        action={
+          <div className="data-actions">
+            <Button variant="contained" onClick={exportData}>
+              Export
+            </Button>
+            <Button component="label" variant="outlined">
+              Import
+              <input
+                hidden
+                type="file"
+                accept=".json,application/json"
+                onChange={importData}
+              />
+            </Button>
+          </div>
+        }
       />
 
       <Grid container spacing={2} className="stats-grid">
@@ -161,22 +126,18 @@ export default function Dashboard() {
       </Grid>
 
       <Grid container spacing={2} className="dashboard-grid">
-        
         <Grid item xs={12} md={5}>
           <Card className="soft-card">
             <CardContent>
               <Typography variant="h6" fontWeight={800} gutterBottom>
                 Task progress
               </Typography>
-
               <Typography color="text.secondary" gutterBottom>
                 Completed {completed} of {tasks.length}
               </Typography>
-
               <Typography variant="h4" fontWeight={900} sx={{ my: 2 }}>
                 {progressValue}%
               </Typography>
-
               <LinearProgress
                 variant="determinate"
                 value={progressValue}
@@ -192,7 +153,6 @@ export default function Dashboard() {
               <Typography variant="h6" fontWeight={800} gutterBottom>
                 Upcoming tasks
               </Typography>
-
               <Table
                 rowKey="id"
                 columns={columns}
@@ -213,12 +173,10 @@ export default function Dashboard() {
               <Typography variant="h6" fontWeight={800}>
                 Project progress
               </Typography>
-              
               <Typography color="text.secondary" className="section-subtitle">
                 Current completion status of active projects
               </Typography>
-
-              <div className="project-list">
+              <div className="project-progress-list">
                 {projects.length ? (
                   projects.map((project) => (
                     <div className="project-progress-item" key={project.id}>
@@ -227,24 +185,18 @@ export default function Dashboard() {
                           <Typography fontWeight={800}>
                             {project.title}
                           </Typography>
-
                           <Typography variant="body2" color="text.secondary">
                             Deadline: {project.deadline || "Not specified"}
                           </Typography>
                         </div>
-
-                        <Typography>
+                        <Typography fontWeight={900}>
                           {project.progress || 0}%
                         </Typography>
                       </div>
-
-                      <LinearProgress 
+                      <LinearProgress
                         variant="determinate"
                         value={project.progress || 0}
-                        sx={{
-                          height: 8,
-                          borderRadius: 4
-                        }}
+                        sx={{ height: 8, borderRadius: 4 }}
                       />
                     </div>
                   ))
@@ -264,36 +216,28 @@ export default function Dashboard() {
               <Typography variant="h6" fontWeight={800}>
                 Team workload
               </Typography>
-
               <Typography color="text.secondary" className="section-subtitle">
                 Active tasks assigned to each team member
               </Typography>
-
-              <div className="team-worload-list">
-                {teamWorkload.map((member) => {
-                  <div className="team-workload-item">
+              <div className="team-workload-list">
+                {teamWorkload.map((member) => (
+                  <div className="team-workload-item" key={member.id}>
                     <Avatar className="team-avatar">
                       {member.name.charAt(0)}
                     </Avatar>
-
                     <div className="team-workload-content">
-                      <div className="team-workload-headr">
+                      <div className="team-workload-header">
                         <div>
-                          <Typography fontWeight={800}>
-                            {member.name}
-                          </Typography>
-
+                          <Typography fontWeight={800}>{member.name}</Typography>
                           <Typography variant="body2" color="text.secondary">
                             {member.role}
                           </Typography>
                         </div>
-
                         <Typography variant="body2" fontWeight={800}>
                           {member.taskCount}/{member.capacity} tasks
                         </Typography>
                       </div>
-
-                      <LinearProgress 
+                      <LinearProgress
                         variant="determinate"
                         value={member.workload}
                         color={
@@ -303,14 +247,11 @@ export default function Dashboard() {
                               ? "warning"
                               : "primary"
                         }
-                        sx={{
-                          height: 7,
-                          borderRadius: 4
-                        }}
+                        sx={{ height: 7, borderRadius: 4 }}
                       />
                     </div>
                   </div>
-                })}
+                ))}
               </div>
             </CardContent>
           </Card>
@@ -328,7 +269,6 @@ function StatCard({ title, value }) {
           <Typography variant="body2" color="text.secondary">
             {title}
           </Typography>
-
           <Typography variant="h4" fontWeight={900}>
             {value}
           </Typography>
