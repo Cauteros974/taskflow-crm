@@ -268,6 +268,16 @@ export default function Dashboard() {
               <Typography color="text.secondary" className="section-subtitle">
                 Active tasks assigned to each team member
               </Typography>
+
+              <div className="team-worload-list">
+                {teamWorkload.map((member) => {
+                  <div className="team-workload-item">
+                    <Avatar className="team-avatar">
+                      {member.name.charAt(0)}
+                    </Avatar>
+                  </div>
+                })}
+              </div>
             </CardContent>
           </Card>
         </Grid>
