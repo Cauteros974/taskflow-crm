@@ -125,20 +125,23 @@ export const mockTeam = [
         name: "David",
         role: "Project Manager",
         email: "david@taskflow.dev",
-        capacity: 5
+        capacity: 5,
+        assigneeId: "member-1"
     },
     {
         id: "member-2",
         name: "Anna",
         role: "UI/UX Designer",
         email: "anna@taskflow.dev",
-        capacity: 4
+        capacity: 4,
+        assigneeId: "member-2"
     },
     {
         id: "member-3",
         name: "Daniel",
         role: "Frontend Developer",
         email: "daniel@taskflow.dev",
-        capacity: 5
+        capacity: 5,
+        assigneeId: "member-3"
     }
 ]
