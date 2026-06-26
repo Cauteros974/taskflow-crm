@@ -146,11 +146,7 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
                  <div>
                     <span className="select-label">Deadline</span>
 
-                    <DatePicker>
-                        <Button onClick={onClose}>Cancel</Button>
-
-                        <Button variant="contained" onClick={handleSubmit}>Save</Button>
-                    </DatePicker>                    
+                                  
                  </div>
             </DialogContent>
         </Dialog>
