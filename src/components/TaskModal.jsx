@@ -146,7 +146,9 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
                  <div>
                     <span className="select-label">Deadline</span>
 
-                                  
+                    <DatePicker 
+                        value={form.dueDate ? dayjs(form.dueDate) : null}
+                    />              
                  </div>
             </DialogContent>
         </Dialog>
