@@ -159,6 +159,12 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
                     />              
                  </div>
             </DialogContent>
+
+            <DialogActions>
+                <Button onClick={onClose}>
+                    Cancel
+                </Button>
+            </DialogActions>
         </Dialog>
     );
 }
