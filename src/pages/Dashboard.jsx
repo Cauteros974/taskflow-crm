@@ -94,6 +94,7 @@ export default function Dashboard() {
   });
 
   return (
+    <div className="dashboard-page">
     <>
       <PageTitle
         title="Dashboard"
@@ -258,6 +259,7 @@ export default function Dashboard() {
         </Grid>
       </Grid>
     </>
+    </div>
   );
 }
 
