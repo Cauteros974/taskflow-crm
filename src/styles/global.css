@@ -518,6 +518,11 @@ button {
   font-weight: 900 !important;
 }
 
+.team-workload-heade{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
 
 @media (max-width: 900px) {
   .app-shell {
