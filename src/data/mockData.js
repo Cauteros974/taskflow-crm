@@ -72,6 +72,7 @@ export const mockTasks = [
         clientId: "client-1",
         dueDate: "2026-05-25",
         projectId: "project-1",
+        assigneeId: "member-1",
         comments: [
             {
                 id: "commnet-1",
@@ -90,6 +91,7 @@ export const mockTasks = [
         projectId: "project-2",
         clientId: "client-1",
         dueDate: "2026-06-08",
+        assigneeId: "member-1",
         comments: []
     },
     {
