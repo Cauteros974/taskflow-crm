@@ -37,6 +37,24 @@ export const mockClients = [
         status: "Active",
         createdAt: "2026-05-22"
     },
+    {
+        id: "client-4",
+        name: "Dany Kowal",
+        email: "d.kowal@example.com",
+        phone: "+123 77 356 10 99",
+        company: "Kowal Bio",
+        status: "Potential",
+        createdAt: "2026-01-10"
+    },
+    {
+        id: "client-5",
+        name: "Lusy Broud",
+        email: "l.broud@example.com",
+        phone: "+123 77 356 10 99",
+        company: "Broud Found",
+        status: "Active",
+        createdAt: "2026-12-12"
+    },
 ];
 
 export const mockProjects = [

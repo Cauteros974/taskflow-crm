@@ -53,7 +53,7 @@ export default function TaskModal({ open, onClose, onSubmit, task }) {
     };
 
     return(
-        <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
+        <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm" disableEnforceFocus>
             <DialogTitle>
                 {task? "Edit task": "New task"}
             </DialogTitle>

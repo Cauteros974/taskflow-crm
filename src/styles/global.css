@@ -443,6 +443,10 @@ button {
   max-width: 1180px !important;
 }
 
+.ant-picker-dropdown {
+  z-index: 2000 !important;
+}
+
 .stat-card {
   height: 100%;
   border-radius: 8px !important;
