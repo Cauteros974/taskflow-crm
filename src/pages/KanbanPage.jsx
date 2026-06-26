@@ -37,6 +37,8 @@ export default function KanbanPage() {
     setActiveTask(task || null);
   };
 
+  // Fires after drag-and-drop is completed.
+  // If the task is moved to another column, update its status.
   const handleDragEnd = (event) => {
     const { active, over } = event;
 
