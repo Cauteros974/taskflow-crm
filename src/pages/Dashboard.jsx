@@ -222,11 +222,12 @@ export default function Dashboard() {
                 {projects.length ? (
                   projects.map((project) => (
                     <div className="project-progress-item" key={project.id}>
-
+                      
                     </div>
                   ))
                 ) : (
                   <Typography color="text.secondary">
+                    No projects yet
                   </Typography>
                 )}
               </div>
