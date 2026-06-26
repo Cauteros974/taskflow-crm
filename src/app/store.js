@@ -6,6 +6,8 @@ import projectsReducer from "../features/projects/projectsSlice.js";
 import activityReducer from "../features/activity/activitySlice.js";
 import teamReducer from "../features/team/teamSlice.js";
 
+// Combine all the application's reducers into a single rootReducer.
+// Each key here will become a separate part of the global Redux state.
 const rootReducer = combineReducers({
   tasks: tasksReducer,
   clients: clientsReducer,
