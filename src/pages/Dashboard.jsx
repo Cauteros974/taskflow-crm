@@ -237,6 +237,11 @@ export default function Dashboard() {
                           {project.progress || 0}%
                         </Typography>
                       </div>
+
+                      <LinearProgress 
+                        variant="indeterminate"
+                        value={project.progress || 0}
+                      />
                     </div>
                   ))
                 ) : (
