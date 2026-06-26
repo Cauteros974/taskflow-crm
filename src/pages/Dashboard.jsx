@@ -222,7 +222,13 @@ export default function Dashboard() {
                 {projects.length ? (
                   projects.map((project) => (
                     <div className="project-progress-item" key={project.id}>
-                      
+                      <div className="project-progress-header">
+                        <div>
+                          <Typography>
+                            {project.title}
+                          </Typography>
+                        </div>
+                      </div>
                     </div>
                   ))
                 ) : (
