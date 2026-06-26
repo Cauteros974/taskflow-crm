@@ -91,7 +91,7 @@ export const mockTasks = [
         projectId: "project-2",
         clientId: "client-1",
         dueDate: "2026-06-08",
-        assigneeId: "member-1",
+        assigneeId: "member-2",
         comments: []
     },
     {
@@ -102,7 +102,8 @@ export const mockTasks = [
         priority: "High",
         projectId: "project-3",
         clientId: "client-2",
-        dueDate: "2026-06-12"
+        dueDate: "2026-06-12",
+        assigneeId: "member-2"
     },
     {
         id: "task-4",
@@ -113,6 +114,7 @@ export const mockTasks = [
         projectId: "project-4",
         clientId: "client-2",
         dueDate: "2026-06-19",
+        assigneeId: "member-2",
         coments:[]
     }
 ];
