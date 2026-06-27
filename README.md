@@ -195,6 +195,8 @@ The main goal of this project is to demonstrate practical React development skil
 
 - Component-based architecture
 - Global state management with Redux Toolkit
+- Routing with React Router
+- CRUD operations
 
     
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
