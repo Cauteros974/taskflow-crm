@@ -98,6 +98,26 @@ Supported statuses:
 - Under review
 - Completed
 
+When a task is moved between columns, its status is updated automatically.
+
+## Project Progress
+
+Project progress is calculated automatically based on completed tasks.
+
+Completed project tasks / Total project tasks * 100
+
+This keeps project progress connected to the real task state instead of relying only on manually entered values.
+
+Team Workload
+
+Each task can be assigned to a team member.
+
+The team workload section calculates how many active tasks are assigned to each member compared to their capacity.
+
+Active assigned tasks / Member capacity
+
+This helps show which team members are available and which ones are overloaded.
+
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/2.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/3.png)
