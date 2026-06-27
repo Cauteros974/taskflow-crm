@@ -197,6 +197,11 @@ The main goal of this project is to demonstrate practical React development skil
 - Global state management with Redux Toolkit
 - Routing with React Router
 - CRUD operations
+- Drag-and-drop interaction
+- Local data persistence
+- Dashboard statistics
+- Working with UI libraries
+- Clean project structure
 
     
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
