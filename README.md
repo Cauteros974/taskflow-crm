@@ -140,6 +140,21 @@ All application data is saved in localStorage.
 
 Tasks, clients, projects, comments, team members, and activity history remain available after page reload.
 
+## Getting Started
+
+Getting Started
+
+Install dependencies:
+
+    npm install
+
+Run the project:
+
+    npm run dev
+
+Open in browser:
+
+    http://localhost:5173
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/2.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/3.png)
