@@ -134,6 +134,12 @@ The app supports exporting all application data to a JSON file and importing it 
 
 This can be used as a simple backup system.
 
+## Data Persistence
+
+All application data is saved in localStorage.
+
+Tasks, clients, projects, comments, team members, and activity history remain available after page reload.
+
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/2.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/3.png)
