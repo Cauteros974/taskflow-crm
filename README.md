@@ -108,7 +108,7 @@ Completed project tasks / Total project tasks * 100
 
 This keeps project progress connected to the real task state instead of relying only on manually entered values.
 
-Team Workload
+## Team Workload
 
 Each task can be assigned to a team member.
 
@@ -117,6 +117,22 @@ The team workload section calculates how many active tasks are assigned to each 
 Active assigned tasks / Member capacity
 
 This helps show which team members are available and which ones are overloaded.
+
+## Activity History
+
+The activity page stores important user actions, such as:
+
+Task created
+Task updated
+Task deleted
+Comment added
+Comment deleted
+Task status changed
+Import / Export
+
+The app supports exporting all application data to a JSON file and importing it back later.
+
+This can be used as a simple backup system.
 
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/2.png)
