@@ -22,6 +22,20 @@ The project is built as a small CRM system with task tracking, Kanban workflow, 
 - Import and export data as JSON
 - LocalStorage data persistence
 
+## Tech Stack
+
+- React
+- Vite
+- Redux Toolkit
+- React Router
+- Material UI
+- Ant Design
+- dnd-kit
+- Day.js
+- LocalStorage
+
+
+
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/2.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/3.png)
