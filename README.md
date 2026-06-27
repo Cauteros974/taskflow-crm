@@ -47,6 +47,20 @@ The application includes the following pages:
 - Team
 - Activity history
 
+## Dashboard
+
+The dashboard shows the main application statistics:
+
+- Total tasks
+- Tasks in progress
+- Tasks under review
+- Critical tasks
+- Total clients
+- Total projects
+- Task completion progress
+- Upcoming tasks
+- Project progress
+- Team workload
 
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/2.png)
