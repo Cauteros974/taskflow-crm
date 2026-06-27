@@ -91,6 +91,12 @@ Each task can include:
 
 The Kanban board allows users to move tasks between statuses using drag-and-drop.
 
+Supported statuses:
+
+- New
+- In Progress
+- Under review
+- Completed
 
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/2.png)
