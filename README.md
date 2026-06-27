@@ -189,6 +189,10 @@ Open in browser:
       styles/
         global.css
 
+## Main Goal
+
+The main goal of this project is to demonstrate practical React development skills:
+
     
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/2.png)
