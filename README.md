@@ -87,6 +87,10 @@ Each task can include:
 - Deadline
 - Comments
 
+## Kanban Board
+
+The Kanban board allows users to move tasks between statuses using drag-and-drop.
+
 
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/2.png)
