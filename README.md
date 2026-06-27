@@ -155,6 +155,41 @@ Run the project:
 Open in browser:
 
     http://localhost:5173
+
+## Project Structure
+    src/
+      app/
+        store.js
+      components/
+        Header.jsx
+        Sidebar.jsx
+        PageTitle.jsx
+        TaskModal.jsx
+        StatusBadge.jsx
+        HeadlessSelect.jsx
+      data/
+        mockData.js
+      features/
+        activity/
+        clients/
+        projects/
+        tasks/
+        team/
+      pages/
+        Dashboard.jsx
+        TasksPage.jsx
+        TaskDetailsPage.jsx
+        ClientsPage.jsx
+        ProjectsPage.jsx
+        KanbanPage.jsx
+        TeamPage.jsx
+        ActivityPage.jsx
+      routes/
+        AppRouter.jsx
+      styles/
+        global.css
+
+    
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/2.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/3.png)
