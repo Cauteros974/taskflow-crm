@@ -62,6 +62,32 @@ The dashboard shows the main application statistics:
 - Project progress
 - Team workload
 
+## Tasks
+
+The tasks page allows users to manage all tasks in the system.
+
+Available actions:
+
+- Create a new task
+- Edit an existing task
+- Delete a task
+- Filter tasks by status and priority
+- Search tasks by title
+- Open a detailed task page
+
+Each task can include:
+
+- Title
+- Description
+- Status
+- Priority
+- Client
+- Project
+- Assignee
+- Deadline
+- Comments
+
+
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/2.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/3.png)
