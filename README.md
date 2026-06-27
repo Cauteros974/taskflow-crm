@@ -193,6 +193,9 @@ Open in browser:
 
 The main goal of this project is to demonstrate practical React development skills:
 
+- Component-based architecture
+- Global state management with Redux Toolkit
+
     
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/2.png)
