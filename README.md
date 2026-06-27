@@ -34,6 +34,18 @@ The project is built as a small CRM system with task tracking, Kanban workflow, 
 - Day.js
 - LocalStorage
 
+## Pages
+
+The application includes the following pages:
+
+- Dashboard
+- Tasks
+- Task details
+- Clients
+- Projects
+- Kanban
+- Team
+- Activity history
 
 
 ![alt text](https://github.com/Cauteros974/taskflow-crm/blob/main/src/screens/1.png)
